@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sprites>
+
+	<sprite name="EncyclopediaLeftPanel">
+	    <image texture="global/tile/stone_background.png"
+			real_texture_placement="28 0 292 264"
+			texture_size="0 0 240 240"
+		/>
+		
+		<image backcolor="230 190 80"
+			size="100%-3 0 100% 100%"
+		/>
+		
+	</sprite>
+	
+	<sprite name="EncyclopediaBackPanel">
+	    <image texture="global/modern/background.png"
+			texture_size="0 0 100% 100%"
+			size="0 0 100% 100%"
+		/>
+		
+	</sprite>
+	
+	<sprite name="OverviewButton">
+		<image backcolor="60 69 87 120" size="0 0 100% 100%"/>
+		<image backcolor="gold" size="0 0 1 100%"/>
+		<image backcolor="gold" size="1 0 100%-1 1"/>
+		<image backcolor="gold" size="100%-1 0 100% 100%"/>
+		<image backcolor="gold" size="0 100%-1 100% 100%"/>
+	</sprite>
+	
+	<sprite name="OverviewButtonOver">
+		<image backcolor="60 69 87 120" size="0 0 100% 100%"/>
+		<image backcolor="gold" size="0 0 3 100%"/>
+		<image backcolor="gold" size="0 0 100% 3"/>
+		<image backcolor="gold" size="100%-3 0 100% 100%"/>
+		<image backcolor="gold" size="0 100%-3 100% 100%"/>
+	</sprite>
+</sprites>

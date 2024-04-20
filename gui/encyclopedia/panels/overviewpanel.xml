@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="overviewPanel">
+    <include file="gui/reference/common/Dropdowns/CivSelectDropdown.xml"/>
+	<object name="overviewTitle" type="text" font="sans-bold-20" textcolor="222 244 255" size="50%-100 10% 50%+100 10%+50" text_align="center"/>
+	<object name="overview" scroll_top="true" font="sans-bold-18" textcolor="222 244 255" type="text" ghost="true" size="0 20% 100% 80%"/>
+	<object name="CivEmblem" type="image" size="50%-50 -50 50%+50 50" hidden="true"/>
+	<object name="learnMore" type="text" size="0 80% 100% 90%" font="sans-bold-18" textcolor="222 244 255">
+		<translatableAttribute id="caption">Learn more about</translatableAttribute>
+	</object>
+	<object name="OverviewButtons">
+	    <repeat count="6">
+		    <object name="OverviewButton[n]" type="button" sprite="OverviewButton" sprite_over="OverviewButtonOver"/>
+		</repeat>
+	</object>
+</object>

@@ -1,0 +1,96 @@
+{
+    "about":{},
+
+    "background":{},
+
+    "general":{
+        "ships":{},
+        "siege weapons":{},
+        "structures":{},
+		"other":{}
+    },
+
+    "environment": {
+        "animals":{},
+        "vegetation":{},
+        "other":{}
+    },
+
+    "maps":{},
+
+    "gameplay":{},
+
+    "civilisations":{
+        "athen":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "brit":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "cart":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "gaul":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "han":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "iber":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "kush":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "mace":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "maur":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "pers":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "ptol":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "rome":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "sele":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        },
+        "spart":{
+            "military":{},
+            "civil":{},
+            "heroes":{}
+        }
+
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_player">
+  <Auras datatype="tokens">
+    teambonuses/rome_player_teambonus
+  </Auras>
+  <Identity>
+    <Civ>rome</Civ>
+    <GenericName>Romans</GenericName>
+    <History>civilisations/rome/overview.json</History>
+    <Icon>emblems/emblem_romans.png</Icon>
+  </Identity>
+  <Player>
+    <Formations datatype="tokens">
+      special/formations/testudo
+      special/formations/anti_cavalry
+    </Formations>
+  </Player>
+</Entity>

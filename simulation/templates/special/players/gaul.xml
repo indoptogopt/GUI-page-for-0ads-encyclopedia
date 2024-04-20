@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_player">
+  <Auras datatype="tokens">
+    teambonuses/gaul_player_teambonus
+  </Auras>
+  <Identity>
+    <Civ>gaul</Civ>
+    <GenericName>Gauls</GenericName>
+    <History>civilisations/gaul/overview.json</History>
+    <Icon>emblems/emblem_celts.png</Icon>
+  </Identity>
+</Entity>

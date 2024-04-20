@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="bush|template_gaia_tree">
+  <Identity>
+    <History>environment/vegetation/bush_temperate.json</History>
+  </Identity>
+  <VisualActor>
+    <Actor>flora/trees/temperate_bush_biome.xml</Actor>
+  </VisualActor>
+</Entity>
