@@ -1,8 +1,8 @@
 {
     "name": "encyclopedia",
     "version": "0.1",
-    "label": "adds new encyclopedia page | work still in progress | by Vantha",
-    "description": "adds new encyclopedia page | work still in progress | by Vantha",
+    "label": "adds new encyclopedia page | by Vantha",
+    "description": "adds new encyclopedia page | by Vantha",
     "dependencies": ["0ad>=0.0.27"],
     "url": ""
 }
