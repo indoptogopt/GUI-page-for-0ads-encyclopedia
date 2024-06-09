@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Shipwreck Cargo</SpecificName>
-    <History>environment/other/shipwreck_debris.json</History>
+    <History>Nature and Environment\other map items\Shipwreck Debris.json</History>
   </Identity>
   <Obstruction>
     <Static width="7.0" depth="7.0"/>

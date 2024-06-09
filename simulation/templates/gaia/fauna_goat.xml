@@ -20,7 +20,7 @@
     <GenericName>Goat</GenericName>
     <SpecificName>Capra aegagrus hircus</SpecificName>
     <Icon>gaia/fauna_goat.png</Icon>
-    <History>environment/animals/fauna_goat.json</History>
+    <History>Nature and Environment\animals\Goat.json</History>
   </Identity>
   <Loot>
     <xp>7</xp>

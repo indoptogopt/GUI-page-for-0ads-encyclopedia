@@ -6,7 +6,7 @@
   <Identity>
     <Civ>maur</Civ>
     <GenericName>Mauryas</GenericName>
-    <History>civilisations/maur/overview.json</History>
+    <History>0 A.D.'s civilizations\Mauryas\overview.json</History>
     <Icon>emblems/emblem_mauryas.png</Icon>
   </Identity>
 </Entity>

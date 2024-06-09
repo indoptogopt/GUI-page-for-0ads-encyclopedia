@@ -29,6 +29,7 @@
   <Identity>
     <VisibleClasses datatype="tokens">Slinger</VisibleClasses>
     <GenericName>Slinger</GenericName>
+    <History>The Ancient World\Ancient warfare\Slinger.json</History>
   </Identity>
   <Loot>
     <stone>3</stone>

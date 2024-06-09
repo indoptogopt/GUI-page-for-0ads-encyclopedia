@@ -4,7 +4,7 @@
     <Civ>spart</Civ>
     <SpecificName>Theatron</SpecificName>
     <Classes datatype="tokens">CivSpecific</Classes>
-    <History>civilisations/spart/civil/theater.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan society\Theater.json</History>
   </Identity>
   <VisualActor>
     <Actor>structures/spartans/theater.xml</Actor>

@@ -7,7 +7,7 @@
     <GenericName>Perioikoi Cavalryman</GenericName>
     <SpecificName>Pródromos Perioïkós</SpecificName>
     <Icon>units/spart/cavalry_javelinist.png</Icon>
-    <History>civilisations/spart/military/cavalry_javelineer_b.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan military\Perioikoi Cavalryman.json</History>
   </Identity>
   <Promotion>
     <Entity>units/spart/cavalry_javelineer_a</Entity>

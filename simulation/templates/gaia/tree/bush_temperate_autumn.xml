@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Entity parent="bush|template_gaia_tree">
   <Identity>
-    <History>environment/vegetation/bush_temperate_autumn.json</History>
+    <History>Nature and Environment\vegetation\Bush Temperate Autumn.json</History>
   </Identity>
   <VisualActor>
     <Actor>props/flora/bush_temperate_autumn.xml</Actor>

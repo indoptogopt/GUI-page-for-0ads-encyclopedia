@@ -7,7 +7,7 @@
   <Identity>
     <SpecificName>Minor Pyramid</SpecificName>
     <Icon>gaia/geology_stone_1.png</Icon>
-    <History>environment/other/pyramid_minor.json</History>
+    <History>Nature and Environment\other map items\Pyramid Minor.json</History>
   </Identity>
   <Obstruction>
     <Static width="34.0" depth="34.0"/>

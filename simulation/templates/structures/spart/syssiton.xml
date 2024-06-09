@@ -27,7 +27,7 @@
     <VisibleClasses datatype="tokens">Syssiton</VisibleClasses>
     <Icon>structures/syssition.png</Icon>
       <!-- The quotes are taken from Plutarch life of Lykurgus paragraph 11 -->
-    <History>civilisations/spart/civil/syssiton.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan society\Military Mess Hall.json</History>
   </Identity>
   <Loot>
     <stone>40</stone>

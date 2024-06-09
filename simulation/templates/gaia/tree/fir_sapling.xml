@@ -2,7 +2,7 @@
 <Entity parent="template_gaia_tree">
   <Identity>
     <SpecificName>Fir Sapling</SpecificName>
-    <History>environment/vegetation/fir_sapling.json</History>
+    <History>Nature and Environment\vegetation\Fir Sapling.json</History>
   </Identity>
   <ResourceSupply>
     <Max>50</Max>

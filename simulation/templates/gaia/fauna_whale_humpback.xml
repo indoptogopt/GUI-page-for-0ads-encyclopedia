@@ -11,7 +11,7 @@
     <GenericName>Humpback Whale</GenericName>
     <SpecificName>Megaptera novaeangliae</SpecificName>
     <Icon>gaia/fauna_fish.png</Icon>
-    <History>environment/animals/fauna_whale_humpback.json</History>
+    <History>Nature and Environment\animals\Humpback Whale.json</History>
   </Identity>
   <Loot>
     <xp>40</xp>

@@ -30,7 +30,7 @@
     <Tooltip>Build in own or neutral territory.</Tooltip>
     <VisibleClasses datatype="tokens">Outpost</VisibleClasses>
     <Icon>structures/outpost.png</Icon>
-    <History>general/other/template_structure_defensive_outpost.json</History>
+    <History>The Ancient World\Ancient warfare\Outpost.json</History>
   </Identity>
   <Loot>
     <wood>12</wood>

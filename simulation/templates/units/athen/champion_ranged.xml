@@ -4,7 +4,7 @@
     <GenericName>Scythian Archer</GenericName>
     <SpecificName>Toxótēs Skythikós</SpecificName>
     <Icon>units/athen/champion_ranged.png</Icon>
-    <History>civilisations/athen/military/champion_ranged.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian military\Scythian Archer.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/athenians/infantry_archer_c.xml</Actor>

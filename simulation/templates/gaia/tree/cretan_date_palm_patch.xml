@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Cretan Date Palm</SpecificName>
-    <History>environment/vegetation/cretan_date_palm_patch.json</History>
+    <History>Nature and Environment\vegetation\Cretan Date Palm Patch.json</History>
   </Identity>
   <Obstruction>
     <Static width="4.0" depth="4.0"/>

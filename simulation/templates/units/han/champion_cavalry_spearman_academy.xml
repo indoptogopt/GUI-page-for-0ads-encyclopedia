@@ -8,7 +8,7 @@
     <Requirements>
       <Techs datatype="tokens">-unlock_champion_cavalry phase_city</Techs>
     </Requirements>
-    <History>civilisations/han/military/champion_cavalry_spearman_academy.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han military\Champion Cavalry Spearman Academy.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/han/cavalry_spearman_c_m.xml</Actor>

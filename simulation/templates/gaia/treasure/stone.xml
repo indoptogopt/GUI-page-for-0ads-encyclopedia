@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Stone Treasure</SpecificName>
-    <History>environment/other/stone.json</History>
+    <History>Nature and Environment\other map items\Stone.json</History>
   </Identity>
   <Obstruction>
     <Static width="6.5" depth="6.5"/>

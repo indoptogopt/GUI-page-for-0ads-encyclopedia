@@ -3,7 +3,7 @@
   <Identity>
     <Civ>spart</Civ>
     <SpecificName>Hippōn</SpecificName>
-    <History>civilisations/spart/military/stable.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan military\Stable.json</History>
   </Identity>
   <VisualActor>
     <Actor>structures/spartans/stable.xml</Actor>

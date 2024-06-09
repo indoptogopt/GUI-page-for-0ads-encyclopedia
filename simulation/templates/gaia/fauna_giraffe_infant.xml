@@ -11,7 +11,7 @@
    <GenericName>Juvenile Giraffe</GenericName>
    <SpecificName>Giraffa camelopardalis</SpecificName>
    <Icon>gaia/fauna_giraffe.png</Icon>
-   <History>environment/animals/fauna_giraffe_infant.json</History>
+   <History>Nature and Environment\animals\Juvenile Giraffe.json</History>
  </Identity>
  <Loot>
    <xp>8</xp>

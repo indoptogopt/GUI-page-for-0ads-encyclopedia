@@ -2,7 +2,7 @@
 <Entity parent="template_gaia_tree">
   <Identity>
     <SpecificName>Palm</SpecificName>
-    <History>environment/vegetation/palm_tropic.json</History>
+    <History>Nature and Environment\vegetation\Palm Tropic.json</History>
   </Identity>
   <ResourceSupply>
     <Max>200</Max>

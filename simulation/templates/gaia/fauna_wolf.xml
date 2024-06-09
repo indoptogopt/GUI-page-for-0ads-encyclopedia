@@ -24,7 +24,7 @@
     <GenericName>Wolf</GenericName>
     <SpecificName>Canis lupus</SpecificName>
     <Icon>gaia/fauna_wolf.png</Icon>
-    <History>environment/animals/fauna_wolf.json</History>
+    <History>Nature and Environment\animals\Wolf.json</History>
   </Identity>
   <Loot>
     <xp>8</xp>

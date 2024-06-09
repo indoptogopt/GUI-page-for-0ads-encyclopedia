@@ -11,7 +11,7 @@
     <GenericName>Common Zebra</GenericName>
     <SpecificName>Equus quagga</SpecificName>
     <Icon>gaia/fauna_zebra.png</Icon>
-    <History>environment/animals/fauna_zebra.json</History>
+    <History>Nature and Environment\animals\Common Zebra.json</History>
   </Identity>
   <Loot>
     <xp>10</xp>

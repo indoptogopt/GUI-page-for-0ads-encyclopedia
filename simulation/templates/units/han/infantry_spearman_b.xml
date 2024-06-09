@@ -10,7 +10,7 @@
     <SelectionGroupName>units/han/infantry_spearman_b</SelectionGroupName>
     <SpecificName>Máo Bīng</SpecificName>
     <Icon>units/han/infantry_spearman.png</Icon>
-    <History>civilisations/han/military/infantry_spearman_b.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han military\Infantry Spearman.json</History>
   </Identity>
   <Promotion>
     <Entity>units/han/infantry_spearman_a</Entity>

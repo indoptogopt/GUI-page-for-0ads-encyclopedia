@@ -10,7 +10,7 @@
   <Identity>
     <GenericName>Rabbit</GenericName>
     <SpecificName>Oryctolagus cuniculus</SpecificName>
-    <History>environment/animals/fauna_rabbit.json</History>
+    <History>Nature and Environment\animals\Rabbit.json</History>
     <Icon>gaia/fauna_rabbit.png</Icon>
   </Identity>
   <Loot>

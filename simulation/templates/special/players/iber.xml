@@ -6,7 +6,7 @@
   <Identity>
     <Civ>iber</Civ>
     <GenericName>Iberians</GenericName>
-    <History>civilisations/iber/overview.json</History>
+    <History>0 A.D.'s civilizations\Iberians\overview.json</History>
     <Icon>emblems/emblem_iberians.png</Icon>
   </Identity>
 </Entity>

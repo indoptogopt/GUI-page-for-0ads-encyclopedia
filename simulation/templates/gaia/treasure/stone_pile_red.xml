@@ -7,7 +7,7 @@
   <Identity>
     <SpecificName>Cut Sandstone</SpecificName>
     <Icon>gaia/geology_stone_2.png</Icon>
-    <History>environment/other/stone_pile_red.json</History>
+    <History>Nature and Environment\other map items\Stone Pile Red.json</History>
   </Identity>
   <Obstruction>
     <Static width="6.5" depth="6.5"/>

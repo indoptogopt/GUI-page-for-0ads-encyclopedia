@@ -6,7 +6,7 @@
     <GenericName>Spartan Hoplite</GenericName>
     <SpecificName>Spartiátēs</SpecificName>
     <Icon>units/spart/champion_infantry_spear.png</Icon>
-    <History>civilisations/spart/military/champion_infantry_spear.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan military\Spartan Hoplite.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/spartans/infantry_spearman_c.xml</Actor>

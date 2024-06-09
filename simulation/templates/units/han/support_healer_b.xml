@@ -5,7 +5,7 @@
     <SelectionGroupName>units/han/support_healer_b</SelectionGroupName>
     <SpecificName>Yīshī</SpecificName>
     <Icon>units/han/support_healer.png</Icon>
-    <History>civilisations/han/civil/support_healer_b.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han society\Support Healer.json</History>
   </Identity>
   <Promotion>
     <Entity>units/han/support_healer_a</Entity>

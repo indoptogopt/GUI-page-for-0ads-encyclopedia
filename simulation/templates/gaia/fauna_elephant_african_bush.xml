@@ -25,7 +25,7 @@
     <GenericName>African Bush Elephant</GenericName>
     <SpecificName>Loxodonta africana</SpecificName>
     <Icon>gaia/fauna_elephant_african_bush.png</Icon>
-    <History>environment/animals/fauna_elephant_african_bush.json</History>
+    <History>Nature and Environment\animals\African Bush Elephant.json</History>
   </Identity>
   <Loot>
     <xp>60</xp>

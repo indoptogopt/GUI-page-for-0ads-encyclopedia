@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Celtic Standing Stone</SpecificName>
-    <History>environment/other/standing_stone.json</History>
+    <History>Nature and Environment\other map items\Standing Stone.json</History>
   </Identity>
   <Obstruction>
     <Static width="2.0" depth="2.0"/>

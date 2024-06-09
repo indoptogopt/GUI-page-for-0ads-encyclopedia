@@ -11,7 +11,7 @@
     <SpecificName>Gýnē Aigýptia</SpecificName>
     <GenericName>Egyptian Woman</GenericName>
     <Icon>units/ptol/support_female_citizen.png</Icon>
-    <History>civilisations/ptol/civil/support_female_citizen.json</History>
+    <History>0 A.D.'s Civilizations\Ptolemies\Ptolemaic society\Egyptian Woman.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/ptolemies/female_citizen.xml</Actor>

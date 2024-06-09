@@ -8,6 +8,7 @@
     <Civ>ptol</Civ>
     <SpecificName>Klērouchia</SpecificName>
     <Classes datatype="tokens">CivSpecific</Classes>
+    <History>0 A.D.'s Civilizations\Ptolemies\Ptolemaic military\Colony.json</History>
   </Identity>
   <Obstruction>
     <Static width="32" depth="31"/>

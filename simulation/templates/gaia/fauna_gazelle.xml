@@ -11,7 +11,7 @@
     <GenericName>Thomson's Gazelle</GenericName>
     <SpecificName>Eudorcas thomsonii</SpecificName>
     <Icon>gaia/fauna_gazelle.png</Icon>
-    <History>environment/animals/fauna_gazelle.json</History>
+    <History>Nature and Environment\animals\Thomson's Gazelle.json</History>
   </Identity>
   <Loot>
     <xp>5</xp>

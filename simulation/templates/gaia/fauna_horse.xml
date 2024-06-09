@@ -14,7 +14,7 @@
     <GenericName>Horse</GenericName>
     <SpecificName>Equus ferus caballus</SpecificName>
     <Icon>gaia/fauna_horse.png</Icon>
-    <History>environment/animals/fauna_horse.json</History>
+    <History>Nature and Environment\animals\Horse.json</History>
   </Identity>
   <Loot>
     <xp>10</xp>

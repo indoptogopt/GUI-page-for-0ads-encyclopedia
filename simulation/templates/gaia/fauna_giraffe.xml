@@ -11,7 +11,7 @@
    <GenericName>Giraffe</GenericName>
    <SpecificName>Giraffa camelopardalis</SpecificName>
    <Icon>gaia/fauna_giraffe.png</Icon>
-   <History>environment/animals/fauna_giraffe.json</History>
+   <History>Nature and Environment\animals\Giraffe.json</History>
  </Identity>
  <Loot>
    <xp>16</xp>

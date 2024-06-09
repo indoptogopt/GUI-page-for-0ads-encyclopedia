@@ -1,55 +1,73 @@
+const contributeMessage = Engine.TranslateLines(Engine.ReadFile("gui/encyclopedia/contributeMessage.txt"));
 class EncyclopediaPage {
-	constructor() {
-
+	constructor() 
+	{
+		// this.last… store various data about the last state of the page
+		// the data is read directly by all classes and doesn't need to be passed between functions
 		this.panel = "";
 		this.lastCategory = "";
 		this.lastCiv = "";
 		this.lastSubcategory = "";
 		this.lastArticle = "";
 
-		this.folders = Engine.ReadJSONFile("gui/encyclopedia/folders.json");
-
 		this.civData = loadCivData(true, false);
 
-		this.categoryPanel = new CategoryPanel(this);
+		this.navigationPanel = new NavigationPanel(this);
 		this.overviewPanel = new OverviewPanel(this);
 		this.selectionPanel = new SelectionPanel(this);
 		this.pathPanel = new PathPanel(this);
-		this.historyPanel = new HistoryPanel(this);
+		this.articlePanel = new ArticlePanel(this);
 		this.relatedArticlesPanel = new RelatedArticlesPanel(this); 
 
+		// the browsing history is saved as a list of objects, each storing a unique state of the page in its properties
+		// an index is used to point out the object (i.e. the state) the page is currently on
 		this.BrowsingHistory = [];
         this.BrowsingHistoryPointer = -1;
 
-		this.backButton = Engine.GetGUIObjectByName("BackButton");
-        this.backButton.onPress = () => {this.Back()}
-		this.forwardButton = Engine.GetGUIObjectByName("ForwardButton");
-        this.forwardButton.onPress = () => {this.Forward();}
+		this.backButton = Engine.GetGUIObjectByName("backButton");
+        this.backButton.onPress = () => {this.back()}
+		this.forwardButton = Engine.GetGUIObjectByName("forwardButton");
+        this.forwardButton.onPress = () => {this.forward();}
+		this.contributeButton = Engine.GetGUIObjectByName("contributeButton");
+		this.contributeButton.onPress = () => 
+			{
+				messageBox(
+					550, 250,
+					contributeMessage,
+					translate("Contributing"),
+					[translate("Back"), translate("Open thread")],
+					[null, () => {openURL("https://wildfiregames.com/forum/topic/107400-0-ads-built-in-encyclopedia/")}]	
+				);
+			}
 
 	}
 
-	switchPanel(panel) 
+	// the overviewPanel, the selectionPanel, and the articlePanel lie above each other
+	// this method is responsible for showing or hiding them
+		switchPanel(panel) 
 	{
 		this.panel = panel;
 		this.overviewPanel.gui.hidden = panel != "overview";
-		this.overviewPanel.civDropdown.civSelection.hidden = this.lastCategory != "civilisations";
-		this.overviewPanel.civDropdown.civSelectionHeading.hidden = this.lastCategory != "civilisations";
+		this.overviewPanel.civDropdown.civSelection.hidden = this.lastCategory != "0 A.D.'s Civilizations";
+		this.overviewPanel.civDropdown.civSelectionHeading.hidden = this.lastCategory != "0 A.D.'s Civilizations";
 		this.selectionPanel.gui.hidden = panel != "selection";
-		this.historyPanel.gui.hidden = panel != "history";
+		this.articlePanel.gui.hidden = panel != "article";
 
 	}
 
-	updateBrowsingHistory (data) {
-		let lastEntry = this.BrowsingHistory[this.BrowsingHistoryPointer];
+	// this method is called from virtually every click on the page
+	updateBrowsingHistory (data) 
+	{
+		const lastEntry = this.BrowsingHistory[this.BrowsingHistoryPointer];
+
 	    //check if it's the same as the last entry
-		let isSame = !lastEntry ? false :Object.keys(data).every(key => data[key] === lastEntry[key]) && data.length == lastEntry.length;
+		const isSame = !lastEntry ? false : Object.keys(data).every(key => data[key] === lastEntry[key]) && data.length == lastEntry.length;
 
 		//check if the pointer is at the end
-		let isEnd = !lastEntry ? false : this.BrowsingHistoryPointer == this.BrowsingHistory.length -1;
-
+		const atTheEnd = !lastEntry ? false : this.BrowsingHistoryPointer == this.BrowsingHistory.length -1;
 
 		if (!isSame) {
-			if (!isEnd) {
+			if (!atTheEnd) {
 				this.BrowsingHistory = this.BrowsingHistory.slice(0, this.BrowsingHistoryPointer + 1)
 			}
 			this.BrowsingHistory.push(data);
@@ -61,114 +79,165 @@ class EncyclopediaPage {
 
 	}
 
-	toParentDirectory() {
-		if (this.panel == "history") {
-			this.selectionPanel.open(this.lastCategory, this.lastCiv, this.lastSubcategory);
-		} else  {
-			if (this.lastCategory == "civilisations") {
-			    this.lastCiv = "";
-			}
-			this.overviewPanel.open(this.lastCategory, this.lastCiv);
+	// this method is called by the upButton of the PathPanel
+	toParentDirectory() 
+	{
+		switch (this.panel) 
+		{
+
+			case "overview":
+				if (this.lastCategory == "0 A.D.'s Civilizations" && this.lastCiv)
+				{
+					this.lastCiv = "";
+					this.overviewPanel.open("0 A.D.'s Civilizations");
+				}
+				break;
+
+			case "selection":
+				this.overviewPanel.open(this.lastCategory, this.lastCiv);
+				break;
+
+			case "article":
+				this.selectionPanel.open(this.lastCategory, this.lastCategory == "0 A.D.'s Civilizations" ? this.lastCiv : null , this.lastSubcategory);
+				break;
 		}
 	}
 
-	Back() {
+	back() 
+	{
 
 		this.forwardButton.hidden = false;
 		this.BrowsingHistoryPointer -= 1;
 
-		let entry = this.BrowsingHistory[this.BrowsingHistoryPointer];
+		const entry = this.BrowsingHistory[this.BrowsingHistoryPointer];
 
 		switch(entry.panel) {
-			case "overview": this.overviewPanel.open(entry.category, entry.civ, true); break;
-			case "selection": this.selectionPanel.open(entry.category, entry.civ, entry.subcategory, true); break;
-			case "history": this.historyPanel.open(entry.file, true); break;
-            default: break;
+			case "overview": 
+				this.overviewPanel.open(entry.category, entry.civ, true); 
+				break;
+			case "selection": 
+				this.lastCategory = entry.category;
+				if (entry.civ)
+					this.lastCiv = entry.civ;
+				this.lastSubcategory = entry.subcategory;
+				this.selectionPanel.open(entry.category, entry.civ, entry.subcategory, true); 
+				break;
+			case "article": 
+				this.lastCategory = entry.category;
+				if (entry.civ)
+					this.lastCiv = entry.civ;
+				this.lastSubcategory = entry.subcategory;
+				this.articlePanel.open(entry.file, true); 
+				break;
+			default: 
+				break;
 		}
 
-		//if there's no more Element in the BrowsingHistory to go to, deactivate the BackButton
+		//if there's no more Element in the BrowsingHistory to go to, deactivate the backButton
 		this.backButton.hidden = this.BrowsingHistoryPointer == 0;
 	}
 
-	Forward() {
-
+	forward() 
+	{
 		this.backButton.hidden = false;
 		this.BrowsingHistoryPointer += 1;
 
-		let entry = this.BrowsingHistory[this.BrowsingHistoryPointer];
+		const entry = this.BrowsingHistory[this.BrowsingHistoryPointer];
 
 		switch(entry.panel) {
-			case "overview": this.overviewPanel.open(entry.category, entry.civ, true); break;
-			case "selection": this.selectionPanel.open(entry.category, entry.civ, entry.subcategory, true); break;
-			case "history": this.historyPanel.open(entry.file, true); break;
-			default: break;
+			case "overview": 
+				this.overviewPanel.open(entry.category, entry.civ, true); 
+				break;
+			case "selection": 
+				this.lastCategory = entry.category;
+				if (entry.civ)
+					this.lastCiv = entry.civ;
+				this.lastSubcategory = entry.subcategory;
+				this.selectionPanel.open(entry.category, entry.civ, entry.subcategory, true); 
+				break;
+			case "article": 
+				this.lastCategory = entry.category;
+				if (entry.civ)
+					this.lastCiv = entry.civ;
+				this.lastSubcategory = entry.subcategory;
+				this.articlePanel.open(entry.file, true); 
+				break;
+			default: 
+				break;
 		}
 
-		//if there's no more Element in the BrowsingHistory to go to, deactivate the ForwardButton
+		//if there's no more Element in the BrowsingHistory to go to, deactivate the forwardButton
 		this.forwardButton.hidden = this.BrowsingHistoryPointer == this.BrowsingHistory.length-1;
 	}
 
 
-	randomArticle() {
+	// this method is called by the "Suprise Me"-button on the about page
+	randomArticle() 
+	{
 
-		// currently many folders are still empty (without any articles)
+		// currently many directories are still empty (without any articles); 
+		// a new one is chosen until one containing articles is found
 		let empty = true;
+		let list = [];
 		while (empty) {
-			this.lastCategory = pickRandom(Object.keys(this.folders));
-			let civ = this.lastCategory == "civilisations";
+			this.lastCategory = pickRandom(Object.keys(g_EncyclopediaStructure));
+			const hasCiv = this.lastCategory == "0 A.D.'s Civilizations";
 
-			if (this.lastCategory == "civilisations") {
-				this.lastCiv = pickRandom(Object.keys(this.civData));
-				this.lastSubcategory = pickRandom(Object.keys(this.folders["civilisations"][this.lastCiv]));
+			if (this.lastCategory == "0 A.D.'s Civilizations") {
+				this.lastCiv = pickRandom(Object.keys(this.civData).map(civ => this.civData[civ].Name));
+				this.lastSubcategory = pickRandom(Object.keys(g_EncyclopediaStructure["0 A.D.'s Civilizations"][this.lastCiv]));
 			} else {
-				this.lastSubcategory = pickRandom(Object.keys(this.folders[this.lastCategory]));
+				this.lastSubcategory = pickRandom(Object.keys(g_EncyclopediaStructure[this.lastCategory]));
 
 			}
-			let targetdir = "gui/encyclopedia/articles/" + this.lastCategory + "/" + (civ? this.lastCiv + "/" : "") + this.lastSubcategory + "/";
-			let list = Engine.ListDirectoryFiles(targetdir, "*.json", false);
+			const targetdir = "gui/encyclopedia/articles/" + this.lastCategory + "/" + (hasCiv? this.lastCiv + "/" : "") + this.lastSubcategory + "/";
+			list = Engine.ListDirectoryFiles(targetdir, "*.json", false);
 			
 			if (list.length) {
-				this.openArticle(pickRandom(list));
 				empty = false;
 			}
 		}
+		this.openArticle(pickRandom(list));
 	}
 
-	//this method is used to jump between (or just open) distant articles, not only switching to a parent or child directory or file. More has to be reloaded.
-	//it works with both paths with and without "gui/encyclopedia/articles/"
-	openArticle (path) {
-		let encyclopediaPath = path.startsWith("gui/encyclopedia/articles/") ? path.substring(26) : path;
-        let folders = encyclopediaPath.split("/");
-		let fullPath = "gui/encyclopedia/articles/" + encyclopediaPath;
-
+	// this method is used to jump between (or just open) distant articles, not only switching to a parent or child directory or file.
+	openArticle (path) 
+	{
+		
+		//works with both paths with and without "gui/encyclopedia/articles/"
+		const relativePath = path.startsWith("gui/encyclopedia/articles/") ? path.substring(26) : path;
+        
+		const fullPath = "gui/encyclopedia/articles/" + relativePath;
+		
 		if (!Engine.FileExists(fullPath)) {
 			error("couldn't find article at " + fullPath)
 			return;
 		}
 
-		let containsCiv = Object.keys(this.civData).some(civ => encyclopediaPath.includes(`/${civ}/`));
+		
+		
+		const containsCiv = Object.keys(this.civData).map(civ => this.civData[civ].Name).some(civ => relativePath.includes(`/${civ}/`));
+		
 		// figuring out what panel and file to open
-		this.lastCategory = folders[0];
-		this.categoryPanel.selectButton(this.lastCategory);
-		let panel = path.includes("overview.json") ? "overview" : "history";
-
+		const splitPath = relativePath.split("/");
+		this.lastCategory = splitPath[0];
+		this.navigationPanel.selectCategoryButton(this.lastCategory);
+		const panel = path.includes("overview.json") ? "overview" : "article";
+		
 		switch(panel) {
 			case "overview": 
-				this.overviewPanel.open(folders[0], containsCiv ? folders[1] : ""); break;
-
-			case "history": 
+			this.overviewPanel.open(splitPath[0], containsCiv ? splitPath[1] : ""); break;
+			
+			case "article": 
 				if (containsCiv) {
-					this.lastCiv = folders[1];
-					this.lastSubcategory = folders[2];
+					this.lastCiv = splitPath[1];
+					this.lastSubcategory = splitPath[2];
 				} else {
-					this.lastSubcategory = folders[1];
+					this.lastSubcategory = splitPath[1];
 				}
-				this.historyPanel.open(fullPath);
+				this.articlePanel.open(fullPath);
 
 			default: break; 
 		}
-	
 	}
-
-
 }

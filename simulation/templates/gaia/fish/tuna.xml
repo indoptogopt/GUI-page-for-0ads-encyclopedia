@@ -3,7 +3,7 @@
   <Identity>
     <SpecificName>Tuna</SpecificName>
     <Icon>gaia/fauna_fish.png</Icon>
-    <History>environment/animals/tuna.json</History>
+    <History>Nature and Environment\animals\Tuna.json</History>
   </Identity>
   <VisualActor>
     <Actor>fauna/tuna_shoal.xml</Actor>

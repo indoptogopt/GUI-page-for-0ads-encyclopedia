@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Banyan</SpecificName>
-    <History>environment/vegetation/banyan.json</History>
+    <History>Nature and Environment\vegetation\Banyan.json</History>
   </Identity>
   <Obstruction>
     <Static width="6.0" depth="6.0"/>

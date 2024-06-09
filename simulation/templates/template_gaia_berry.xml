@@ -2,7 +2,7 @@
 <Entity parent="template_gaia_fruit">
   <Identity>
     <SpecificName>Berries</SpecificName>
-    <History>environment/other/template_gaia_berry.json</History>
+    <History>The Ancient World\Ancient society\Berry.json</History>
   </Identity>
   <ResourceSupply>
     <Max>200</Max>

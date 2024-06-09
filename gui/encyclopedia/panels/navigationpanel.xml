@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="navigationPanel">
+    <object name="rightShading" type="image" size ="100%-20 0 100%+100 100%" sprite="stretched:global/modern/item-shading-right.png"/>
+    <object name="navigationPanelBackground" type="image" sprite="DarkTilesPanelLeft"/>
+    <object name="logo" size="50%-110 30 50%+110 130" type="image" sprite="0ADLogo"/>
+    <object name="categorySelection" type="image" style="TranslucentPanelThinBorder">
+        <object name="categoryButtonHeading" type="text" style="ModernLabelText">
+            <translatableAttribute id="caption">Choose a category:</translatableAttribute>
+        </object>
+        <object name="categoryButtons">
+	        <repeat count="7">
+		        <object name="categoryButton[n]" type="button" style="StoneButton"/>
+	        </repeat>
+        </object>
+    </object>
+    <object name="navigationButtons">
+	    <repeat count="4">
+		        <object name="navigationButton[n]" type="button" style="ModernButtonRed"/>
+	    </repeat>
+    </object>
+</object>

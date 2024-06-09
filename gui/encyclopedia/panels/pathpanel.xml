@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<object name="Path" size="20%+50 20% 56% 20%+30" type="text" sprite="ModernDarkBox" sprite_overlay="ModernDarkBoxGoldBorder">
-	<object name="PathCategory" type="button" text_valign="center" text_align="center" font="sans-16" textcolor="222 244 255" textcolor_over="143 157 164" size="50 0 150 100%"/>
-	<object name="PathFiller1" type="text" text_valign="center" text_align="center" font="sans-16" textcolor="222 244 255" size="160 0 190 100%">
-		<translatableAttribute id="caption">></translatableAttribute>
-	</object>
-	<object name="PathCiv" type="button" font="sans-16" text_valign="center" text_align="center" textcolor="222 244 255" textcolor_over="143 157 164" size="200 0 300 100%"/>
-	<object name="PathFiller2" type="text" text_valign="center" text_align="center" font="sans-16" textcolor="222 244 255" size="310 0 340 100%">
-		<translatableAttribute id="caption">></translatableAttribute>
-	</object>
-	<object name="PathSubcategory" type="button" text_valign="center" text_align="center" font="sans-16" textcolor="222 244 255" textcolor_over="143 157 164"/>
-	<object name="UpButton" type="button" size="-50 0 0 100%" text_align="center" font="sans-bold-24" textcolor_over="143 157 164" textcolor="222 244 255">
-		<translatableAttribute id="caption">↑</translatableAttribute>
-	</object>
+<object name="pathPanel">
+	<object name="pathFadingTop" type="image" sprite="BrownSeparator"/>
+	<object name="pathFadingBottom" type="image" sprite="BrownSeparator"/>
+	<object name="upButton" type="button" size="0 -5 30 100%+5" sprite="BrownArrowUp" sprite_over="LightBrownArrowUp" sound_pressed="audio/interface/ui/ui_button_click.ogg"/>
+	<object name="pathCategory" type="button" style="BrownItalicLabelButton"/>
+	<!-- the caption of the separators is ">" (>></object> is not a mistake) -->
+	<object name="pathSeparator1" type="text" style="BrownItalicText">></object>
+	<object name="pathCiv" type="button" style="BrownItalicLabelButton"/>
+	<object name="pathSeparator2" type="text" style="BrownItalicText">></object>
+	<object name="pathSubcategory" type="button" style="BrownItalicLabelButton"/>
+	<object name="pathSeparator3" type="text" style="BrownItalicText">></object>
+	<object name="pathArticle" type="button" style="BrownItalicLabelButton"/>
 </object>

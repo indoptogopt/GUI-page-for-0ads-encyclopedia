@@ -31,6 +31,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_village</Techs>
     </Requirements>
+    <History>The Ancient World\Ancient society\Corral.json</History>
   </Identity>
   <ResourceTrickle>
     <Rates>

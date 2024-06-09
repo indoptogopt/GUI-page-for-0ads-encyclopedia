@@ -24,7 +24,7 @@
     <GenericName>Hippopotamus</GenericName>
     <SpecificName>Hippopotamus amphibius</SpecificName>
     <Icon>gaia/fauna_hippopotamus.png</Icon>
-    <History>environment/animals/fauna_hippopotamus.json</History>
+    <History>Nature and Environment\animals\Hippopotamus.json</History>
   </Identity>
   <Loot>
     <xp>40</xp>

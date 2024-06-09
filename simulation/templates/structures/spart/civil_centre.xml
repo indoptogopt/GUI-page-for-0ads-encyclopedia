@@ -6,7 +6,7 @@
   <Identity>
     <Civ>spart</Civ>
     <SpecificName>Agora</SpecificName>
-    <History>civilisations/spart/civil/civil_centre.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan society\Civil Centre.json</History>
   </Identity>
   <Trainer>
     <Entities datatype="tokens">

@@ -20,6 +20,7 @@
     <VisibleClasses datatype="tokens">Field</VisibleClasses>
     <Tooltip>Harvest grain for food. Each subsequent gatherer works less efficiently.</Tooltip>
     <Icon>structures/field.png</Icon>
+    <History>The Ancient World\Ancient society\Field.json</History>
   </Identity>
   <Loot>
     <food>50</food>

@@ -13,7 +13,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
-    <History>civilisations/athen/military/cavalry_swordsman_b.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian military\Greek Cavalry.json</History>
   </Identity>
   <Promotion>
     <Entity>units/athen/cavalry_swordsman_a</Entity>

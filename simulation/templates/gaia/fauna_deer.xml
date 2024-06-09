@@ -11,7 +11,7 @@
     <GenericName>Red Deer</GenericName>
     <SpecificName>Cervus elaphus</SpecificName>
     <Icon>gaia/fauna_deer.png</Icon>
-    <History>environment/animals/fauna_deer.json</History>
+    <History>Nature and Environment\animals\Red Deer.json</History>
   </Identity>
   <Loot>
     <xp>5</xp>

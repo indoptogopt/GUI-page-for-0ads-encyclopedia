@@ -8,7 +8,7 @@
     <GenericName>Metal Mine</GenericName>
     <Tooltip>Mine ore for metal.</Tooltip>
     <Icon>gaia/geology_metal.png</Icon>
-    <History>environment/other/template_gaia_ore.json</History>
+    <History>The Ancient World\Ancient society\Metal Mine.json</History>
   </Identity>
   <Minimap>
     <Type>metal</Type>

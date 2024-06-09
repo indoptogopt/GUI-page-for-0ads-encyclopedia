@@ -24,7 +24,7 @@
     <GenericName>Mastiff</GenericName>
     <SpecificName>Canis lupus familiaris</SpecificName>
     <Icon>gaia/fauna_dog.png</Icon>
-    <History>environment/animals/fauna_dog_mastiff.json</History>
+    <History>Nature and Environment\animals\Mastiff.json</History>
   </Identity>
   <Loot>
     <xp>8</xp>

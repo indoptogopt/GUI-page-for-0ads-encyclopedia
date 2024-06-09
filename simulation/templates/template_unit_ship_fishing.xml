@@ -30,7 +30,7 @@
     <Tooltip>Fish the waters for food.</Tooltip>
     <Classes datatype="tokens">-ConquestCritical</Classes>
     <VisibleClasses datatype="tokens">FishingBoat</VisibleClasses>
-    <History>general/other/template_unit_ship_fishing.json</History>
+    <History>The Ancient World\Ancient society\Fishing Boat.json</History>
   </Identity>
   <Loot>
     <wood>10</wood>

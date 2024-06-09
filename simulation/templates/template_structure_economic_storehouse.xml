@@ -30,7 +30,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_village</Techs>
     </Requirements>
-    <History>general/other/template_structure_economic_storehouse.json</History>
+    <History>The Ancient World\Ancient society\Storehouse.json</History>
   </Identity>
   <Loot>
     <wood>20</wood>

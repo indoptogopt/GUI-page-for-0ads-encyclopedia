@@ -8,7 +8,7 @@
     <GenericName>Themistocles</GenericName>
     <SpecificName>Themistoklēs</SpecificName>
     <Icon>units/athen/hero_themistocles.png</Icon>
-    <History>civilisations/athen/heroes/hero_themistocles.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian heroes\Themistocles.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/athenians/hero_infantry_swordsman_themistocles.xml</Actor>

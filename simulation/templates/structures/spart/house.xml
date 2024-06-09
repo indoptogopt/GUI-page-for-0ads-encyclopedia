@@ -3,7 +3,7 @@
   <Identity>
     <Civ>spart</Civ>
     <SpecificName>Oikos</SpecificName>
-    <History>civilisations/spart/civil/house.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan society\House.json</History>
   </Identity>
   <VisualActor>
     <Actor>structures/spartans/house.xml</Actor>

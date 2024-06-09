@@ -2,7 +2,7 @@
 <Entity parent="template_gaia_fruit">
   <Identity>
     <SpecificName>Grapes</SpecificName>
-    <History>environment/vegetation/grapes.json</History>
+    <History>Nature and Environment\vegetation\Grapes.json</History>
   </Identity>
   <ResourceSupply>
     <Max>200</Max>

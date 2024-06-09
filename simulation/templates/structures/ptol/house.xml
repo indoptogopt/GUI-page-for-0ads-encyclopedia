@@ -7,7 +7,7 @@
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_3x3</SpawnEntityOnDeath>
   </Health>
   <Identity>
-    <History>civilisations/ptol/civil/house.json</History>
+    <History>0 A.D.'s Civilizations\Ptolemies\Ptolemaic society\House.json</History>
     <Civ>ptol</Civ>
     <SpecificName>Oikos</SpecificName>
   </Identity>

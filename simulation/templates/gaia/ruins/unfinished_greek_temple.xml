@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Unfinished Greek Temple</SpecificName>
-    <History>environment/other/unfinished_greek_temple.json</History>
+    <History>Nature and Environment\other map items\Unfinished Greek Temple.json</History>
   </Identity>
   <Obstruction>
     <Static width="17.5" depth="30.0"/>

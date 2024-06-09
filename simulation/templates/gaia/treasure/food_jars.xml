@@ -7,7 +7,7 @@
   <Identity>
     <SpecificName>Food Treasure</SpecificName>
     <Icon>gaia/special_treasure_food.png</Icon>
-    <History>environment/other/food_jars.json</History>
+    <History>Nature and Environment\other map items\Food Jars.json</History>
   </Identity>
   <Obstruction>
     <Static width="6.5" depth="6.5"/>

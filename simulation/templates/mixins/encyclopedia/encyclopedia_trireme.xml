@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity>
   <Identity>
-    <History>general/ships/encyclopedia_trireme.json</History>
+    <History>parent articles\Trireme.json</History>
   </Identity>
 </Entity>
 

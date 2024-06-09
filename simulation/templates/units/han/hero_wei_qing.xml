@@ -15,7 +15,7 @@
     <Civ>han</Civ>
     <SpecificName>Wèi Qīng</SpecificName>
     <Icon>units/han/hero_wei_qing.png</Icon>
-    <History>civilisations/han/heroes/hero_wei_qing.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han heroes\Hero Wei Qing.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/han/hero_infantry_wei_qing.xml</Actor>

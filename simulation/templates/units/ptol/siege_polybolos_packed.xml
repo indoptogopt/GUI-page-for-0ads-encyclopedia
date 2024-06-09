@@ -18,7 +18,7 @@
     <Civ>ptol</Civ>
     <SpecificName>Polybolos</SpecificName>
     <Icon>units/hele/siege_oxybeles_packed.png</Icon>
-    <History>civilisations/ptol/civil/siege_polybolos_packed.json</History>
+    <History>0 A.D.'s Civilizations\Ptolemies\Ptolemaic military\Siege Polybolos.json</History>
   </Identity>
   <Pack>
     <Entity>units/ptol/siege_polybolos_unpacked</Entity>

@@ -8,7 +8,7 @@
     <Civ>spart</Civ>
     <SpecificName>Ploîon Phortēgikón</SpecificName>
     <Icon>units/hele/ship_merchant.png</Icon>
-    <History>civilisations/spart/civil/ship_merchant.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan society\Ship Merchant.json</History>
   </Identity>
   <VisualActor>
     <Actor>structures/hellenes/merchant.xml</Actor>

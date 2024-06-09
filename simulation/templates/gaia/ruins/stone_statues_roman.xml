@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Roman Statue</SpecificName>
-    <History>environment/other/stone_statues_roman.json</History>
+    <History>Nature and Environment\other map items\Stone Statues Roman.json</History>
   </Identity>
   <Obstruction>
     <Static width="3.5" depth="3.5"/>

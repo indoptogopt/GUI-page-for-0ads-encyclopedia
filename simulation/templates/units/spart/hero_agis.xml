@@ -6,7 +6,7 @@
     <GenericName>Agis III</GenericName>
     <SpecificName>Agis</SpecificName>
     <Icon>units/spart/hero_agis.png</Icon>
-    <History>civilisations/spart/heroes/hero_agis.json</History> 
+    <History>0 A.D.'s Civilizations\Spartans\Spartan heroes\Agis III.json</History> 
   </Identity>
   <VisualActor>
     <Actor>units/spartans/hero_infantry_spearman_agis.xml</Actor>

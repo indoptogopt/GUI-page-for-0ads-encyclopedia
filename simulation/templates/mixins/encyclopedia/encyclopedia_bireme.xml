@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity>
   <Identity>
-    <History>general/ships/encyclopedia_bireme.json</History>
+    <History>parent articles\Bireme.json</History>
   </Identity>
 </Entity>

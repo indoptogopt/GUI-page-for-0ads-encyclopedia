@@ -24,7 +24,7 @@
     <Lang>greek</Lang>
     <GenericName>Spartan Woman</GenericName>
     <SpecificName>Spartiâtis</SpecificName>
-    <History>civilisations/spart/civil/support_female_citizen.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan society\Spartan Woman.json</History>
     <Icon>units/spart/support_female_citizen.png</Icon>
   </Identity>
   <UnitAI>

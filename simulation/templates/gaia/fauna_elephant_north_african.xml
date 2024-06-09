@@ -25,7 +25,7 @@
     <GenericName>African Forest Elephant</GenericName>
     <SpecificName>Loxodonta cyclotis</SpecificName>
     <Icon>gaia/fauna_elephant_north_african.png</Icon>
-    <History>environment/animals/fauna_elephant_north_african.json</History>
+    <History>Nature and Environment\animals\African Forest Elephant.json</History>
   </Identity>
   <Loot>
     <xp>40</xp>

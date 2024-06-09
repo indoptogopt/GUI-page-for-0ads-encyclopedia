@@ -10,7 +10,7 @@
   <Identity>
     <Civ>spart</Civ>
     <SpecificName>Stratopedon</SpecificName>
-    <History>civilisations/spart/military/barracks.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan military\Barracks.json</History>
   </Identity>
   <Obstruction>
     <Static width="20.0" depth="20.0"/>

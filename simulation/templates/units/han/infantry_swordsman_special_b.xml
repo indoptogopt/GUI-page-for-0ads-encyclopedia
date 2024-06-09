@@ -13,7 +13,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
-    <History>civilisations/han/military/infantry_swordsman_special_b.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han military\Infantry Swordsman Special.json</History>
   </Identity>
   <Promotion>
     <Entity>units/han/infantry_swordsman_special_a</Entity>

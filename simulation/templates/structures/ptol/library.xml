@@ -4,7 +4,7 @@
     <Civ>ptol</Civ>
     <SpecificName>Bibliothēkē</SpecificName>
     <Classes datatype="tokens">CivSpecific</Classes>
-    <History>civilisations/ptol/civil/library.json</History>
+    <History>0 A.D.'s Civilizations\Ptolemies\Ptolemaic society\Library.json</History>
   </Identity>
   <VisualActor>
     <Actor>structures/ptolemies/library.xml</Actor>

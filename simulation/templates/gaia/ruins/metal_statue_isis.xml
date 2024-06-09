@@ -8,7 +8,7 @@
     <Civ>gaia</Civ>
     <SpecificName>Isis Cult Image</SpecificName>
     <Icon>gaia/geology_metal.png</Icon>
-    <History>environment/other/metal_statue_isis.json</History>
+    <History>Nature and Environment\other map items\Metal Statue Isis.json</History>
   </Identity>
   <Obstruction>
     <Static width="7.5" depth="7.5"/>

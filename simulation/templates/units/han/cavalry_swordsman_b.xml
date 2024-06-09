@@ -5,7 +5,7 @@
     <SelectionGroupName>units/han/cavalry_swordsman_b</SelectionGroupName>
     <SpecificName>Dāo Qíbīng</SpecificName>
     <Icon>units/han/cavalry_swordsman.png</Icon>
-    <History>civilisations/han/military/cavalry_swordsman_b.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han military\Cavalry Swordsman.json</History>
   </Identity>
   <Promotion>
     <Entity>units/han/cavalry_swordsman_a</Entity>

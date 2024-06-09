@@ -20,7 +20,7 @@
     <GenericName>Zebu</GenericName>
     <SpecificName>Bos taurus indicus</SpecificName>
     <Icon>gaia/fauna_zebu.png</Icon>
-    <History>environment/animals/fauna_cattle_zebu.json</History>
+    <History>Nature and Environment\animals\Zebu.json</History>
   </Identity>
   <Loot>
     <xp>30</xp>

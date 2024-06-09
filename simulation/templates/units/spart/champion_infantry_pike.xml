@@ -6,7 +6,7 @@
     <GenericName>Spartan Pikeman</GenericName>
     <SpecificName>Phalangites Spartiatis</SpecificName>
     <Icon>units/spart/champion_infantry_pike.png</Icon>
-    <History>civilisations/spart/military/champion_infantry_pike.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan military\Spartan Pikeman.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/spartans/infantry_pikeman_c.xml</Actor>

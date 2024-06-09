@@ -7,7 +7,7 @@
     <Requirements>
       <Techs datatype="tokens">-phase_city iphicratean_reforms</Techs>
     </Requirements>
-    <History>civilisations/athen/military/champion_marine.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian military\Athenian Marine.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/athenians/infantry_swordsman_c.xml</Actor>

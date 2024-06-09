@@ -14,7 +14,7 @@
   <Identity>
     <Civ>han</Civ>
     <GenericName>Han</GenericName>
-    <History>civilisations/han/overview.json</History>
+    <History>0 A.D.'s civilizations\Han\overview.json</History>
     <Icon>emblems/emblem_han.png</Icon>
   </Identity>
   <Player>

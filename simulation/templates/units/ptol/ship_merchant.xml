@@ -8,7 +8,7 @@
     <Civ>ptol</Civ>
     <SpecificName>Ploîon Phortēgikón</SpecificName>
     <Icon>units/ptol/ship_merchant.png</Icon>
-    <History>civilisations/ptol/civil/ship_merchant.json</History>
+    <History>0 A.D.'s Civilizations\Ptolemies\Ptolemaic society\Ship Merchant.json</History>
   </Identity>
   <VisualActor>
     <Actor>structures/ptolemies/merchant_ship.xml</Actor>

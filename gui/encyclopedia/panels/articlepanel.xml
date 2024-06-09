@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object  name="articlePanel">
+    <object name="articleFrame" type="image" sprite="LargeOrnateFrame"/>
+    <object name="articleTitle" type="text" ghost="true" font="sans-bold-24" textcolor="blackbrown" size="50%-200 10% 50%+200 10%+30" text_align="center"/>
+    <object name="articleOrnament" type="image" sprite="TextOrnament" size="100 10%+60 100%-100 85%"/>
+    <object name="articleText" scroll_top="true" scrollbar="true" scrollbar_style="BrownGoldenScrollBar" type="text" font="sans-18" textcolor="blackbrown" text_align="left" size="70 10%+90 100%-50 80%"/>
+    <!-- <object name="articleImageFrame" type="image" sprite="SmallOrnateFrame" size="50%+100 30 50%+180 110">
+        <object name="articleImage" type="image" size="5 5 100%-5 100%-5"/>
+    </object> -->
+</object>

@@ -7,7 +7,7 @@
   <Identity>
     <SpecificName>Egyptian Statue</SpecificName>
     <Icon>gaia/geology_stone_1.png</Icon>
-    <History>environment/other/stone_statues_egyptian.json</History>
+    <History>Nature and Environment\other map items\Stone Statues Egyptian.json</History>
   </Identity>
   <Obstruction>
     <Static width="3.5" depth="3.5"/>

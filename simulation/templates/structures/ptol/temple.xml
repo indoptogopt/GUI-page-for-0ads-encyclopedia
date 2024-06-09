@@ -10,7 +10,7 @@
   <Identity>
     <Civ>ptol</Civ>
     <SpecificName>Naos</SpecificName>
-    <History>civilisations/ptol/civil/temple.json</History>
+    <History>0 A.D.'s Civilizations\Ptolemies\Ptolemaic society\Temple.json</History>
   </Identity>
   <Obstruction>
     <Static width="17.5" depth="35.5"/>

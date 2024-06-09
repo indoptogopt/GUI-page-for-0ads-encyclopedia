@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Fig</SpecificName>
-    <History>environment/vegetation/fig.json</History>
+    <History>Nature and Environment\vegetation\Fig.json</History>
   </Identity>
   <Obstruction>
     <Static width="5.0" depth="5.0"/>

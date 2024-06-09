@@ -2,7 +2,7 @@
 <Entity parent="template_gaia_treasure">
   <Identity>
     <SpecificName>Cut Granite</SpecificName>
-    <History>environment/other/stone_pile_granite.json</History>
+    <History>Nature and Environment\other map items\Stone Pile Granite.json</History>
   </Identity>
   <Treasure>
     <Resources>

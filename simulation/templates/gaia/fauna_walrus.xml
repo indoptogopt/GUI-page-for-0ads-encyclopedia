@@ -24,7 +24,7 @@
     <GenericName>Walrus</GenericName>
     <SpecificName>Odobenus rosmarus</SpecificName>
     <Icon>gaia/fauna_walrus.png</Icon>
-    <History>environment/animals/fauna_walrus.json</History>
+    <History>Nature and Environment\animals\Walrus.json</History>
   </Identity>
   <Loot>
     <xp>24</xp>

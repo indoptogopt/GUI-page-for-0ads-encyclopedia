@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Baobab</SpecificName>
-    <History>environment/vegetation/baobab_3_mature.json</History>
+    <History>Nature and Environment\vegetation\Baobab 3 Mature.json</History>
   </Identity>
   <Obstruction>
     <Static width="6.0" depth="6.0"/>

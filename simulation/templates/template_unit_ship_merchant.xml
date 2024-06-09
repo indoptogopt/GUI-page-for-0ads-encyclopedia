@@ -16,7 +16,7 @@
   <Identity>
     <GenericName>Merchantman</GenericName>
     <SelectionGroupName>template_unit_ship_merchant</SelectionGroupName>
-    <History>general/other/template_unit_ship_merchant.json</History>
+    <History>The Ancient World\Ancient society\Merchantman.json</History>
     <Tooltip>Trade between docks. Garrison a Trader aboard for additional profit (+20% for each garrisoned). Gather profitable aquatic treasures.</Tooltip>
     <Classes datatype="tokens">-ConquestCritical</Classes>
     <VisibleClasses datatype="tokens">Trader Bribable</VisibleClasses>

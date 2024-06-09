@@ -23,7 +23,7 @@
     <GenericName>Lion</GenericName>
     <SpecificName>Panthera leo</SpecificName>
     <Icon>gaia/fauna_lion.png</Icon>
-    <History>environment/animals/fauna_lion.json</History>
+    <History>Nature and Environment\animals\Lion.json</History>
   </Identity>
   <Loot>
     <xp>10</xp>

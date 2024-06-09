@@ -8,7 +8,7 @@
     <GenericName>Stone Quarry</GenericName>
     <Tooltip>Quarry rock for stone.</Tooltip>
     <Icon>gaia/geology_stone.png</Icon>
-    <History>environment/other/template_gaia_rock.json</History>
+    <History>The Ancient World\Ancient society\Stone Quarry.json</History>
   </Identity>
   <Minimap>
     <Type>stone</Type>

@@ -7,7 +7,7 @@
   <Identity>
     <SpecificName>Half-buried Barrels</SpecificName>
     <Icon>gaia/special_treasure_food.png</Icon>
-    <History>environment/other/food_barrels_buried.json</History>
+    <History>Nature and Environment\other map items\Food Barrels Buried.json</History>
   </Identity>
   <Obstruction>
     <Static width="7.0" depth="7.0"/>

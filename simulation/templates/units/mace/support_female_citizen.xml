@@ -5,7 +5,7 @@
     <SpecificName>Gýnē Makedonikḗ</SpecificName>
     <GenericName>Macedonian Woman</GenericName>
     <Icon>units/hele/support_female_citizen.png</Icon>
-    <History>civilisations/mace/civil/support_female_citizen.json</History>
+    <History>0 A.D.'s Civilizations\Macedonians\Macedonian society\Macedonian Woman.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/macedonians/female_citizen.xml</Actor>

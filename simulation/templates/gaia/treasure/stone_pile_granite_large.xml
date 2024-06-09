@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Cut Stone</SpecificName>
-    <History>environment/other/stone_pile_granite_large.json</History>
+    <History>Nature and Environment\other map items\Stone Pile Granite Large.json</History>
   </Identity>
   <Obstruction>
     <Static width="4.0" depth="4.0"/>

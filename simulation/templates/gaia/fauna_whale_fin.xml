@@ -11,7 +11,7 @@
     <GenericName>Fin Whale</GenericName>
     <SpecificName>Balaenoptera physalus</SpecificName>
     <Icon>gaia/fauna_fish.png</Icon>
-    <History>environment/animals/fauna_whale_fin.json</History>
+    <History>Nature and Environment\animals\Fin Whale.json</History>
   </Identity>
   <Loot>
     <xp>40</xp>

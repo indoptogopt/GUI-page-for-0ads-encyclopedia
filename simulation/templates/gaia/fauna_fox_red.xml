@@ -24,7 +24,7 @@
     <GenericName>Red Fox</GenericName>
     <SpecificName>Vulpes vulpes</SpecificName>
     <Icon>gaia/fauna_fox_red.png</Icon>
-    <History>environment/animals/fauna_fox_red.json</History>
+    <History>Nature and Environment\animals\Red Fox.json</History>
   </Identity>
   <Loot>
     <xp>4</xp>

@@ -3,7 +3,7 @@
   <Identity>
     <SpecificName>Tilapia</SpecificName>
     <Icon>gaia/fauna_fish.png</Icon>
-    <History>environment/animals/tilapia.json</History>
+    <History>Nature and Environment\animals\Tilapia.json</History>
   </Identity>
   <VisualActor>
     <Actor>fauna/fish_generic.xml</Actor>

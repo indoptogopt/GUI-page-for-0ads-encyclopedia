@@ -6,7 +6,7 @@
   <Identity>
     <Civ>brit</Civ>
     <GenericName>Britons</GenericName>
-    <History>civilisations/brit/overview.json</History>
+    <History>0 A.D.'s civilizations\Britons\overview.json</History>
     <Icon>emblems/emblem_britons.png</Icon>
   </Identity>
 </Entity>

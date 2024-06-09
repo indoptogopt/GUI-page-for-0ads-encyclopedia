@@ -1,0 +1,74 @@
+<styles>
+    <style name="WhiteButton"
+        sprite="WhiteButton"
+        sprite_over="WhiteButtonOver" 
+        sprite_pressed="WhiteButtonPressed" 
+        text_align="center" 
+        text_valign="center" 
+        font="sans-bold-16"
+		sound_pressed="audio/interface/ui/ui_button_click.ogg"
+    />
+
+    <style name="BrownButton"
+        sprite="BrownBorder" 
+        sprite_over="LightBrownBorder" 
+        text_align="center" 
+        text_valign="center" 
+        font="sans-bold-18" 
+        textcolor="blackbrown" 
+        textcolor_over="mattbrown"
+		sound_pressed="audio/interface/ui/ui_button_click.ogg"
+    />
+
+	<style name="BrownItalicLabelButton"
+		text_valign="center" 
+		text_align="left" 
+		font="sans-italic-20" 
+		textcolor="blackbrown" 
+		textcolor_over="mattbrown" 
+		sound_pressed="audio/interface/ui/ui_button_click.ogg"
+    />
+
+	<style name="GrayLabelButton"
+		text_align="center" 
+		text_valign="center" 
+		font="sans-bold-16" 
+		textcolor="140 140 140" 
+		textcolor_over="245 245 245"
+		sound_pressed="audio/interface/ui/ui_button_click.ogg"
+	/>
+
+	<style name="BrownItalicText"
+		text_valign="center" 
+		text_align="left" 
+		font="sans-italic-20" 
+		textcolor="blackbrown"  
+    />
+
+
+    <style name="BrownDropDown"
+		dropdown_buffer="1"
+		font="sans-bold-14"
+		textcolor="blackbrown"
+		text_align="center"
+		text_valign="center"
+		button_width="16"
+		sprite="color:255 240 203 70"
+		sprite_overlay="FadingBrownEdges"
+		sprite2="BrownDropDownArrow"
+        sprite2_pressed="LightBrownDropDownArrow"
+		buffer_zone="8"
+		dropdown_size="440"
+		minimum_visible_items="3"
+		sprite_list="BeigeDropdownBackground"
+		sprite_list_overlay="ThinBrownBorder"
+		sprite_selectarea="LightBrownBackground"
+        sprite_selectarea_overlay="FadingBrownEdges"
+		textcolor_selected="blackbrown"
+		scrollbar="true"
+		scrollbar_style="BrownGoldenScrollBar"
+		sound_opened="audio/interface/ui/ui_button_click.ogg"
+		sound_closed="audio/interface/ui/ui_button_click.ogg"
+		sound_selected="audio/interface/ui/ui_button_click.ogg"
+	/>
+</styles>

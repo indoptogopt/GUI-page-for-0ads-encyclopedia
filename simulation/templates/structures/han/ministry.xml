@@ -42,7 +42,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
-    <History>civilisations/han/civil/ministry.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han society\Imperial Ministry.json</History>
   </Identity>
   <Loot>
     <xp>200</xp>

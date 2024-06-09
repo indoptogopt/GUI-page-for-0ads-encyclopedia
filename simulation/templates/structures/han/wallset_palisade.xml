@@ -9,7 +9,7 @@
     <Requirements>
       <Techs datatype="tokens">-phase_town phase_village</Techs>
     </Requirements>
-    <History>civilisations/han/civil/wallset_palisade.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han society\Bamboo Stockade.json</History>
   </Identity>
   <WallSet>
     <MaxTowerOverlap>0.95</MaxTowerOverlap>

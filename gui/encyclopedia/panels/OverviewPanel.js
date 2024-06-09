@@ -1,80 +1,104 @@
-//OverviewButtons are horiontal
 const overviewButtonHeight = 35;
-const overviewButtonWidth = 150;
-const overviewButtonDist = 20;
+const overviewButtonDist = 30;
 
 class OverviewPanel {
 	constructor(page) {
 
         this.page = page;
-
+		
         this.gui = Engine.GetGUIObjectByName("overviewPanel");
         this.title = Engine.GetGUIObjectByName("overviewTitle");
-        this.text = Engine.GetGUIObjectByName("overview");
-        this.civEmblem = Engine.GetGUIObjectByName("CivEmblem");
+        this.text = Engine.GetGUIObjectByName("overviewText");
+        this.civEmblem = Engine.GetGUIObjectByName("civEmblem");
         this.learnMore = Engine.GetGUIObjectByName("learnMore");
-        this.buttons = Engine.GetGUIObjectByName("OverviewButtons");
+		this.disclaimer = Engine.GetGUIObjectByName("disclaimer");
+		this.disclaimer.caption = Engine.ReadFile("gui/encyclopedia/articles/About this Encyclopedia/disclaimer.txt");
+		this.supriseMeButton = Engine.GetGUIObjectByName("supriseMeButton");
+		this.buttons = Engine.GetGUIObjectByName("overviewButtons").children;
+
+		// overviewButtons are horiontal, only three fit into a line (therefore the modulo)
+		// their width is determined by screen resolution
+		this.buttons.forEach((button, i) => {
+			this.buttons = Engine.GetGUIObjectByName("overviewButtons").children;
+			button.size = new GUISize(
+				overviewButtonDist / 2, Math.floor(i / 3) * (overviewButtonHeight + overviewButtonDist / 2),
+                -(overviewButtonDist / 2), Math.floor(i / 3) * (overviewButtonHeight + overviewButtonDist / 2) + overviewButtonHeight,
+				(i % 3) * (100 / 3), 79, ((i % 3) + 1) * (100 / 3), 79
+			);
+		})
+
+		
+		this.supriseMeButton.font = "sans-bold-22";
+		this.supriseMeButton.size = new GUISize(-overviewButtonDist, 0, overviewButtonDist, 2 * overviewButtonHeight, (100 / 3), 55, (100 / 3) * 2, 55);
+		this.supriseMeButton.onPress = () => {
+			this.page.randomArticle();
+		}
 
         // initializing the CivDropdown
     	this.civDropdown = new CivSelectDropdown(this.page.civData);
-		this.civDropdown.registerHandler(((civ) => {this.open('civilisations', civ)}).bind(this));
+		this.civDropdown.registerHandler(((civ) => 
+			{
+				this.open("0 A.D.'s Civilizations", this.page.civData[civ].Name);
+			}).bind(this));
+		this.civDropdown.civSelection.style = "BrownDropDown";
+
+		// the heading is not necessary in this context
+		this.civDropdown.civSelectionHeading.textcolor = "transparent";
     }
 
-    setupButtons(names, category, civ){
-
-		if (!names) {
-
+    setupButtons(items, category, civ){
+		if (!items) {
 			return;
 		}
+		if (category == "0 A.D.'s Civilizations" && !civ) {
+			this.page.overviewPanel.civDropdown.selectNothing();
 
-		if (category == "civilisations" && !civ) {
-			names = [];
+			// if no civilization is selected, all overviewButtons have to be disabled
+			items = [];
 		}
 
-        for (let i in this.buttons.children) {
-			let button = this.buttons.children[i];
-			let name = names[i];
-			button.hidden = !name;
+        this.buttons.forEach((button, i) => {
+			const caption = items[i];
+			button.hidden = !caption;
 			if (button.hidden) {
-				continue;
+				return;
 			}
-            button.size = new GUISize(
-				i * (overviewButtonWidth + overviewButtonDist) + overviewButtonDist / 2, 0,
-                i * (overviewButtonWidth + overviewButtonDist) + overviewButtonDist / 2 + overviewButtonWidth, overviewButtonHeight,
-				20, 79, 20, 79);
-			button.caption = name;
+			button.caption = caption;
 			button.onPress = () => {
-            	this.page.selectionPanel.open(category, civ || "", name);
+            	this.page.selectionPanel.open(category, civ || "", caption);
             };
-		};
-		if (this.buttons.children.length < names.length) {
-			error("GUI page has space for " + this.buttons.children.length + " overview buttons, but " + names.length + " items are provided!");
+		});
+		if (this.buttons.length < items.length) {
+			error("GUI page has space for " + this.buttons.length + " overview buttons, but " + items.length + " items are provided!");
 	    }
-
     }
 
 
-    open(category, civ, fromBack) {
+    open(category, civ, dontUpdateBrowsingHistory) {
         this.page.lastCategory = category;
 		this.page.switchPanel("overview");
-		this.page.categoryPanel.selectButton(category);
+		this.disclaimer.hidden = this.supriseMeButton.hidden = category != "About this Encyclopedia";
 
-		if (!fromBack) {
-		    this.page.updateBrowsingHistory({"panel":"overview", "category":category, "civ":civ});
+		if (!dontUpdateBrowsingHistory) {
+		    this.page.updateBrowsingHistory({"panel":"overview", "category":category, "civ": civ && category == "0 A.D.'s Civilizations"? civ : ""});
 		}
 
-		this.civDropdown.hidden = category != "civilisations";
-		if (category == "civilisations" && !!civ) {
-			this.openCiv(civ, fromBack);
+		this.civDropdown.hidden = category != "0 A.D.'s Civilizations";
+		if (category == "0 A.D.'s Civilizations" && civ) {
+			this.openCiv(civ);
 			return;
 		}
 
-        this.learnMore.hidden = Object.keys(this.page.folders[category]).length == 0;
+		this.learnMore.hidden = category == "0 A.D.'s Civilizations" || category == "About this Encyclopedia";
         this.civEmblem.hidden = true;
-        this.title.caption = category;
-        this.text.caption = Engine.ReadJSONFile("gui/encyclopedia/articles/" + category + "/overview.json").Content;
-        
-		this.setupButtons(Object.keys(this.page.folders[category]), category);
+
+		const json = Engine.ReadJSONFile("gui/encyclopedia/articles/" + category + "/overview.json");
+        this.title.caption = json.title || category;
+        this.text.caption = json.content;
+
+		this.learnMore.caption = json.learnMorePhrase || "Learn more about the …";
+
+		this.setupButtons(Object.keys(g_EncyclopediaStructure[category]), category);
         this.page.relatedArticlesPanel.open("gui/encyclopedia/articles/" + category + "/overview.json");
 		this.page.pathPanel.update("overview");
 	}
@@ -83,15 +107,15 @@ class OverviewPanel {
         this.page.lastCiv = civ;
 		this.learnMore.hidden = this.civEmblem.hidden = false;
 		
-		this.page.relatedArticlesPanel.open("gui/encyclopedia/articles/civilisations/" + civ + "/overview.json");
+		this.page.relatedArticlesPanel.open("gui/encyclopedia/articles/0 A.D.'s Civilizations/" + civ + "/overview.json");
 
-		this.civEmblem.sprite = "stretched:" + this.page.civData[civ].Emblem;
-		this.title.caption = this.page.civData[civ].Name;
+		this.civEmblem.children[1].sprite = "stretched:" + Object.values(this.page.civData).find(subObj => subObj.Name == civ).Emblem;
+		this.title.caption = civ;
 
 		//display the civ's overview text
-		this.text.caption = Engine.ReadJSONFile("gui/encyclopedia/articles/civilisations/" + civ + "/overview.json").Content;
+		this.text.caption = Engine.ReadJSONFile("gui/encyclopedia/articles/0 A.D.'s Civilizations/" + civ + "/overview.json").content;
             
-        this.setupButtons(Object.keys(this.page.folders["civilisations"][civ]), "civilisations", civ);
-		this.page.pathPanel.update('overview');
+        this.setupButtons(Object.keys(g_EncyclopediaStructure["0 A.D.'s Civilizations"][civ]), "0 A.D.'s Civilizations", civ);
+		this.page.pathPanel.update("overview");
     }
 }

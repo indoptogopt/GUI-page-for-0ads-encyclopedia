@@ -6,7 +6,7 @@
   <Identity>
     <Civ>gaul</Civ>
     <GenericName>Gauls</GenericName>
-    <History>civilisations/gaul/overview.json</History>
+    <History>0 A.D.'s civilizations\Gauls\overview.json</History>
     <Icon>emblems/emblem_celts.png</Icon>
   </Identity>
 </Entity>

@@ -30,7 +30,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
-    <History>general/other/template_structure_military_arsenal.json</History>
+    <History>The Ancient World\Ancient warfare\Arsenal.json</History>
   </Identity>
   <Loot>
     <wood>60</wood>

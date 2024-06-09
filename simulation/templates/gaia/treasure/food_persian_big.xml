@@ -7,7 +7,7 @@
   <Identity>
     <SpecificName>Persian Food Stores</SpecificName>
     <Icon>gaia/special_treasure_food.png</Icon>
-    <History>environment/other/food_persian_big.json</History>
+    <History>Nature and Environment\other map items\Food Persian Big.json</History>
   </Identity>
   <Obstruction>
     <Static width="8.0" depth="8.0"/>

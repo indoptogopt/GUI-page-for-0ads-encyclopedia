@@ -2,7 +2,7 @@
 <Entity parent="template_gaia_tree">
   <Identity>
     <SpecificName>Poplar</SpecificName>
-    <History>environment/vegetation/poplar.json</History>
+    <History>Nature and Environment\vegetation\Poplar.json</History>
   </Identity>
   <ResourceSupply>
     <Max>200</Max>

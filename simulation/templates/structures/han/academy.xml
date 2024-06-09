@@ -33,7 +33,7 @@
     <Requirements>
       <Techs datatype="tokens">-phase_village phase_city</Techs>
     </Requirements>
-    <History>civilisations/han/military/academy.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han military\Imperial Academy.json</History>
   </Identity>
   <Obstruction>
     <Static depth="22.0" width="22.0"/>

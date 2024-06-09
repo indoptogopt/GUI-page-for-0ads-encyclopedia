@@ -9,7 +9,7 @@
     <GenericName>Stone Resource</GenericName>
     <SpecificName>Ruined Tower</SpecificName>
     <Icon>gaia/geology_stone_1.png</Icon>
-    <History>environment/other/stone_structure_tower.json</History>
+    <History>Nature and Environment\other map items\Stone Resource.json</History>
   </Identity>
   <Obstruction>
     <Static width="9" depth="6"/>

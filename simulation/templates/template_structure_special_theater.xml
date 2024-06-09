@@ -26,7 +26,7 @@
     <SelectionGroupName>template_structure_special_theater</SelectionGroupName>
     <VisibleClasses datatype="tokens">Theater</VisibleClasses>
     <Icon>structures/theater.png</Icon>
-    <History>general/other/template_structure_special_theater.json</History>
+    <History>The Ancient World\Ancient society\Theater.json</History>
   </Identity>
   <Loot>
     <wood>40</wood>

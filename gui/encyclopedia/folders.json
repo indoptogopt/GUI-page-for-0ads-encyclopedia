@@ -1,96 +1,108 @@
 {
-    "about":{},
+    "About":{},
+    
+    "Environment": 
+    {
+        "animals":{},
+        "vegetation":{},
+        "other":{}
+    },
 
-    "background":{},
-
-    "general":{
+    "General":
+    {
         "ships":{},
         "siege weapons":{},
         "structures":{},
 		"other":{}
     },
 
-    "environment": {
-        "animals":{},
-        "vegetation":{},
-        "other":{}
-    },
-
-    "maps":{},
-
-    "gameplay":{},
-
-    "civilisations":{
-        "athen":{
+    "Civilisations":
+    {
+        "athen":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "brit":{
+        "brit":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "cart":{
+        "cart":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "gaul":{
+        "gaul":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "han":{
+        "han":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "iber":{
+        "iber":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "kush":{
+        "kush":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "mace":{
+        "mace":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "maur":{
+        "maur":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "pers":{
+        "pers":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "ptol":{
+        "ptol":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "rome":{
+        "rome":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "sele":{
+        "sele":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         },
-        "spart":{
+        "spart":
+        {
             "military":{},
             "civil":{},
             "heroes":{}
         }
+    },
 
-    }
+    "Wars and Battles":{}
 }

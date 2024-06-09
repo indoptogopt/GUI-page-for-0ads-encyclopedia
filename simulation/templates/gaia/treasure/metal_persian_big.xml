@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Persian Wares</SpecificName>
-    <History>environment/other/metal_persian_big.json</History>
+    <History>Nature and Environment\other map items\Metal Persian Big.json</History>
   </Identity>
   <Obstruction>
     <Static width="7.0" depth="7.0"/>

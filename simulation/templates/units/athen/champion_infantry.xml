@@ -4,7 +4,7 @@
     <GenericName>City Guard</GenericName>
     <SpecificName>Epílektos</SpecificName>
     <Icon>units/athen/champion_infantry.png</Icon>
-    <History>civilisations/athen/military/champion_infantry.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian military\City Guard.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/athenians/infantry_spearman_c.xml</Actor>

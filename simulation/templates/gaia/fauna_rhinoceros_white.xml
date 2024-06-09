@@ -24,7 +24,7 @@
     <GenericName>White Rhinoceros</GenericName>
     <SpecificName>Ceratotherium simum</SpecificName>
     <Icon>gaia/fauna_rhino.png</Icon>
-    <History>environment/animals/fauna_rhinoceros_white.json</History>
+    <History>Nature and Environment\animals\White Rhinoceros.json</History>
   </Identity>
   <Loot>
     <xp>32</xp>

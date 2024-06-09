@@ -1,5 +1,5 @@
 
-const relatedArticlesButtonHeight = 35;
+const relatedArticlesButtonHeight = 30;
 const relatedArticlesButtonDist = 5;
 
 
@@ -10,38 +10,53 @@ class RelatedArticlesPanel {
 
         this.gui = Engine.GetGUIObjectByName("relatedArticlesPanel");
         this.heading = Engine.GetGUIObjectByName("relatedArticlesPanel");
-        this.buttons = Engine.GetGUIObjectByName("relatedArticlesButtons");
+        this.warning = Engine.GetGUIObjectByName("relatedArticlesWarning");
+        this.buttons = Engine.GetGUIObjectByName("relatedArticlesButtons").children;
+        this.buttons.forEach((button, i) => {
+            button.size = new GUISize(
+				8, i * (relatedArticlesButtonHeight + relatedArticlesButtonDist) + relatedArticlesButtonDist / 2,
+                -8, i * (relatedArticlesButtonHeight + relatedArticlesButtonDist) + relatedArticlesButtonDist / 2 + relatedArticlesButtonHeight,
+				0, 12, 100, 12);
+        })
     }
 
-    setupButtons(buttons, items) {
-        buttons.forEach((button, i) => {
-			let item = items[i];
+    setupButtons(items) {
+        this.buttons.forEach((button, i) => {
+            const item = items[i];
 			button.hidden = !item;
 			if (button.hidden)
 				return;
-            button.size = new GUISize(
-				0, i * (relatedArticlesButtonHeight + relatedArticlesButtonDist) + relatedArticlesButtonDist / 2,
-                0, i * (relatedArticlesButtonHeight + relatedArticlesButtonDist) + relatedArticlesButtonDist / 2 + relatedArticlesButtonHeight, overviewButtonHeight,
-				0, 20, 0, 20);
-			button.caption = item.name;
-			button.tooltip = item.tooltip? item.tooltip : "";
+			button.caption = item.title;
 			button.onPress = () => {
-            	this.page.selectionPanel.open(categoryIndex, i, civIndex? Object.keys(this.civData)[civIndex] :"");
+            	this.page.articlePanel.open("gui/encyclopedia/articles/" + item.path);
             };
 		});
 
-		if (buttons.length < items.length) {
-			error("GUI page has space for " + buttons.length + " relatedArticles buttons, but " + items.length + " items are provided!");
+		if (this.buttons.length < items.length) {
+			error("GUI page has space for " + this.buttons.length + " relatedArticles buttons, but " + items.length + " items are provided!");
 	    }
     }
 
     open(file) {
 
-        let list = Engine.ReadJSONFile(file).relatedArticles;
-        this.gui.hidden = !list;
-        if (!this.gui.hidden) {
-            this.setupButtons(this.buttons.children, list);
+        const list = Engine.ReadJSONFile(file).relatedArticles;
+        this.warning.hidden = !!list;
+        if (!this.warning.hidden) {
+            this.buttons.forEach(button => button.hidden = true);
+            return;
         }
+
+        // getting the articles' titles
+        const data = list.map(path => {
+            if (!Engine.FileExists("gui/encyclopedia/articles/" + path)) {
+                warn("invalid relatedArticle in " + file);
+                return;
+            }
+            const json = Engine.ReadJSONFile("gui/encyclopedia/articles/" + path);
+            const title = json.title || Engine.ReadJSONFile("gui/encyclopedia/articles/parent articles/" + json.parent).title;
+            return {"path":path, "title": title};
+        })
+        this.setupButtons(data);
     }
 
 }

@@ -6,7 +6,7 @@
   <Identity>
     <Civ>athen</Civ>
     <SpecificName>Agora</SpecificName>
-    <History>civilisations/athen/civil/civil_centre.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian society\Civil Centre.json</History>
   </Identity>
   <Trainer>
     <Entities datatype="tokens">

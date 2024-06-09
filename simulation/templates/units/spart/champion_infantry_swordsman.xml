@@ -21,7 +21,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
-    <History>civilisations/spart/military/champion_infantry_swordsman.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan military\Skiritai Commando.json</History>
   </Identity>
   <Loot>
     <metal op="add">3</metal>

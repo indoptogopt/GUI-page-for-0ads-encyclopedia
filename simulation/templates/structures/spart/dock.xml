@@ -10,7 +10,7 @@
   <Identity>
     <Civ>spart</Civ>
     <SpecificName>Limēn</SpecificName>
-    <History>civilisations/spart/military/dock.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan military\Dock.json</History>
   </Identity>
   <Obstruction>
     <Static width="22.0" depth="28.0"/>

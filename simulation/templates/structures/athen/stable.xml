@@ -3,7 +3,7 @@
   <Identity>
     <Civ>athen</Civ>
     <SpecificName>Hippōn</SpecificName>
-    <History>civilisations/athen/military/stable.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian military\Stable.json</History>
   </Identity>
   <Obstruction>
     <Static width="23.0" depth="23.0"/>

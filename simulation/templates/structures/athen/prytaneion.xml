@@ -25,7 +25,7 @@
     <Classes datatype="tokens">ConquestCritical CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Council</VisibleClasses>
     <Icon>structures/tholos.png</Icon>
-    <History>civilisations/athen/civil/prytaneion.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian society\Council Chamber.json</History>
   </Identity>
   <Loot>
     <stone>20</stone>

@@ -13,7 +13,7 @@
     <GenericName>Helot Skirmisher</GenericName>
     <SpecificName>Akontistḗs Heílōs</SpecificName>
     <Icon>units/spart/infantry_javelinist.png</Icon>
-    <History>civilisations/spart/military/infantry_javelineer_b.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan military\Helot Skirmisher.json</History>
   </Identity>
   <Promotion>
     <Entity>units/spart/infantry_javelineer_a</Entity>

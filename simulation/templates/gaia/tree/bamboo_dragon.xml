@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Dragon Bamboo</SpecificName>
-    <History>environment/vegetation/bamboo_dragon.json</History>
+    <History>Nature and Environment\vegetation\Bamboo Dragon.json</History>
   </Identity>
   <Obstruction>
     <Static width="6.0" depth="6.0"/>

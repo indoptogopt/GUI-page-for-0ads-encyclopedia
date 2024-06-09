@@ -11,7 +11,7 @@
     <GenericName>Peacock</GenericName>
     <SpecificName>Pavo cristatus</SpecificName>
     <Icon>gaia/fauna_peacock.png</Icon>
-    <History>environment/animals/fauna_peacock.json</History>
+    <History>Nature and Environment\animals\Peacock.json</History>
   </Identity>
   <Loot>
     <xp>2</xp>

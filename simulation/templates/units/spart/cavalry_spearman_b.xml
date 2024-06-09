@@ -7,7 +7,7 @@
     <GenericName>Greek Allied Cavalry</GenericName>
     <SpecificName>Hippeús Symmakhikós</SpecificName>
     <Icon>units/spart/cavalry_spearman.png</Icon>
-    <History>civilisations/spart/military/cavalry_spearman_b.json</History>
+    <History>0 A.D.'s Civilizations\Spartans\Spartan military\Greek Allied Cavalry.json</History>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>

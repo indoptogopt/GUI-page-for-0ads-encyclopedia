@@ -23,7 +23,7 @@
   <Identity>
     <GenericName>Polar Bear</GenericName>
     <SpecificName>Ursus maritimus</SpecificName>
-    <History>environment/animals/fauna_bear_polar.json</History>
+    <History>Nature and Environment\animals\Polar Bear.json</History>
     <Icon>gaia/fauna_bear_polar.png</Icon>
   </Identity>
   <Loot>

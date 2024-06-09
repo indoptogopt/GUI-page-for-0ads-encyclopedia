@@ -7,7 +7,7 @@
   <Identity>
     <Civ>ptol</Civ>
     <SpecificName>Agora</SpecificName>
-    <History>civilisations/ptol/civil/civil_centre.json</History>
+    <History>0 A.D.'s Civilizations\Ptolemies\Ptolemaic society\Civil Centre.json</History>
   </Identity>
   <Obstruction>
     <Static width="39" depth="31"/>

@@ -13,7 +13,7 @@
     <SpecificName>Carcharodon carcharias</SpecificName>
     <Classes datatype="tokens">SeaCreature</Classes>
     <Icon>gaia/fauna_shark.png</Icon>
-    <History>environment/animals/fauna_shark.json</History>
+    <History>Nature and Environment\animals\Great White Shark.json</History>
   </Identity>
   <Loot>
     <xp>30</xp>

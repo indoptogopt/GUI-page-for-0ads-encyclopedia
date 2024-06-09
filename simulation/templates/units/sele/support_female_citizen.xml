@@ -6,7 +6,7 @@
     <SpecificName>Syrías Gýnē</SpecificName>
     <GenericName>Syrian Woman</GenericName>
     <Icon>units/sele/support_female.png</Icon>
-    <History>civilisations/sele/civil/support_female_citizen.json</History>
+    <History>0 A.D.'s Civilizations\Seleucids\Seleucid society\Syrian Woman.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/seleucids/female_citizen.xml</Actor>

@@ -6,7 +6,7 @@
   </Footprint>
   <Identity>
     <SpecificName>Teak</SpecificName>
-    <History>environment/vegetation/teak.json</History>
+    <History>Nature and Environment\vegetation\Teak.json</History>
   </Identity>
   <Obstruction>
     <Static width="3.0" depth="3.0"/>

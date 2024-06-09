@@ -20,7 +20,7 @@
     <GenericName>Sanga Cattle</GenericName>
     <SpecificName>Bos taurus africanus</SpecificName>
     <Icon>gaia/fauna_sanga.png</Icon>
-    <History>environment/animals/fauna_cattle_sanga.json</History>
+    <History>Nature and Environment\animals\Sanga Cattle.json</History>
   </Identity>
   <Loot>
     <xp>30</xp>

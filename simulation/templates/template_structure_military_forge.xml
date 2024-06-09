@@ -28,7 +28,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
-    <History>general/other/template_structure_military_forge.json</History>
+    <History>The Ancient World\Ancient warfare\Forge.json</History>
   </Identity>
   <Loot>
     <wood>40</wood>

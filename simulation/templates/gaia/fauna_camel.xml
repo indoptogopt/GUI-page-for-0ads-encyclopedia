@@ -14,7 +14,7 @@
     <GenericName>Dromedary</GenericName>
     <SpecificName>Camelus dromedarius</SpecificName>
     <Icon>gaia/fauna_camel.png</Icon>
-    <History>environment/animals/fauna_camel.json</History>
+    <History>Nature and Environment\animals\Dromedary.json</History>
   </Identity>
   <Loot>
     <xp>10</xp>

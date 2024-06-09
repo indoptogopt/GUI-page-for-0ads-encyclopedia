@@ -6,7 +6,7 @@
     <SpecificName>Hǔ Bēn</SpecificName>
     <SelectionGroupName>units/han/champion_infantry_spearman</SelectionGroupName>
     <Icon>units/han/champion_infantry_swordsman.png</Icon>
-    <History>civilisations/han/military/champion_infantry_spearman_academy.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han military\Palace Guard Spearman.json</History>
   </Identity>
   <VisualActor>
     <Actor>units/han/infantry_spearman_c.xml</Actor>

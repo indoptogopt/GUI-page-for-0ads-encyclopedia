@@ -8,7 +8,7 @@
     <Civ>gaia</Civ>
     <GenericName>Stone Resource</GenericName>
     <SpecificName>Ruined House</SpecificName>
-    <History>environment/other/stone_structure_house.json</History>
+    <History>Nature and Environment\other map items\Stone Resource.json</History>
     <Icon>gaia/geology_stone_1.png</Icon>
   </Identity>
   <Obstruction>

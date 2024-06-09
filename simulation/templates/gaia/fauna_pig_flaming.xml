@@ -17,7 +17,7 @@
   <Identity>
     <GenericName>Flaming Pig</GenericName>
     <Icon>units/flaming_pig.png</Icon>
-    <History>environment/animals/fauna_pig_flaming.json</History>
+    <History>Nature and Environment\animals\Flaming Pig.json</History>
   </Identity>
   <ResourceSupply disable=""/>
   <Sound>

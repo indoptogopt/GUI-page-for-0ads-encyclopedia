@@ -4,7 +4,7 @@
     <SelectionGroupName>units/athen/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Pródromos</SpecificName>
     <Icon>units/athen/cavalry_javelinist.png</Icon>
-    <History>civilisations/athen/military/cavalry_javelineer_b.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian military\Cavalry Javelineer.json</History>
   </Identity>
   <Promotion>
     <Entity>units/athen/cavalry_javelineer_a</Entity>

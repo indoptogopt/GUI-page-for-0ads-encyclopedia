@@ -9,7 +9,7 @@
     <GenericName>Brasidas</GenericName>
     <SpecificName>Brasidas</SpecificName>
     <Icon>units/spart/hero_brasidas.png</Icon>
-    <History>civilisations/spart/heroes/hero_brasidas.json</History>  
+    <History>0 A.D.'s Civilizations\Spartans\Spartan heroes\Brasidas.json</History>  
   </Identity>
   <VisualActor>
     <Actor>units/spartans/hero_infantry_swordsman_brasidas.xml</Actor>

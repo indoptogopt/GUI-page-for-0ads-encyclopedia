@@ -11,7 +11,7 @@
     <GenericName>Chicken</GenericName>
     <SpecificName>Gallus gallus domesticus</SpecificName>
     <Icon>gaia/fauna_chicken.png</Icon>
-    <History>environment/animals/fauna_chicken.json</History>
+    <History>Nature and Environment\animals\Chicken.json</History>
   </Identity>
   <Obstruction>
     <BlockMovement>false</BlockMovement>

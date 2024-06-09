@@ -23,7 +23,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
-    <History>civilisations/han/military/infantry_pikeman_b.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han military\Halberdier.json</History>
   </Identity>
   <Promotion>
     <Entity>units/han/infantry_pikeman_a</Entity>

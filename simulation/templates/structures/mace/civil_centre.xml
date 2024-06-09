@@ -6,7 +6,7 @@
   <Identity>
     <Civ>mace</Civ>
     <SpecificName>Agora</SpecificName>
-    <History>civilisations/mace/civil/civil_centre.json</History>
+    <History>0 A.D.'s Civilizations\Macedonians\Macedonian society\Civil Centre.json</History>
   </Identity>
   <Trainer>
     <Entities datatype="tokens">

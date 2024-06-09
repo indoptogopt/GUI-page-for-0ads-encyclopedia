@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_gaia_berry">
   <Identity>
-    <History>environment/vegetation/berry_04.json</History>
+    <History>Nature and Environment\vegetation\Berry 04.json</History>
   </Identity>
   <VisualActor>
     <Actor>props/flora/berry_bush_autumn_01.xml</Actor>

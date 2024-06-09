@@ -3,7 +3,7 @@
   <Identity>
     <SpecificName>Fish</SpecificName>
     <Icon>gaia/fauna_fish.png</Icon>
-    <History>environment/animals/generic.json</History>
+    <History>Nature and Environment\animals\Generic.json</History>
   </Identity>
   <VisualActor>
     <Actor>fauna/fish_generic.xml</Actor>

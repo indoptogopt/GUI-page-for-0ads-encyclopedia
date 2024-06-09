@@ -7,7 +7,7 @@
   <Identity>
     <SpecificName>Food Treasure</SpecificName>
     <Icon>gaia/special_treasure_food.png</Icon>
-    <History>environment/other/food_barrel.json</History>
+    <History>Nature and Environment\other map items\Food Barrel.json</History>
   </Identity>
   <Selectable replace="">
     <Overlay>

@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object name="relatedArticlesPanel">
-    <object name="relatedArticlestext" type="text" style="ModernLabelText" size="5 20%-50 100%-5 20%-25">
+	<object name="relatedArticlesBackground" type="image" sprite="BlackGoldenPanel"/>
+    <object name="relatedArticlestext" type="text" font="sans-bold-20" textcolor="230 190 80" text_align="center" text_valign="center" size="0 0 100% 15%">
 		<translatableAttribute id="caption">related articles:</translatableAttribute>
 	</object>
+   <object name="relatedArticlesWarning" type="text" style="ModernLabelText" size="20 15% 100%-20 15%+60">
+		<translatableAttribute id="caption">This article seems lonely: it is not related to any others. :(</translatableAttribute>
+	</object>
 	<object name="relatedArticlesButtons">
-		<repeat count="15">
-			<object name="relatedArticlesButton[n]" type="button" size="5 20% 100%-5 20%+25" style="ModernButtonRed" hidden="true"/>
+		<repeat count="14">
+			<object name="relatedArticlesButton[n]" type="button" style="GrayLabelButton"/>
 	    </repeat>
 	</object>
 </object>

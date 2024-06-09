@@ -20,7 +20,7 @@
     <GenericName>Sheep</GenericName>
     <SpecificName>Ovis aries</SpecificName>
     <Icon>gaia/fauna_sheep.png</Icon>
-    <History>environment/animals/fauna_sheep.json</History>
+    <History>Nature and Environment\animals\Sheep.json</History>
   </Identity>
   <Loot>
     <xp>10</xp>

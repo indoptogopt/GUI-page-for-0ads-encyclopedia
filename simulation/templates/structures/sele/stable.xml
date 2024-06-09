@@ -3,6 +3,7 @@
   <Identity>
     <Civ>sele</Civ>
     <SpecificName>Hippōn</SpecificName>
+    <History>0 A.D.'s Civilizations\Seleucids\Seleucid military\Stable.json</History>
   </Identity>
   <VisualActor>
     <Actor>structures/seleucids/stable.xml</Actor>

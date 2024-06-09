@@ -4,7 +4,7 @@
     <Civ>athen</Civ>
     <SpecificName>Theatron</SpecificName>
     <Classes datatype="tokens">CivSpecific</Classes>
-    <History>civilisations/athen/civil/theater.json</History>
+    <History>0 A.D.'s Civilizations\Athenians\Athenian society\Theater.json</History>
   </Identity>
   <VisualActor>
     <Actor>structures/athenians/theater.xml</Actor>

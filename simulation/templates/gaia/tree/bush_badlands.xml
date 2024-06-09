@@ -2,7 +2,7 @@
 <Entity parent="bush|template_gaia_tree">
   <Identity>
     <SpecificName>Hardy Bush</SpecificName>
-    <History>environment/vegetation/bush_badlands.json</History>
+    <History>Nature and Environment\vegetation\Bush Badlands.json</History>
   </Identity>
   <VisualActor>
     <Actor>props/flora/bush_tempe_a.xml</Actor>

@@ -20,7 +20,7 @@
     <GenericName>Pig</GenericName>
     <SpecificName>Sus scrofa domesticus</SpecificName>
     <Icon>gaia/fauna_pig.png</Icon>
-    <History>environment/animals/fauna_pig.json</History>
+    <History>Nature and Environment\animals\Pig.json</History>
   </Identity>
   <Loot>
     <xp>15</xp>

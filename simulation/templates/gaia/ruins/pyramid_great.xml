@@ -7,7 +7,7 @@
   <Identity>
     <SpecificName>Great Pyramid</SpecificName>
     <Icon>gaia/geology_stone_1.png</Icon>
-    <History>environment/other/pyramid_great.json</History>
+    <History>Nature and Environment\other map items\Pyramid Great.json</History>
   </Identity>
   <Obstruction>
     <Static width="59.0" depth="59.0"/>

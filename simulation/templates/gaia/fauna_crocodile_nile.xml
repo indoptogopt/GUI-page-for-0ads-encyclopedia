@@ -24,7 +24,7 @@
     <SpecificName>Crocodylus niloticus</SpecificName>
     <Icon>gaia/fauna_crocodile.png</Icon>
     <!-- This history article starts with a quote from Herodotus-->
-    <History>environment/animals/fauna_crocodile_nile.json</History>
+    <History>Nature and Environment\animals\Nile Crocodile.json</History>
   </Identity>
   <Loot>
     <xp>20</xp>

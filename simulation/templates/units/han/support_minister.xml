@@ -47,7 +47,7 @@
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
-    <History>civilisations/han/civil/support_minister.json</History>
+    <History>0 A.D.'s Civilizations\Han\Han society\Imperial Minister.json</History>
   </Identity>
   <Loot>
     <xp>150</xp>

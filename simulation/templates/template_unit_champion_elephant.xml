@@ -18,7 +18,7 @@
   <Identity>
     <GenericName>War Elephant</GenericName>
     <VisibleClasses datatype="tokens">Elephant</VisibleClasses>
-    <History>general/other/template_unit_champion_elephant.json</History>
+    <History>The Ancient World\Ancient warfare\War Elephant.json</History>
   </Identity>
   <Loot>
     <xp>300</xp>

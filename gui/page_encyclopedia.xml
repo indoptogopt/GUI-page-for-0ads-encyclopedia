@@ -13,7 +13,9 @@
   
   <include>session/sprites.xml</include>
   
+  <include>encyclopedia/setup.xml</include>
   <include>encyclopedia/sprites.xml</include>
+  <include>encyclopedia/styles.xml</include>
 
   <include>encyclopedia/encyclopedia.xml</include>
 </page>

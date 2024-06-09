@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<setup>
+
+    <scrollbar name="BrownScrollBar"
+			width="15"
+			minimum_bar_size="15"
+			maximum_bar_size="15"
+			show_edge_buttons="false"
+			sprite_bar_vertical="BrownScrollSlider"
+			sprite_back_vertical="BrownScrollBack"
+	/>
+
+    <scrollbar name="BrownGoldenScrollBar"
+			width="15"
+			minimum_bar_size="15"
+			maximum_bar_size="15"
+			show_edge_buttons="false"
+			sprite_bar_vertical="GoldenScrollSlider"
+			sprite_back_vertical="BrownScrollBack"
+	/>
+
+	<icon name="hoplite"
+          sprite="stretched:encyclopedia/hoplite.png"
+          size="128 128" 
+    />
+  
+	<color name="blackbrown">29 15 5</color>
+    <color name="mattbrown">122 95 75</color>
+
+</setup>
