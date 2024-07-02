@@ -1,4 +1,10 @@
 {
-    "title":"Field Grain",
-    "content":"While rice is the grain commonly associated with China, in the north it was more often to grow wheat and millet for grain or hemp for cloth."
+    "title": "Field Grain",
+    "content": "While rice is the grain commonly associated with China, in the north it was more often to grow wheat and millet for grain or hemp for cloth.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "structures/han/field_grain",
+            "civ": "han"
+        }
+    }
 }

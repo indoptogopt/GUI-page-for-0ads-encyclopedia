@@ -1,4 +1,11 @@
 {
-    "title":"overview",
-    "content":"Macedonia was an ancient Greek kingdom, centered in the northeastern part of the Greek peninsula. Under the leadership of Alexander the Great, Macedonian forces and allies took over most of the world they knew, including Egypt, Persia and parts of the Indian subcontinent, allowing a diffusion of Hellenic and eastern cultures for years to come."
+    "title": "overview",
+    "content": "Macedonia was an ancient Greek kingdom, centered in the northeastern part of the Greek peninsula. Under the leadership of Alexander the Great, Macedonian forces and allies took over most of the world they knew, including Egypt, Persia and parts of the Indian subcontinent, allowing a diffusion of Hellenic and eastern cultures for years to come.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "special/players/mace",
+            "civ": "gaia"
+        },
+        "icon": "emblems/emblem_macedonians.png"
+    }
 }

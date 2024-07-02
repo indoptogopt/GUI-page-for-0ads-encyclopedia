@@ -1,4 +1,10 @@
 {
-    "title":"Cherry Blossom",
-    "content":"A cherry tree that is in full bloom. There are many cherries in the genus Prunus, however it is only the eastern cherries that put on such vibrant and beautiful colors when they are in bloom."
+    "title": "Cherry Blossom",
+    "content": "A cherry tree that is in full bloom. There are many cherries in the genus Prunus, however it is only the eastern cherries that put on such vibrant and beautiful colors when they are in bloom.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/cherry_blossom",
+            "civ": "gaia"
+        }
+    }
 }

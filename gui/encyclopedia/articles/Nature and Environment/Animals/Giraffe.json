@@ -1,4 +1,11 @@
 {
-    "title":"Giraffe",
-    "content":"Aside from their obvious height, the giraffes' coat is the animal's most distinctive feature. While distinctive, however, every giraffe’s coat is unique. Giraffes in modern day mostly range in Central Africa, but, in ancient times they lived further north."
+    "title": "Giraffe",
+    "content": "Aside from their obvious height, the giraffes' coat is the animal's most distinctive feature. While distinctive, however, every giraffe’s coat is unique. Giraffes in modern day mostly range in Central Africa, but, in ancient times they lived further north.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fauna_giraffe",
+            "civ": "gaia"
+        },
+        "icon": "gaia/fauna_giraffe.png"
+    }
 }

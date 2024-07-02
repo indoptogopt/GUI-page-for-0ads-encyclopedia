@@ -1,4 +1,10 @@
 {
-    "title":"Poplar",
-    "content":"Poplars(Genus Populus) are fast growing, deciduous trees of the family Salicacae. There are around 35 different kinds of the tree."
+    "title": "Poplar",
+    "content": "Poplars(Genus Populus) are fast growing, deciduous trees of the family Salicacae. There are around 35 different kinds of the tree.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/poplar",
+            "civ": "gaia"
+        }
+    }
 }

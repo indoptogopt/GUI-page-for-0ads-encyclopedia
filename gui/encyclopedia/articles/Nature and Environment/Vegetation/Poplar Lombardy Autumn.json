@@ -1,4 +1,10 @@
 {
-    "title":"Poplar Lombardy Autumn",
-    "content":"Poplars(Genus Populus) are fast growing, deciduous trees of the family Salicacae. There are around 35 different kinds of the tree.\n\nIt is autumn and this Poplar's leaves are fading yellow and soon will fall to the ground."
+    "title": "Poplar Lombardy Autumn",
+    "content": "Poplars(Genus Populus) are fast growing, deciduous trees of the family Salicacae. There are around 35 different kinds of the tree.\n\nIt is autumn and this Poplar's leaves are fading yellow and soon will fall to the ground.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/poplar_lombardy_autumn",
+            "civ": "gaia"
+        }
+    }
 }

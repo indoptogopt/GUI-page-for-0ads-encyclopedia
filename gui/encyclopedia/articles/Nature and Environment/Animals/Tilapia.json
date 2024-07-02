@@ -1,4 +1,11 @@
 {
-    "title":"Tilapia",
-    "content":"Tilapia is the common name for almost a hundred species of freshwater fish, which were fished everywhere, from the Nile to the Sea of Galilee."
+    "title": "Tilapia",
+    "content": "Tilapia is the common name for almost a hundred species of freshwater fish, which were fished everywhere, from the Nile to the Sea of Galilee.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fish/tilapia",
+            "civ": "gaia"
+        },
+        "icon": "gaia/fauna_fish.png"
+    }
 }

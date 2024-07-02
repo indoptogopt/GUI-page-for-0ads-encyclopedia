@@ -1,4 +1,10 @@
 {
-    "title":"Pine Black",
-    "content":"There are over 100 different kinds of pine (Species Pinna). They are usually tall, thin conifers usually with a sticky sap in with the wood."
+    "title": "Pine Black",
+    "content": "There are over 100 different kinds of pine (Species Pinna). They are usually tall, thin conifers usually with a sticky sap in with the wood.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/pine_black",
+            "civ": "gaia"
+        }
+    }
 }

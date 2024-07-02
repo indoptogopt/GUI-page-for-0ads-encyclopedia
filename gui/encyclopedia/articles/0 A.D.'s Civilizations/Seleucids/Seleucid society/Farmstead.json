@@ -1,4 +1,10 @@
 {
-    "title":"Farmstead",
-    "content":"The Seleucids stored excess grains in preperation for siege or famine."
+    "title": "Farmstead",
+    "content": "The Seleucids stored excess grains in preperation for siege or famine.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "structures/sele/farmstead",
+            "civ": "sele"
+        }
+    }
 }

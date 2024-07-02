@@ -1,4 +1,10 @@
 {
-    "title":"Stone",
-    "content":"A pile of stone roughly cut into blocks."
+    "title": "Stone",
+    "content": "A pile of stone roughly cut into blocks.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/stone",
+            "civ": "gaia"
+        }
+    }
 }

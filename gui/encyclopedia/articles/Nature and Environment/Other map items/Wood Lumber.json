@@ -1,4 +1,10 @@
 {
-    "title":"Wood Lumber",
-    "content":"A pile of roughly hewn lumber, ready to be used for building."
+    "title": "Wood Lumber",
+    "content": "A pile of roughly hewn lumber, ready to be used for building.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/wood_lumber",
+            "civ": "gaia"
+        }
+    }
 }

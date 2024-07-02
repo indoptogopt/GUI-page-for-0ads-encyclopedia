@@ -1,4 +1,10 @@
 {
-    "title":"Date",
-    "content":"The Date Palm is found all over the Southern and Eastern Mediterranean. Its fruit, the date, was an important food crop in ancient times as well as today."
+    "title": "Date",
+    "content": "The Date Palm is found all over the Southern and Eastern Mediterranean. Its fruit, the date, was an important food crop in ancient times as well as today.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fruit/date",
+            "civ": "gaia"
+        }
+    }
 }

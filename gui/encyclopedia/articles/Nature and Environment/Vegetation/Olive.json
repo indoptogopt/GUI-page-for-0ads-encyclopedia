@@ -1,4 +1,10 @@
 {
-    "title":"Olive",
-    "content":"The Common Olive (Olea europeia) has been cultivated for so long that it is unknown where they originated from. Greek Mythology has a story of Athene gifting it to Athens in a contest with Posiden to see who would be the cities namesake. Since ancient times they have been useful for their fruits and oil. Olive trees can grow up to 30 feet (9.144 meters) tall and have narrow, obovate leaves,"
+    "title": "Olive",
+    "content": "The Common Olive (Olea europeia) has been cultivated for so long that it is unknown where they originated from. Greek Mythology has a story of Athene gifting it to Athens in a contest with Posiden to see who would be the cities namesake. Since ancient times they have been useful for their fruits and oil. Olive trees can grow up to 30 feet (9.144 meters) tall and have narrow, obovate leaves,",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/olive",
+            "civ": "gaia"
+        }
+    }
 }

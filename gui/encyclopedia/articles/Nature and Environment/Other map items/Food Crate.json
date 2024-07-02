@@ -1,4 +1,11 @@
 {
-    "title":"Food Crate",
-    "content":"A crate of food, packed as if it was going to be taken on a boat for a long journey."
+    "title": "Food Crate",
+    "content": "A crate of food, packed as if it was going to be taken on a boat for a long journey.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/food_crate",
+            "civ": "gaia"
+        },
+        "icon": "gaia/special_treasure_food.png"
+    }
 }

@@ -1,4 +1,11 @@
 {
-    "title":"Storehouse",
-    "content":"While the size, and shape didn’t exactly match the structures in game, all ancient civilization stored resources and building materials in warehouses."
+    "title": "Storehouse",
+    "content": "While the size, and shape didn’t exactly match the structures in game, all ancient civilization stored resources and building materials in warehouses.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "template_structure_economic_storehouse",
+            "civ": "gaia"
+        },
+        "icon": "structures/storehouse.png"
+    }
 }

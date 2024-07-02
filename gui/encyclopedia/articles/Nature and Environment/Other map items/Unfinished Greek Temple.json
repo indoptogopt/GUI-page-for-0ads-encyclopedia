@@ -1,4 +1,10 @@
 {
-    "title":"Unfinished Greek Temple",
-    "content":"The Greeks were excellent masons, and when completed, their structures will last for ages. Unfortunately, this temple was abandoned before it was finished, and now it is little more than a pile of stone waiting to be repurposed."
+    "title": "Unfinished Greek Temple",
+    "content": "The Greeks were excellent masons, and when completed, their structures will last for ages. Unfortunately, this temple was abandoned before it was finished, and now it is little more than a pile of stone waiting to be repurposed.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/ruins/unfinished_greek_temple",
+            "civ": "gaia"
+        }
+    }
 }

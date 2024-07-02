@@ -1,4 +1,10 @@
 {
-    "title":"Medit Fan Palm",
-    "content":"The Mediterranean Fan Palm is common throughout low-lying areas around the Mediterranean Sea."
+    "title": "Medit Fan Palm",
+    "content": "The Mediterranean Fan Palm is common throughout low-lying areas around the Mediterranean Sea.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/medit_fan_palm",
+            "civ": "gaia"
+        }
+    }
 }

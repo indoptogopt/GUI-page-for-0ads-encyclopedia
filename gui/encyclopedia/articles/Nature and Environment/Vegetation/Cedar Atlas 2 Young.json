@@ -1,4 +1,10 @@
 {
-    "title":"Cedar Atlas 2 Young",
-    "content":"The Atlas Cedar is native to the atlas mountains. This evergreen grows along the snow line over 4,000 feet (1,219.2 meters) above sea level.\n\nThis cedar is still growing."
+    "title": "Cedar Atlas 2 Young",
+    "content": "The Atlas Cedar is native to the atlas mountains. This evergreen grows along the snow line over 4,000 feet (1,219.2 meters) above sea level.\n\nThis cedar is still growing.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/cedar_atlas_2_young",
+            "civ": "gaia"
+        }
+    }
 }

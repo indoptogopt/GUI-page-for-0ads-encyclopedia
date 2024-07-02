@@ -1,4 +1,11 @@
 {
-    "title":"Stone Resource",
-    "content":"The start of a tower. Unfortunately, whoever started was not able to finish the work, so you’ll have to put what remains to good use."
+    "title": "Stone Resource",
+    "content": "The start of a tower. Unfortunately, whoever started was not able to finish the work, so you’ll have to put what remains to good use.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/ruins/stone_structure_tower",
+            "civ": "gaia"
+        },
+        "icon": "gaia/geology_stone_1.png"
+    }
 }

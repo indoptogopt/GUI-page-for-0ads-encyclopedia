@@ -1,4 +1,11 @@
 {
-    "title":"Pig",
-    "content":"Domesticated pigs size, shape, and color vary. Most are significantly less hairy than their wild counterparts. Pigs were popular due to the fact that they could be fed almost anything, and they will grow fat on it."
+    "title": "Pig",
+    "content": "Domesticated pigs size, shape, and color vary. Most are significantly less hairy than their wild counterparts. Pigs were popular due to the fact that they could be fed almost anything, and they will grow fat on it.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fauna_pig",
+            "civ": "gaia"
+        },
+        "icon": "gaia/fauna_pig.png"
+    }
 }

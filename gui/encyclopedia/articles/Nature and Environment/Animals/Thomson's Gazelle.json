@@ -1,4 +1,11 @@
 {
-    "title":"Thomson's Gazelle",
-    "content":"Gazelles are Antelopes with long, thin legs and two-toed hoofs. They live in Northern Africa and Eastern Asia. Gazelles are easily recognizable with brown coats, white underbellies, and black and white markings on their faces. Both male and female Gazelles also have horns, except for the Persian Gazelle, where only the male has horns."
+    "title": "Thomson's Gazelle",
+    "content": "Gazelles are Antelopes with long, thin legs and two-toed hoofs. They live in Northern Africa and Eastern Asia. Gazelles are easily recognizable with brown coats, white underbellies, and black and white markings on their faces. Both male and female Gazelles also have horns, except for the Persian Gazelle, where only the male has horns.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fauna_gazelle",
+            "civ": "gaia"
+        },
+        "icon": "gaia/fauna_gazelle.png"
+    }
 }

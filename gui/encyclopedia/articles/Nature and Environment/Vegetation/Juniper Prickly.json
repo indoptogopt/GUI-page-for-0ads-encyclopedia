@@ -1,4 +1,10 @@
 {
-    "title":"Juniper Prickly",
-    "content":"The prickly juniper (Juniperus formosana) is a tree native to southern China. Like other junipers it is an evergreen. The prickly juniper grows up to 40 feet (12.19 meters) tall."
+    "title": "Juniper Prickly",
+    "content": "The prickly juniper (Juniperus formosana) is a tree native to southern China. Like other junipers it is an evergreen. The prickly juniper grows up to 40 feet (12.19 meters) tall.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/juniper_prickly",
+            "civ": "gaia"
+        }
+    }
 }

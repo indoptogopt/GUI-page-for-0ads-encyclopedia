@@ -1,4 +1,10 @@
 {
-    "title":"Cedar Atlas 4 Dead",
-    "content":"The Atlas Cedar is native to the atlas mountains. This evergreen grows along the snow line over 4,000 feet (1,219.2 meters) above sea level.\n\nUnfortunately, this cedar is dead."
+    "title": "Cedar Atlas 4 Dead",
+    "content": "The Atlas Cedar is native to the atlas mountains. This evergreen grows along the snow line over 4,000 feet (1,219.2 meters) above sea level.\n\nUnfortunately, this cedar is dead.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/cedar_atlas_4_dead",
+            "civ": "gaia"
+        }
+    }
 }

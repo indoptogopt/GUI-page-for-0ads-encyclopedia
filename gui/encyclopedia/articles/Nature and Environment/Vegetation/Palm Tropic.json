@@ -1,4 +1,10 @@
 {
-    "title":"Palm Tropic",
-    "content":"Tropical areas are home to many different kinds of palm trees. Most palms have a hard upright trunk and arching leaves. Many palms provide important products including food, timbers, waxes and oils."
+    "title": "Palm Tropic",
+    "content": "Tropical areas are home to many different kinds of palm trees. Most palms have a hard upright trunk and arching leaves. Many palms provide important products including food, timbers, waxes and oils.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/palm_tropic",
+            "civ": "gaia"
+        }
+    }
 }

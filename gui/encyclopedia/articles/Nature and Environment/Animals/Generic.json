@@ -1,4 +1,11 @@
 {
-    "title":"Generic",
-    "content":"Fishing has always been a good way to gather food. Not only are fish high in important nutrients, but they are abundant in most bodies of water."
+    "title": "Generic",
+    "content": "Fishing has always been a good way to gather food. Not only are fish high in important nutrients, but they are abundant in most bodies of water.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fish/generic",
+            "civ": "gaia"
+        },
+        "icon": "gaia/fauna_fish.png"
+    }
 }

@@ -1,4 +1,11 @@
 {
-    "title":"Metal Statue Isis",
-    "content":"A great metal statue of Isis, the Egyptian mother goddess. It’s nice if you like that sort of thing, but the material probably could be put to better use."
+    "title": "Metal Statue Isis",
+    "content": "A great metal statue of Isis, the Egyptian mother goddess. It’s nice if you like that sort of thing, but the material probably could be put to better use.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/ruins/metal_statue_isis",
+            "civ": "gaia"
+        },
+        "icon": "gaia/geology_metal.png"
+    }
 }

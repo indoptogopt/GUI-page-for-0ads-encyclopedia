@@ -1,4 +1,10 @@
 {
-    "title":"Towers",
-    "content":"Towers were an important part of city fortifications. The extra height allowed for better vision and and the defenses and roof allowed the defenders to fire arrows and other projectiles, in relative safety."
+    "title": "Towers",
+    "content": "Towers were an important part of city fortifications. The extra height allowed for better vision and and the defenses and roof allowed the defenders to fire arrows and other projectiles, in relative safety.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "mixins/encyclopedia/encyclopedia_towers",
+            "civ": "gaia"
+        }
+    }
 }

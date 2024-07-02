@@ -1,4 +1,10 @@
 {
-    "title":"Strangler",
-    "content":"Stranglers figs is the common name for several plant species that grow by climbing a host tree and then stealing its nutrients."
+    "title": "Strangler",
+    "content": "Stranglers figs is the common name for several plant species that grow by climbing a host tree and then stealing its nutrients.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/strangler",
+            "civ": "gaia"
+        }
+    }
 }

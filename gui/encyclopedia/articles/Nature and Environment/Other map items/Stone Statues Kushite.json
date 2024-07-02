@@ -1,4 +1,11 @@
 {
-    "title":"Stone Statues Kushite",
-    "content":"Various stone statues of Kushite of royalty and religion. Its materials could easily be reused in other constructions."
+    "title": "Stone Statues Kushite",
+    "content": "Various stone statues of Kushite of royalty and religion. Its materials could easily be reused in other constructions.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/ruins/stone_statues_kushite",
+            "civ": "gaia"
+        },
+        "icon": "gaia/geology_stone_1.png"
+    }
 }

@@ -1,4 +1,10 @@
 {
-    "title":"Poplar Lombardy Dead",
-    "content":"There are many questions with this tree. Is it winter? If so, is this tree really dead? Why is it here? And most importantly, why is it called a Black Poplar when it looks more like it’s variant, the Lombardy Poplar, which didn’t start growing until the early 1700s?"
+    "title": "Poplar Lombardy Dead",
+    "content": "There are many questions with this tree. Is it winter? If so, is this tree really dead? Why is it here? And most importantly, why is it called a Black Poplar when it looks more like it’s variant, the Lombardy Poplar, which didn’t start growing until the early 1700s?",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/poplar_lombardy_dead",
+            "civ": "gaia"
+        }
+    }
 }

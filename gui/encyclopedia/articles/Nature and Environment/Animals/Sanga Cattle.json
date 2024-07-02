@@ -1,4 +1,11 @@
 {
-    "title":"Sanga Cattle",
-    "content":"Sanga cattle are a subfamily of cattle that is native in Sub-Saharan Africa."
+    "title": "Sanga Cattle",
+    "content": "Sanga cattle are a subfamily of cattle that is native in Sub-Saharan Africa.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fauna_cattle_sanga",
+            "civ": "gaia"
+        },
+        "icon": "gaia/fauna_sanga.png"
+    }
 }

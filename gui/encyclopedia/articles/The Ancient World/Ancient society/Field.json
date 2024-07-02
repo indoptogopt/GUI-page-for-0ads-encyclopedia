@@ -1,4 +1,11 @@
 {
-    "title":"Field",
-    "content":"Grains such as wheat and barley were staples for any ancient society. They were cheap, easy-to-grow crops that were a staple in the diets of all but the richest individuals."
+    "title": "Field",
+    "content": "Grains such as wheat and barley were staples for any ancient society. They were cheap, easy-to-grow crops that were a staple in the diets of all but the richest individuals.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "template_structure_resource_field",
+            "civ": "gaia"
+        },
+        "icon": "structures/field.png"
+    }
 }

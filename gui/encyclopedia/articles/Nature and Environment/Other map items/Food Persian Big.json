@@ -1,4 +1,11 @@
 {
-    "title":"Food Persian Big",
-    "content":"A large display of food, straight from the finest bazars of Persia."
+    "title": "Food Persian Big",
+    "content": "A large display of food, straight from the finest bazars of Persia.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/food_persian_big",
+            "civ": "gaia"
+        },
+        "icon": "gaia/special_treasure_food.png"
+    }
 }

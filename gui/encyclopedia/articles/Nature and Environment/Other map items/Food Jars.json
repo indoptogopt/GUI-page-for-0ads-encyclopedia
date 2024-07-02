@@ -1,4 +1,11 @@
 {
-    "title":"Food Jars",
-    "content":"Food safely stored inside clay jars."
+    "title": "Food Jars",
+    "content": "Food safely stored inside clay jars.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/food_jars",
+            "civ": "gaia"
+        },
+        "icon": "gaia/special_treasure_food.png"
+    }
 }

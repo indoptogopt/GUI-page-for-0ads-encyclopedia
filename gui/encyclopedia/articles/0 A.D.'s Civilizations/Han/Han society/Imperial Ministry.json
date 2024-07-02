@@ -1,4 +1,11 @@
 {
-    "title":"Imperial Ministry",
-    "content":"The Han dynasty had a large bureaucratic force to help efficiently manage the empire’s vast resources. The bureaucrats were organized into nine courts, each put under the charge of an imperial minister who was responsible of a specific aspect of the government."
+    "title": "Imperial Ministry",
+    "content": "The Han dynasty had a large bureaucratic force to help efficiently manage the empire’s vast resources. The bureaucrats were organized into nine courts, each put under the charge of an imperial minister who was responsible of a specific aspect of the government.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "structures/han/ministry",
+            "civ": "han"
+        },
+        "icon": "structures/imperial_ministry.png"
+    }
 }

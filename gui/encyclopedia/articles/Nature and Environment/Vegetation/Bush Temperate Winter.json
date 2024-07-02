@@ -1,4 +1,10 @@
 {
-    "title":"Bush Temperate Winter",
-    "content":"A deciduous bush commonly found in temperate forests and fields. It is winter, and the bush's limbs are bare and covered with snow."
+    "title": "Bush Temperate Winter",
+    "content": "A deciduous bush commonly found in temperate forests and fields. It is winter, and the bush's limbs are bare and covered with snow.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/bush_temperate_winter",
+            "civ": "gaia"
+        }
+    }
 }

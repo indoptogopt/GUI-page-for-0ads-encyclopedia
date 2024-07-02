@@ -1,4 +1,10 @@
 {
-    "title":"Pine W",
-    "content":"There are over 100 different kinds of pine (Species Pinna). They are usually tall, thin conifers usually with a sticky sap in with the wood.\n\nThese pines are covered in crisp, white snow."
+    "title": "Pine W",
+    "content": "There are over 100 different kinds of pine (Species Pinna). They are usually tall, thin conifers usually with a sticky sap in with the wood.\n\nThese pines are covered in crisp, white snow.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/pine_w",
+            "civ": "gaia"
+        }
+    }
 }

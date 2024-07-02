@@ -1,4 +1,10 @@
 {
-    "title":"Stone Pile Granite",
-    "content":"A pile of granite roughly cut into blocks."
+    "title": "Stone Pile Granite",
+    "content": "A pile of granite roughly cut into blocks.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/stone_pile_granite",
+            "civ": "gaia"
+        }
+    }
 }

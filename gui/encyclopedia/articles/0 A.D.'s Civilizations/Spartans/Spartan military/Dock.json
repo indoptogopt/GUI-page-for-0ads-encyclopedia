@@ -1,4 +1,10 @@
 {
-    "title":"Dock",
-    "content":"While the city of Sparta was not on the coastline, the Spartan empire reached the south-eastern shore of the Peloponnese peninsula and there would certainly be ports along the sea. Plutarch says that the Spartans were engaged in sea trade, that is until the reforms of Lycurgus did away with it. History tells us that the Spartans had a navy. It was never as powerful, however, as Athens'."
+    "title": "Dock",
+    "content": "While the city of Sparta was not on the coastline, the Spartan empire reached the south-eastern shore of the Peloponnese peninsula and there would certainly be ports along the sea. Plutarch says that the Spartans were engaged in sea trade, that is until the reforms of Lycurgus did away with it. History tells us that the Spartans had a navy. It was never as powerful, however, as Athens'.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "structures/spart/dock",
+            "civ": "spart"
+        }
+    }
 }

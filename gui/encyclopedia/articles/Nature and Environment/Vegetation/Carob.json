@@ -1,4 +1,10 @@
 {
-    "title":"Carob",
-    "content":"The carob is a leafed evergreen common around the Aegean Sea. It is in the Fabaceae family. Its pods contain carob seeds which is a tasty chocolate substitute."
+    "title": "Carob",
+    "content": "The carob is a leafed evergreen common around the Aegean Sea. It is in the Fabaceae family. Its pods contain carob seeds which is a tasty chocolate substitute.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/carob",
+            "civ": "gaia"
+        }
+    }
 }

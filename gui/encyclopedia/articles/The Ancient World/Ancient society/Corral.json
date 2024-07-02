@@ -1,4 +1,11 @@
 {
-    "title":"Corral",
-    "content":"In ancient times meat was eaten much less frequently than today. It was far better to keep a sheep, for her milk, or a hen for her eggs. Most often the lower class would eat the meat from temple sacrifices. What wasn’t burnt on the altar was often cooked and shared between the priests and the people."
+    "title": "Corral",
+    "content": "In ancient times meat was eaten much less frequently than today. It was far better to keep a sheep, for her milk, or a hen for her eggs. Most often the lower class would eat the meat from temple sacrifices. What wasn’t burnt on the altar was often cooked and shared between the priests and the people.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "template_structure_resource_corral",
+            "civ": "gaia"
+        },
+        "icon": "structures/corral.png"
+    }
 }

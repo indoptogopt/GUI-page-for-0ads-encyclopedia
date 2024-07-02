@@ -1,4 +1,10 @@
 {
-    "title":"Bush Temperate",
-    "content":"A deciduous bush commonly found in temperate forests and fields."
+    "title": "Bush Temperate",
+    "content": "A deciduous bush commonly found in temperate forests and fields.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/bush_temperate",
+            "civ": "gaia"
+        }
+    }
 }

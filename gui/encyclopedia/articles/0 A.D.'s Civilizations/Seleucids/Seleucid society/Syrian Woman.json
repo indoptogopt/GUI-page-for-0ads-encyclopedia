@@ -1,4 +1,11 @@
 {
-    "title":"Syrian Woman",
-    "content":"Hellenistic women had significantly more freedom than their counterparts during the Greek classical period. As before, they were expected to mostly bear their husbands’ children and to keep house. However, during the Hellenistic period, there are cases of young girls attending school, and the rights of women expanded to allow ownership of property. We find mentions of women poets and philosophers, unfortunately, though very little of their original works are left."
+    "title": "Syrian Woman",
+    "content": "Hellenistic women had significantly more freedom than their counterparts during the Greek classical period. As before, they were expected to mostly bear their husbands’ children and to keep house. However, during the Hellenistic period, there are cases of young girls attending school, and the rights of women expanded to allow ownership of property. We find mentions of women poets and philosophers, unfortunately, though very little of their original works are left.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "units/sele/support_female_citizen",
+            "civ": "sele"
+        },
+        "icon": "units/sele/support_female.png"
+    }
 }

@@ -1,4 +1,10 @@
 {
-    "title":"Rice Paddy",
-    "content":"Rice was the staple grain in Ancient China. It was eaten by everyone from the peasants to the emperor himself. Rice required a lot of water to grow so the Chinese flooded the rice paddies."
+    "title": "Rice Paddy",
+    "content": "Rice was the staple grain in Ancient China. It was eaten by everyone from the peasants to the emperor himself. Rice required a lot of water to grow so the Chinese flooded the rice paddies.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "structures/han/field",
+            "civ": "han"
+        }
+    }
 }

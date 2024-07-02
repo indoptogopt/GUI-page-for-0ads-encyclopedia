@@ -1,4 +1,10 @@
 {
-    "title":"Metal",
-    "content":"It's a barrel filled with metal.\n\nThere. I ruined the secret."
+    "title": "Metal",
+    "content": "It's a barrel filled with metal.\n\nThere. I ruined the secret.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/metal",
+            "civ": "gaia"
+        }
+    }
 }

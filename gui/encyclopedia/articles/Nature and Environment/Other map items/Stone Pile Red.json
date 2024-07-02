@@ -1,4 +1,11 @@
 {
-    "title":"Stone Pile Red",
-    "content":"A pile of red sandstone roughly cut into blocks."
+    "title": "Stone Pile Red",
+    "content": "A pile of red sandstone roughly cut into blocks.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/stone_pile_red",
+            "civ": "gaia"
+        },
+        "icon": "gaia/geology_stone_2.png"
+    }
 }

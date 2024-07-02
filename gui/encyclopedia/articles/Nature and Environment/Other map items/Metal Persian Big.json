@@ -1,4 +1,10 @@
 {
-    "title":"Metal Persian Big",
-    "content":"Bolts of cloth, rugs and other high-quality textiles. Such crafts can be sold in the bazars of Persia, and across the ancient world."
+    "title": "Metal Persian Big",
+    "content": "Bolts of cloth, rugs and other high-quality textiles. Such crafts can be sold in the bazars of Persia, and across the ancient world.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/metal_persian_big",
+            "civ": "gaia"
+        }
+    }
 }

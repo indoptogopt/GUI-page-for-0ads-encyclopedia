@@ -1,4 +1,10 @@
 {
-    "title":"Fig",
-    "content":"Figs are found in the Mediterranean and were eaten by the Greeks and Romans. It is a sweet fruit that can be eaten raw, but it is usually dried into dates because the fruit does not keep well."
+    "title": "Fig",
+    "content": "Figs are found in the Mediterranean and were eaten by the Greeks and Romans. It is a sweet fruit that can be eaten raw, but it is usually dried into dates because the fruit does not keep well.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fruit/fig",
+            "civ": "gaia"
+        }
+    }
 }

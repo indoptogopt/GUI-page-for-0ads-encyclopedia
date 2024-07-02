@@ -1,4 +1,10 @@
 {
-    "title":"Farmstead",
-    "content":"A successful farm year in Egypt was dependent on the Nile River. Unfortunately, some years the river couldn't provide the necessary water, causing a drought. In plentiful years Egyptians stored excess produce in case the next year they did not have the same fortune."
+    "title": "Farmstead",
+    "content": "A successful farm year in Egypt was dependent on the Nile River. Unfortunately, some years the river couldn't provide the necessary water, causing a drought. In plentiful years Egyptians stored excess produce in case the next year they did not have the same fortune.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "structures/ptol/farmstead",
+            "civ": "ptol"
+        }
+    }
 }

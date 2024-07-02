@@ -1,4 +1,10 @@
 {
-    "title":"Bush Temperate Autumn",
-    "content":"A deciduous bush commonly found in temperate forests and fields. Slowly, some of the bush’s leaves are changing colors."
+    "title": "Bush Temperate Autumn",
+    "content": "A deciduous bush commonly found in temperate forests and fields. Slowly, some of the bush’s leaves are changing colors.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/bush_temperate_autumn",
+            "civ": "gaia"
+        }
+    }
 }

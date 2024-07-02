@@ -1,4 +1,10 @@
 {
-    "title":"Bush Mediterranean",
-    "content":"Various scrub growing around the Mediterranean."
+    "title": "Bush Mediterranean",
+    "content": "Various scrub growing around the Mediterranean.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/bush_mediterranean",
+            "civ": "gaia"
+        }
+    }
 }

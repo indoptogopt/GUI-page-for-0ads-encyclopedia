@@ -1,4 +1,11 @@
 {
-    "title":"Chicken",
-    "content":"Bred from the jungle fowl in Southeast Asia, the chicken (Gallus gallus domesticus) is a common and important farm animal. Farmers since ancient times been raised for both its eggs and, when the bird grew too old to lay, for meat. However, also Chickens were raised for cock fighting which was a very popular sport.\n\nIt is even written that Themistocles, while he was leading his troops against the Persians, stopped so that his soldiers could watch the fight. He then said: “Behold, these do not fight for their household gods, for the monuments of their ancestors, for glory, for liberty or the safety of their children, but only because one will not give way to the other.” And thus inspired the soldiers went on to defeat the Persians.\n\nChickens come in all sizes. They are foraging ground birds that can only fly for short distances."
+    "title": "Chicken",
+    "content": "Bred from the jungle fowl in Southeast Asia, the chicken (Gallus gallus domesticus) is a common and important farm animal. Farmers since ancient times been raised for both its eggs and, when the bird grew too old to lay, for meat. However, also Chickens were raised for cock fighting which was a very popular sport.\n\nIt is even written that Themistocles, while he was leading his troops against the Persians, stopped so that his soldiers could watch the fight. He then said: “Behold, these do not fight for their household gods, for the monuments of their ancestors, for glory, for liberty or the safety of their children, but only because one will not give way to the other.” And thus inspired the soldiers went on to defeat the Persians.\n\nChickens come in all sizes. They are foraging ground birds that can only fly for short distances.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fauna_chicken",
+            "civ": "gaia"
+        },
+        "icon": "gaia/fauna_chicken.png"
+    }
 }

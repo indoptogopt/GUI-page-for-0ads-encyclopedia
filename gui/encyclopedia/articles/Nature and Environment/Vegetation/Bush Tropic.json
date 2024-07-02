@@ -1,4 +1,10 @@
 {
-    "title":"Bush Tropic",
-    "content":"Various plants that grow in the tropics."
+    "title": "Bush Tropic",
+    "content": "Various plants that grow in the tropics.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/bush_tropic",
+            "civ": "gaia"
+        }
+    }
 }

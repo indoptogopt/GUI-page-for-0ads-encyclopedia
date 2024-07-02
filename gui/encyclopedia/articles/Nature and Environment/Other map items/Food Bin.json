@@ -1,4 +1,11 @@
 {
-    "title":"Food Bin",
-    "content":"A bin of food."
+    "title": "Food Bin",
+    "content": "A bin of food.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/food_bin",
+            "civ": "gaia"
+        },
+        "icon": "gaia/special_treasure_food.png"
+    }
 }

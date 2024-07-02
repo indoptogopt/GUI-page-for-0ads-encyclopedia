@@ -1,4 +1,10 @@
 {
-    "title":"Poplar Lombardy",
-    "content":"The Black Poplar (Poplus nigra) is a large, deciduous tree that grows across Europe and Asia. The standard Black Poplar grows up to 100 feet (30.48 meters) tall."
+    "title": "Poplar Lombardy",
+    "content": "The Black Poplar (Poplus nigra) is a large, deciduous tree that grows across Europe and Asia. The standard Black Poplar grows up to 100 feet (30.48 meters) tall.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/poplar_lombardy",
+            "civ": "gaia"
+        }
+    }
 }

@@ -1,4 +1,10 @@
 {
-    "title":"Shipwreck Ram Bow",
-    "content":"Sadly, sailing in the ancient world was a dangerous thing. Large storms could appear unexpectedly and wreck even the largest boat. It appears all the ship’s cargo has washed away. However, the ship’s wood is still sturdy and could be repurposed."
+    "title": "Shipwreck Ram Bow",
+    "content": "Sadly, sailing in the ancient world was a dangerous thing. Large storms could appear unexpectedly and wreck even the largest boat. It appears all the ship’s cargo has washed away. However, the ship’s wood is still sturdy and could be repurposed.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/shipwreck_ram_bow",
+            "civ": "gaia"
+        }
+    }
 }

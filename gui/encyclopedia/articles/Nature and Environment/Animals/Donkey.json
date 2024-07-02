@@ -1,4 +1,11 @@
 {
-    "title":"Donkey",
-    "content":"Wild donkeys, or asses, as they are often called, are the smallest species in the horse family. They can grow up to 5 feet (1.52 meters) tall, and have long ears, short legs, and a frame holding considerable power. While wild donkeys ranged anywhere from Africa to Asia, they were quickly domesticated and in ancient times used as a cheap but sturdy beast of burden."
+    "title": "Donkey",
+    "content": "Wild donkeys, or asses, as they are often called, are the smallest species in the horse family. They can grow up to 5 feet (1.52 meters) tall, and have long ears, short legs, and a frame holding considerable power. While wild donkeys ranged anywhere from Africa to Asia, they were quickly domesticated and in ancient times used as a cheap but sturdy beast of burden.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/fauna_donkey",
+            "civ": "gaia"
+        },
+        "icon": "gaia/fauna_donkey.png"
+    }
 }

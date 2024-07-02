@@ -1,4 +1,10 @@
 {
-    "title":"Temperate Autumn",
-    "content":"The once green leaves of these temperate, template trees have faded into a variety of orange and red hues. Soon the trees will shed their leaves in preparation for the coming winter.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI'm pretty sure one of them just moved."
+    "title": "Temperate Autumn",
+    "content": "The once green leaves of these temperate, template trees have faded into a variety of orange and red hues. Soon the trees will shed their leaves in preparation for the coming winter.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI'm pretty sure one of them just moved.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/temperate_autumn",
+            "civ": "gaia"
+        }
+    }
 }

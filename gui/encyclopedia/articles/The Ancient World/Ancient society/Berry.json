@@ -1,4 +1,10 @@
 {
-    "title":"Berry",
-    "content":"Since ancient times, wild berries have been a viable source of food. While caution had to be taken so poisonous fruit were not gathered, the berries, whether they be strawberries, raspberries, or blackberries, were one of the few sources of sweetness. Not limited to consumption while fresh, berries could be dried, or squashed and their juice fermented into wine."
+    "title": "Berry",
+    "content": "Since ancient times, wild berries have been a viable source of food. While caution had to be taken so poisonous fruit were not gathered, the berries, whether they be strawberries, raspberries, or blackberries, were one of the few sources of sweetness. Not limited to consumption while fresh, berries could be dried, or squashed and their juice fermented into wine.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "template_gaia_berry",
+            "civ": "gaia"
+        }
+    }
 }

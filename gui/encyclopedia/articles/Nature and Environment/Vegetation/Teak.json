@@ -1,4 +1,10 @@
 {
-    "title":"Teak",
-    "content":"The Teak (Tectona grandis) is a tropical hardwood in the family Lamiacae. It is native to South Asia and can grow up to 130 feet (39.62 meters) tall."
+    "title": "Teak",
+    "content": "The Teak (Tectona grandis) is a tropical hardwood in the family Lamiacae. It is native to South Asia and can grow up to 130 feet (39.62 meters) tall.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/teak",
+            "civ": "gaia"
+        }
+    }
 }

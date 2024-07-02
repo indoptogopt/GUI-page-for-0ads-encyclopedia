@@ -1,4 +1,10 @@
 {
-    "title":"Fishing Boat",
-    "content":"Fishing, like hunting, was a very convenient way of gathering food. All that was needed was a body of water and a way to get the fish out. Usually that was done by either spear, net, or some combination of string and hook (much like the modern fishing pole). The usage of the tool varied on the culture and the scale which the people fished."
+    "title": "Fishing Boat",
+    "content": "Fishing, like hunting, was a very convenient way of gathering food. All that was needed was a body of water and a way to get the fish out. Usually that was done by either spear, net, or some combination of string and hook (much like the modern fishing pole). The usage of the tool varied on the culture and the scale which the people fished.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "template_unit_ship_fishing",
+            "civ": "gaia"
+        }
+    }
 }

@@ -1,4 +1,10 @@
 {
-    "title":"Euro Birch",
-    "content":"The European Birch or Silver Birch is a hearty tree, able to survive the harsh weather in Scandinavia as the warm Mediterranean cost. It grows up to 100 feet (30.48 meters), and its bark is white to silver and has serrated, triangular leaves."
+    "title": "Euro Birch",
+    "content": "The European Birch or Silver Birch is a hearty tree, able to survive the harsh weather in Scandinavia as the warm Mediterranean cost. It grows up to 100 feet (30.48 meters), and its bark is white to silver and has serrated, triangular leaves.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/euro_birch",
+            "civ": "gaia"
+        }
+    }
 }

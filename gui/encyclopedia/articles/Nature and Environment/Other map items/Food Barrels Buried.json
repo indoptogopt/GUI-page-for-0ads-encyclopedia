@@ -1,4 +1,11 @@
 {
-    "title":"Food Barrels Buried",
-    "content":"A long forgotten cache of food. They were buried for safekeeping. However, over time, the soil has eroded, exposing them. Seeing that the original owners are long gone, it is probably best that you put the resources to good use before your opponents do."
+    "title": "Food Barrels Buried",
+    "content": "A long forgotten cache of food. They were buried for safekeeping. However, over time, the soil has eroded, exposing them. Seeing that the original owners are long gone, it is probably best that you put the resources to good use before your opponents do.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/food_barrels_buried",
+            "civ": "gaia"
+        },
+        "icon": "gaia/special_treasure_food.png"
+    }
 }

@@ -1,4 +1,10 @@
 {
-    "title":"Stone Pile Granite Large",
-    "content":"A large pile of stone roughly cut into blocks."
+    "title": "Stone Pile Granite Large",
+    "content": "A large pile of stone roughly cut into blocks.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/treasure/stone_pile_granite_large",
+            "civ": "gaia"
+        }
+    }
 }

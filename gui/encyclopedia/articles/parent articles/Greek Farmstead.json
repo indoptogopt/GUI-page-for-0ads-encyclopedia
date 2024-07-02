@@ -1,4 +1,10 @@
 {
-    "title":"Greek Farmstead",
-    "content":"Grain wasn't plentiful in Greece, which is why it was carefully stored in granaries so that there would be some for times of famine or siege."
+    "title": "Greek Farmstead",
+    "content": "Grain wasn't plentiful in Greece, which is why it was carefully stored in granaries so that there would be some for times of famine or siege.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "mixins/encyclopedia/encyclopedia_greek_farmstead",
+            "civ": "gaia"
+        }
+    }
 }
