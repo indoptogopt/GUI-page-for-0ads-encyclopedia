@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object  name="selectionPanel">
-	<object name="selectionFrame" type="image" sprite="SmallOrnateFrame"/>
+	<object name="selectionFrame" type="image" sprite="MediumOrnateFrame"/>
     <object name="selectionTitle" type="text" ghost="true" font="sans-bold-24" textcolor="blackbrown" size="50%-150 10% 50%+150 10%+50" text_align="center"/>
 	<object name="selectionTitleSeperator" type="image" sprite="BrownSeparator" size="20% 18% 80% 18%+2"/>
 	<object name="selectionWarning" type="text" ghost="true" font="sans-italic-20" textcolor="blackbrown" size="100 25%+30 100%-100 25%+80" text_align="center">
@@ -16,7 +16,7 @@
 		textcolor_selected="mattbrown"
 		scrollbar="true"
 		scrollbar_style="BrownScrollBar"
-		sprite_selectarea="LightBrownBorder"
+		sprite_selectarea="WideBrownBorderOver"
 		text_align="center"
 		sound_selected="audio/interface/ui/ui_button_click.ogg">
 		<!-- <object name="selectionFading" type="image" sprite="stretched:encyclopedia/shading-bottom.png" size="0 80% 100%-15 100%"/> -->

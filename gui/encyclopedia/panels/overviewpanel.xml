@@ -3,14 +3,16 @@
 	<object size="16 16 100%-16 100%-16">
     	<include file="gui/reference/common/Dropdowns/CivSelectDropdown.xml"/>
 	</object>
-	<object name="overviewFrame" type="image" sprite="SmallOrnateFrame"/>
-	<object name="overviewTitle" type="text" font="sans-bold-24" textcolor="blackbrown" size="50%-200 10% 50%+200 10%+50" text_align="center"/>
+	<object name="overviewFrame" type="image" sprite="MediumOrnateFrame"/>
+	<object name="overviewTitle" type="text" font="sans-bold-24" textcolor="blackbrown" size="50%-200 10% 50%+200 10%+30" text_valign="center" text_align="center"/>
 	<object name="overviewTitleSeperator" type="image" sprite="BrownSeparator" size="20% 18% 80% 18%+2"/>
-	<object name="overviewText" scroll_top="true" font="sans-20" textcolor="blackbrown" type="text" ghost="true" size="50 25% 100%-30 100%-70">
-		<object name="disclaimer" type="text" font="sans-italic-18" textcolor="blackbrown" text_align="center" text_valign="bottom"/>
+	<object name="overviewText" scroll_top="true" font="sans-20" textcolor="blackbrown" type="text" scrollbar="true" scrollbar_style="BrownScrollBar" size="50 25% 100%-30 25%+220" />
+	<object name="civilizationsTextAddition" type="text" font="sans-20" size="50 70% 100%-30 70%+100">
+		<translatableAttribute id="caption">The question is…\n[font="sans-bold-22"]Who will you choose to lead to victory?[/font]</translatableAttribute>
 	</object>
-	<object name="civEmblem" type="image" size="50%-50 -55 50%+50 45">
-		<object name="civEmblemFrame" type="image" sprite="stretched:encyclopedia/small-frame/circle.png" size="-10 -10 100%+10 100%+10" ghost="true"/>
+	<object name="disclaimer" type="text" font="sans-italic-18" textcolor="blackbrown" text_align="center" text_valign="bottom" size="50 25% 100%-30 93%" ghost="true"/>
+	<object name="civEmblem" type="image" size="50%-35 -25 50%+35 45">
+		<object name="civEmblemFrame" type="image" sprite="stretched:encyclopedia/frames/medium/circle.png" size="-10 -10 100%+10 100%+10" ghost="true"/>
 		<object name="civEmblemTexture" type="image"/>
 		<object name="civEmblemOver" type="button" sprite="color:transparent" sprite_over="stretched:session/portraits/emblems/states/hover.png" sprite_pressed="stretched:session/portraits/emblems/states/hover.png"/>
 	</object>
@@ -18,7 +20,7 @@
 	<object name="supriseMeButton" type="button" style="BrownButton">
 		<translatableAttribute id="caption">Suprise me!</translatableAttribute>
 	</object>
-	<object name="overviewButtons" size="60 0 100%-60 100%">
+	<object name="overviewButtons" size="60 79% 100%-60 100%">
 	    <repeat count="4">
 		    <object name="overviewButton[n]" type="button" style="BrownButton"/>
 		</repeat>

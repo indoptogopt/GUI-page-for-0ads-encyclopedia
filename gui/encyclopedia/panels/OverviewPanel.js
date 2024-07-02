@@ -1,35 +1,45 @@
 const overviewButtonHeight = 35;
-const overviewButtonDist = 30;
+const overviewButtonDist = 25;
 
-class OverviewPanel {
-	constructor(page) {
+const categoriesHidingLearnMore = ["About this Encyclopedia", "0 A.D.'s Civilizations"];
 
+class OverviewPanel 
+{
+	constructor(page) 
+	{
         this.page = page;
-		
+
         this.gui = Engine.GetGUIObjectByName("overviewPanel");
         this.title = Engine.GetGUIObjectByName("overviewTitle");
         this.text = Engine.GetGUIObjectByName("overviewText");
         this.civEmblem = Engine.GetGUIObjectByName("civEmblem");
         this.learnMore = Engine.GetGUIObjectByName("learnMore");
+		this.textAddition = Engine.GetGUIObjectByName("civilizationsTextAddition");
 		this.disclaimer = Engine.GetGUIObjectByName("disclaimer");
-		this.disclaimer.caption = Engine.ReadFile("gui/encyclopedia/articles/About this Encyclopedia/disclaimer.txt");
+		this.disclaimer.caption = Engine.TranslateLines(Engine.ReadFile("gui/encyclopedia/articles/About this Encyclopedia/disclaimer.txt"));
 		this.supriseMeButton = Engine.GetGUIObjectByName("supriseMeButton");
 		this.buttons = Engine.GetGUIObjectByName("overviewButtons").children;
-
+		
+		const panelSize = this.gui.getComputedSize();
+		const panelWidth = panelSize.right - panelSize.left;
+		const panelHeight = panelSize.bottom - panelSize.top;
+		const civEmblemRadius = panelHeight * 0.12 - 34;
+		this.civEmblem.size = new GUISize(- civEmblemRadius, 50 - civEmblemRadius * 2, civEmblemRadius, 50, 50, 0, 50, 0);
+		// on smaller screen sizes we can only fit two buttons in the available horizontal space (otherwise they will be to narrow for their captions)
+		const buttonsPerLine = panelWidth > 720 ? 3 : 2;
 		// overviewButtons are horiontal, only three fit into a line (therefore the modulo)
 		// their width is determined by screen resolution
 		this.buttons.forEach((button, i) => {
-			this.buttons = Engine.GetGUIObjectByName("overviewButtons").children;
 			button.size = new GUISize(
-				overviewButtonDist / 2, Math.floor(i / 3) * (overviewButtonHeight + overviewButtonDist / 2),
-                -(overviewButtonDist / 2), Math.floor(i / 3) * (overviewButtonHeight + overviewButtonDist / 2) + overviewButtonHeight,
-				(i % 3) * (100 / 3), 79, ((i % 3) + 1) * (100 / 3), 79
+				overviewButtonDist / 2, Math.floor(i / buttonsPerLine) * (overviewButtonHeight + overviewButtonDist / 2),
+                -(overviewButtonDist / 2), Math.floor(i / buttonsPerLine) * (overviewButtonHeight + overviewButtonDist / 2) + overviewButtonHeight,
+				(i % buttonsPerLine) * (100 / buttonsPerLine), 0, ((i % buttonsPerLine) + 1) * (100 / buttonsPerLine), 0
 			);
 		})
 
 		
 		this.supriseMeButton.font = "sans-bold-22";
-		this.supriseMeButton.size = new GUISize(-overviewButtonDist, 0, overviewButtonDist, 2 * overviewButtonHeight, (100 / 3), 55, (100 / 3) * 2, 55);
+		this.supriseMeButton.size = new GUISize(-overviewButtonDist, 230, overviewButtonDist, 300, (100 / 3), 25, (100 / 3) * 2, 25);
 		this.supriseMeButton.onPress = () => {
 			this.page.randomArticle();
 		}
@@ -41,12 +51,12 @@ class OverviewPanel {
 				this.open("0 A.D.'s Civilizations", this.page.civData[civ].Name);
 			}).bind(this));
 		this.civDropdown.civSelection.style = "BrownDropDown";
-
-		// the heading is not necessary in this context
 		this.civDropdown.civSelectionHeading.textcolor = "transparent";
+		// this.civDropdown.civSelectionHeading.caption = "Choose a civilization:";
     }
 
-    setupButtons(items, category, civ){
+    setupButtons(items, category, civ)
+	{
 		if (!items) {
 			return;
 		}
@@ -74,13 +84,15 @@ class OverviewPanel {
     }
 
 
-    open(category, civ, dontUpdateBrowsingHistory) {
+    open(category, civ, dontUpdateNavigationHistory) 
+	{
         this.page.lastCategory = category;
 		this.page.switchPanel("overview");
 		this.disclaimer.hidden = this.supriseMeButton.hidden = category != "About this Encyclopedia";
+		this.textAddition.hidden = (category != "0 A.D.'s Civilizations" || !!civ);
 
-		if (!dontUpdateBrowsingHistory) {
-		    this.page.updateBrowsingHistory({"panel":"overview", "category":category, "civ": civ && category == "0 A.D.'s Civilizations"? civ : ""});
+		if (!dontUpdateNavigationHistory) {
+		    this.page.updateNavigationHistory({"panel":"overview", "category":category, "civ": civ && category == "0 A.D.'s Civilizations"? civ : ""});
 		}
 
 		this.civDropdown.hidden = category != "0 A.D.'s Civilizations";
@@ -88,8 +100,9 @@ class OverviewPanel {
 			this.openCiv(civ);
 			return;
 		}
+		// this.civDropdown.civSelectionHeading.textcolor = "blackbrown";
 
-		this.learnMore.hidden = category == "0 A.D.'s Civilizations" || category == "About this Encyclopedia";
+		this.learnMore.hidden = categoriesHidingLearnMore.includes(category);
         this.civEmblem.hidden = true;
 
 		const json = Engine.ReadJSONFile("gui/encyclopedia/articles/" + category + "/overview.json");
@@ -103,9 +116,12 @@ class OverviewPanel {
 		this.page.pathPanel.update("overview");
 	}
 
-    openCiv(civ) {
+    openCiv(civ) 
+	{
         this.page.lastCiv = civ;
 		this.learnMore.hidden = this.civEmblem.hidden = false;
+		
+		// this.civDropdown.civSelectionHeading.textcolor = "transparent";
 		
 		this.page.relatedArticlesPanel.open("gui/encyclopedia/articles/0 A.D.'s Civilizations/" + civ + "/overview.json");
 

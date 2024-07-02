@@ -1,13 +1,15 @@
-const wordSpacing = 5;
+const wordSpacing = 0;
 const textBuffer = 10;
 const fadingExtrusion = 20;
 
-class PathPanel {
-    constructor(page) {
-
+class PathPanel 
+{
+    constructor(page) 
+    {
         this.page = page;
 
         this.gui = Engine.GetGUIObjectByName("path");
+        this.guiWidth = 0;
         this.fadingTop = Engine.GetGUIObjectByName("pathFadingTop");
         this.fadingBottom = Engine.GetGUIObjectByName("pathFadingBottom");
         this.upButton = Engine.GetGUIObjectByName("upButton");
@@ -24,7 +26,8 @@ class PathPanel {
         this.upButton.onPress = () => {this.page.toParentDirectory()};
     }
 
-    update(panel) {
+    update(panel) 
+    {
         this.page.lastPanel = panel;
 
         // if pressing the upButton would do nothing, it should also give no visual response when the player is hovering over it (i.e. setting the sprite_over to sprite)
@@ -60,16 +63,16 @@ class PathPanel {
         // aligning the buttons
         let offset = this.upButton.size.right + wordSpacing;
         const left = offset;
-        for (let i = 0; i < this.elements.length; i++) {
-            if (this.elements[i].hidden) 
+        for (let element of this.elements) {
+            if (element.hidden) 
             {
                 continue;
             }
-            const width = Engine.GetTextWidth(this.elements[i].font, this.elements[i].caption);
-            this.elements[i].size = new GUISize(offset, 0, offset + width + textBuffer, 0, 0, 0, 0, 100);
+            const width = Engine.GetTextWidth(element.font, element.caption);
+            element.size = new GUISize(offset, 0, offset + width + textBuffer, 0, 0, 0, 0, 100);
             offset += width + wordSpacing + textBuffer;
         }
-        const right = offset;
+        const right = this.guiWidth = offset;
         this.fadingTop.size = new GUISize(left - fadingExtrusion, 0, right + fadingExtrusion * 3, 1);
         this.fadingBottom.size = new GUISize(left - fadingExtrusion, -1, right + fadingExtrusion * 3, 0, 0, 100, 0, 100);
     }

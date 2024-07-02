@@ -1,10 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<object  name="articlePanel">
-    <object name="articleFrame" type="image" sprite="LargeOrnateFrame"/>
-    <object name="articleTitle" type="text" ghost="true" font="sans-bold-24" textcolor="blackbrown" size="50%-200 10% 50%+200 10%+30" text_align="center"/>
-    <object name="articleOrnament" type="image" sprite="TextOrnament" size="100 10%+60 100%-100 85%"/>
-    <object name="articleText" scroll_top="true" scrollbar="true" scrollbar_style="BrownGoldenScrollBar" type="text" font="sans-18" textcolor="blackbrown" text_align="left" size="70 10%+90 100%-50 80%"/>
-    <!-- <object name="articleImageFrame" type="image" sprite="SmallOrnateFrame" size="50%+100 30 50%+180 110">
-        <object name="articleImage" type="image" size="5 5 100%-5 100%-5"/>
-    </object> -->
+<object name="articlePanel">
+    <object name="articleOuterFrame" type="image" sprite="WideOrnateFrame"/>
+
+    <!-- the outerFrame uses the WideOrnateFrame sprite whose horizontal and vertical textures have different widths (22px vs 23px).
+        What follows is the space inside the outerFrame -->
+    <object name="articlePanelContent" size="23 22 100%-23 100%-22">
+
+        <!-- heading without an image -->
+        <object name="articleHeadingCenter">
+            <object name="articleExpandedTitleCenter" size="90 28 100%-90 115">
+                    <object name="articleTitleCenter" type="text" font="sans-bold-24" textcolor="blackbrown" size="0 0 100% 30" text_valign="center" text_align="center"/>
+                    <object name="articleTitleSeparatorCenter" type="image" sprite="BrownSeparator"/>
+                    <object name="articleSubtitleCenter" type="text" font="sans-20" textcolor="blackbrown" text_valign="center" size="0 40 100% 100%" text_align="center"/>
+            </object>
+            <object name="articleSoleTitleCenter" type="text" font="sans-bold-26" textcolor="blackbrown" text_valign="center" text_align="center" size="90 45 100%-90 90"/>
+        </object>
+
+        <!-- heading with an image -->
+        <object name="articleHeadingLeft">
+            <object name="articleTitleContainerLeft">
+                <object name="articleExpandedTitleLeft" size="12%-20 38% 100% 60%+35">
+                    <object name="articleTitleLeft" type="text" font="sans-bold-24" textcolor="blackbrown" text_align="left"/>
+                    <object name="articleTitleSeparatorLeft" type="image" sprite="BrownFadingRight"/>
+                    <object name="articleSubtitleLeft" type="text" font="sans-20" textcolor="blackbrown" text_valign="center" text_align="left" size="0 44% 100% 100%"/>
+                </object>
+                <object name="articleSoleTitleLeft" type="text" font="sans-bold-26" textcolor="blackbrown" text_valign="center" text_align="center" size="0 42% 100% 42%+30"/>
+                <object name="nextArticleButtonLeft" type="button" sprite="BrownArrowCurvedRight" sprite_over="LightBrownArrowCurvedRight" size="100%-88 10 100%-30 68"/>
+                <object name="templateViewerButtonArea" size="0 0 100% 100%+10">
+                    <object name="templateViewerButtonContainer">
+                        <object name="templateViewerButton" type="button" style="SubtleBrownButton" text_align="right" size="0 0 100%+125 100%">
+                            <translatableAttribute id="caption">View in-game stats</translatableAttribute>
+                        </object>
+                        <object name="templateIcon" type="image" size="8% 8% 92% 92%"/>
+                    </object>
+                </object>
+            </object>
+            <object name="articleImageArea">
+                <object name="articleImageFrame" type="image" sprite="NarrowOrnateFrame"/>
+                <object name="articleImageContainer">
+                    <object name="articleImage" type="image" ghost="true"/>
+                </object>
+            </object>
+        </object>
+
+        <object name="articleContent">
+            <object name="articleText" scroll_top="true" scrollbar="true" scrollbar_style="BrownGoldenScrollBar" type="text" font="sans-18" textcolor="blackbrown" text_align="left"/>
+            <object name="articleOrnament" type="image" sprite="TextOrnament" size="60 0 100%-60 100%" ghost="true"/>
+        </object>
+        <object name="previousArticleButton" type="button" sprite="BrownArrowCurvedLeft" sprite_over="LightBrownArrowCurvedLeft" size="30 10 88 68"/>
+        <object name="nextArticleButtonRight" type="button" sprite="BrownArrowCurvedRight" sprite_over="LightBrownArrowCurvedRight" size="100%-88 10 100%-30 68"/>
+    </object>
 </object>

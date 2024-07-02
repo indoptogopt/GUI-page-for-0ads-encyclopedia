@@ -1,5 +1,5 @@
-const contributeMessage = Engine.TranslateLines(Engine.ReadFile("gui/encyclopedia/contributeMessage.txt"));
-class EncyclopediaPage {
+class EncyclopediaPage 
+{
 	constructor() 
 	{
 		// this.last… store various data about the last state of the page
@@ -12,23 +12,37 @@ class EncyclopediaPage {
 
 		this.civData = loadCivData(true, false);
 
+		this.gui = Engine.GetGUIObjectByName("encyclopedia");
+		const panelSize = this.gui.getComputedSize();
+		// this.gui covers the entire screen (therfore panelSize.top = 0)
+		const panelHeight = panelSize.bottom;
+		const letteringHeight = panelHeight * 0.088;
+		const letteringVerticalOffset = panelHeight * 0.024;
+		this.lettering = Engine.GetGUIObjectByName("lettering");
+		// the lettering image file has an aspect ration of 8:1
+		// its size is relative to the screen height to prevent it from taking up too much space on lower screen resolutions
+		// we have to set its size in here to avoid distortion between different screen aspect ratios 
+		this.lettering.size = new GUISize(-(letteringHeight * 4), letteringVerticalOffset, letteringHeight * 4, letteringVerticalOffset + letteringHeight, 50, 0, 50, 0);
+
+		this.relatedArticlesPanel = new RelatedArticlesPanel(this);
 		this.navigationPanel = new NavigationPanel(this);
 		this.overviewPanel = new OverviewPanel(this);
 		this.selectionPanel = new SelectionPanel(this);
-		this.pathPanel = new PathPanel(this);
 		this.articlePanel = new ArticlePanel(this);
-		this.relatedArticlesPanel = new RelatedArticlesPanel(this); 
+		this.pathPanel = new PathPanel(this);
 
-		// the browsing history is saved as a list of objects, each storing a unique state of the page in its properties
+		// the navigation history is saved as a list of objects, each storing a unique state of the page in its properties
 		// an index is used to point out the object (i.e. the state) the page is currently on
-		this.BrowsingHistory = [];
-        this.BrowsingHistoryPointer = -1;
-
+		this.navigationHistory = [];
+        this.navigationHistoryPointer = -1;
+		
 		this.backButton = Engine.GetGUIObjectByName("backButton");
         this.backButton.onPress = () => {this.back()}
 		this.forwardButton = Engine.GetGUIObjectByName("forwardButton");
         this.forwardButton.onPress = () => {this.forward();}
+
 		this.contributeButton = Engine.GetGUIObjectByName("contributeButton");
+		const contributeMessage = Engine.TranslateLines(Engine.ReadFile("gui/encyclopedia/contributeMessage.txt"));
 		this.contributeButton.onPress = () => 
 			{
 				messageBox(
@@ -39,12 +53,12 @@ class EncyclopediaPage {
 					[null, () => {openURL("https://wildfiregames.com/forum/topic/107400-0-ads-built-in-encyclopedia/")}]	
 				);
 			}
-
+			
 	}
 
 	// the overviewPanel, the selectionPanel, and the articlePanel lie above each other
 	// this method is responsible for showing or hiding them
-		switchPanel(panel) 
+	switchPanel(panel) 
 	{
 		this.panel = panel;
 		this.overviewPanel.gui.hidden = panel != "overview";
@@ -56,27 +70,25 @@ class EncyclopediaPage {
 	}
 
 	// this method is called from virtually every click on the page
-	updateBrowsingHistory (data) 
+	updateNavigationHistory (data) 
 	{
-		const lastEntry = this.BrowsingHistory[this.BrowsingHistoryPointer];
+		const lastEntry = this.navigationHistory[this.navigationHistoryPointer];
 
 	    //check if it's the same as the last entry
 		const isSame = !lastEntry ? false : Object.keys(data).every(key => data[key] === lastEntry[key]) && data.length == lastEntry.length;
 
 		//check if the pointer is at the end
-		const atTheEnd = !lastEntry ? false : this.BrowsingHistoryPointer == this.BrowsingHistory.length -1;
+		const atTheEnd = !lastEntry ? false : this.navigationHistoryPointer == this.navigationHistory.length -1;
 
 		if (!isSame) {
 			if (!atTheEnd) {
-				this.BrowsingHistory = this.BrowsingHistory.slice(0, this.BrowsingHistoryPointer + 1)
+				this.navigationHistory = this.navigationHistory.slice(0, this.navigationHistoryPointer + 1)
 			}
-			this.BrowsingHistory.push(data);
-			this.BrowsingHistoryPointer += 1;
+			this.navigationHistory.push(data);
+			this.navigationHistoryPointer += 1;
 			this.forwardButton.hidden = true;
-			this.backButton.hidden = this.BrowsingHistory.length == 1;
+			this.backButton.hidden = this.navigationHistory.length == 1;
 		}
-
-
 	}
 
 	// this method is called by the upButton of the PathPanel
@@ -105,12 +117,12 @@ class EncyclopediaPage {
 
 	back() 
 	{
-
 		this.forwardButton.hidden = false;
-		this.BrowsingHistoryPointer -= 1;
+		this.navigationHistoryPointer -= 1;
 
-		const entry = this.BrowsingHistory[this.BrowsingHistoryPointer];
+		const entry = this.navigationHistory[this.navigationHistoryPointer];
 
+		this.navigationPanel.selectCategoryButton(entry.category);
 		switch(entry.panel) {
 			case "overview": 
 				this.overviewPanel.open(entry.category, entry.civ, true); 
@@ -133,16 +145,17 @@ class EncyclopediaPage {
 				break;
 		}
 
-		//if there's no more Element in the BrowsingHistory to go to, deactivate the backButton
-		this.backButton.hidden = this.BrowsingHistoryPointer == 0;
+		//if there's no more Element in the NavigationHistory to go to, deactivate the backButton
+		this.backButton.hidden = this.navigationHistoryPointer == 0;
 	}
 
 	forward() 
 	{
 		this.backButton.hidden = false;
-		this.BrowsingHistoryPointer += 1;
+		this.navigationHistoryPointer += 1;
 
-		const entry = this.BrowsingHistory[this.BrowsingHistoryPointer];
+		const entry = this.navigationHistory[this.navigationHistoryPointer];
+		this.navigationPanel.selectCategoryButton(entry.category);
 
 		switch(entry.panel) {
 			case "overview": 
@@ -166,8 +179,8 @@ class EncyclopediaPage {
 				break;
 		}
 
-		//if there's no more Element in the BrowsingHistory to go to, deactivate the forwardButton
-		this.forwardButton.hidden = this.BrowsingHistoryPointer == this.BrowsingHistory.length-1;
+		//if there's no more Element in the NavigationHistory to go to, deactivate the forwardButton
+		this.forwardButton.hidden = this.navigationHistoryPointer == this.navigationHistory.length-1;
 	}
 
 
@@ -208,14 +221,13 @@ class EncyclopediaPage {
 		const relativePath = path.startsWith("gui/encyclopedia/articles/") ? path.substring(26) : path;
         
 		const fullPath = "gui/encyclopedia/articles/" + relativePath;
+		const pathToFile = fullPath.slice(0, fullPath.lastIndexOf("/"));
 		
 		if (!Engine.FileExists(fullPath)) {
 			error("couldn't find article at " + fullPath)
 			return;
 		}
 
-		
-		
 		const containsCiv = Object.keys(this.civData).map(civ => this.civData[civ].Name).some(civ => relativePath.includes(`/${civ}/`));
 		
 		// figuring out what panel and file to open
@@ -229,15 +241,31 @@ class EncyclopediaPage {
 			this.overviewPanel.open(splitPath[0], containsCiv ? splitPath[1] : ""); break;
 			
 			case "article": 
-				if (containsCiv) {
-					this.lastCiv = splitPath[1];
-					this.lastSubcategory = splitPath[2];
-				} else {
-					this.lastSubcategory = splitPath[1];
-				}
+			if (containsCiv) {
+				this.lastCiv = splitPath[1];
+				this.lastSubcategory = splitPath[2];
+			} else {
+				this.lastSubcategory = splitPath[1];
+			}
+				// Note that the second parameter (dontRenderList) of setupList() is set to true in order to load the list in without displaying the selection
+				this.selectionPanel.setupList(pathToFile, true);
 				this.articlePanel.open(fullPath);
-
-			default: break; 
+				break;
 		}
 	}
+	calculateDistanceByFactor(parentObj, horizOrVert, subtrahend, factor, summand, minimum, maximum)
+    {
+        const parentSize = parentObj.getComputedSize();
+		let totalDist = 
+			horizOrVert == "vertical" ?
+				parentSize.bottom - parentSize.top:
+				parentSize.right - parentSize.left;
+
+        // the factor is only multiplied with the space that scales along with the screen resolution (total space minus fix-sized elements, i.e. the free space between all borders, frames, and margins)
+        const scalableDist = totalDist - subtrahend;
+        const value = scalableDist * factor + (summand || 0);
+        const clampedValue = Math.max(Math.min(value, maximum), minimum);
+        return clampedValue;
+    }
+
 }

@@ -289,17 +289,17 @@ var g_MainMenuItems = [
 		}
 	},
 	{
-		"caption": translate("Credits"),
-		"tooltip": translate("Show the 0 A.D. credits."),
-		"onPress": () => {
-			Engine.PushGuiPage("page_credits.xml");
-		}
-	},
-	{
 		"caption": translate("Encyclopedia"),
 		"tooltip": translate("Learn about the historical background behind 0 A.D and its civilizations."),
 		"onPress": () => {
 			Engine.SwitchGuiPage("page_encyclopedia.xml");
+		}
+	},
+	{
+		"caption": translate("Credits"),
+		"tooltip": translate("Show the 0 A.D. credits."),
+		"onPress": () => {
+			Engine.PushGuiPage("page_credits.xml");
 		}
 	},
 	{

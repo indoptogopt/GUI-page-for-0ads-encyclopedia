@@ -10,11 +10,22 @@
     />
 
     <style name="BrownButton"
-        sprite="BrownBorder" 
-        sprite_over="LightBrownBorder" 
+        sprite="WideBrownBorder" 
+        sprite_over="WideBrownBorderOver" 
         text_align="center" 
         text_valign="center" 
         font="sans-bold-18" 
+        textcolor="blackbrown" 
+        textcolor_over="mattbrown"
+		sound_pressed="audio/interface/ui/ui_button_click.ogg"
+    />
+
+	<style name="SubtleBrownButton"
+        sprite="ThinBrownBorder" 
+        sprite_over="ThinBrownBorderOver" 
+        text_align="center" 
+        text_valign="center" 
+        font="sans-italic-16" 
         textcolor="blackbrown" 
         textcolor_over="mattbrown"
 		sound_pressed="audio/interface/ui/ui_button_click.ogg"

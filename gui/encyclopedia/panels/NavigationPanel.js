@@ -36,28 +36,37 @@ const navigationButtons =
 
 const categoryButtonHeight = 35;
 const categoryButtonDist = 5;
-const categoryButtonPadding = categoryButtonDist * 4;
+const categoryPanelAbsoluteMargin = - 60;
+const categoryPanelRelativeMargin =  100 / 3;
 
 const navigationButtonHeight = 30;
 const navigationButtonDist = 5;
 const navigationButtonPadding = 17;
 
 
-class NavigationPanel {
-	constructor(page) {
+class NavigationPanel 
+{
+	constructor(page) 
+	{
         this.page = page;
 
+		this.gui = Engine.GetGUIObjectByName("navigationPanel");
         this.categoryButtons = Engine.GetGUIObjectByName("categoryButtons").children;
 		this.navigationButtons = Engine.GetGUIObjectByName("navigationButtons").children;
 		this.heading = Engine.GetGUIObjectByName("categoryButtonHeading");
-		this.buttonPanel = Engine.GetGUIObjectByName("categorySelection");
+		this.categoryPanel = Engine.GetGUIObjectByName("categoryPanel");
 		this.mainMenuButton = Engine.GetGUIObjectByName("mainMenuButton");
 		this.aboutButton = Engine.GetGUIObjectByName("aboutButton");
 
-        this.setupCategoryButtons(Object.keys(g_EncyclopediaStructure).filter(category => ["About"]));
+		// margin desribes the space surrounding the panel on the outside, padding on the inside
+		// the panel is placed to the left edge of the screen (this.gui.getComputedSize().left = 0) therefore 'right' determines the width
+		this.categoryPanelMargin = this.gui.getComputedSize().right * 0.3 - 52;
+		this.categoryPanelPadding = this.categoryPanelMargin / 2;
+
+        this.setupCategoryButtons(Object.keys(g_EncyclopediaStructure));
 		this.setupNavigationButtons(navigationButtons);
     }
-
+	
     setupCategoryButtons(items)
 	{
 		if (!items.length)
@@ -65,7 +74,8 @@ class NavigationPanel {
 		
 		// the heading is placed above the buttons and outside of the buttonPanel 
 		this.heading.size = new GUISize(0, -(categoryButtonHeight + categoryButtonDist), 0, -categoryButtonDist, 0, 0, 100, 0);
-		this.buttonPanel.size = new GUISize(40, 0, -40, items.length * categoryButtonHeight + (items.length - 1) * categoryButtonDist + 2 * categoryButtonPadding, 0, 25, 100, 25);
+		this.categoryPanel.size = new GUISize(this.categoryPanelMargin, 0, -this.categoryPanelMargin,
+			items.length * categoryButtonHeight + (items.length - 1) * categoryButtonDist + 2 * this.categoryPanelPadding, 0, 25, 100, 25);
 
 		this.categoryButtons.forEach((button, i) => {
 			const item = items[i];
@@ -74,8 +84,8 @@ class NavigationPanel {
 				return;
 			button.caption = item;
             button.size = new GUISize(
-				categoryButtonPadding, i * (categoryButtonHeight + categoryButtonDist) + categoryButtonPadding,
-                -categoryButtonPadding, i * (categoryButtonHeight + categoryButtonDist) + categoryButtonHeight + categoryButtonPadding,
+				this.categoryPanelPadding, i * (categoryButtonHeight + categoryButtonDist) + this.categoryPanelPadding,
+                -this.categoryPanelPadding, i * (categoryButtonHeight + categoryButtonDist) + categoryButtonHeight + this.categoryPanelPadding,
 				0, 0, 100, 0);
 			button.onPress = () => {
 				if (item == "0 A.D.'s Civilizations")

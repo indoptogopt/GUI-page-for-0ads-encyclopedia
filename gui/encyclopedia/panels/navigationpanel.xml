@@ -3,7 +3,7 @@
     <object name="rightShading" type="image" size ="100%-20 0 100%+100 100%" sprite="stretched:global/modern/item-shading-right.png"/>
     <object name="navigationPanelBackground" type="image" sprite="DarkTilesPanelLeft"/>
     <object name="logo" size="50%-110 30 50%+110 130" type="image" sprite="0ADLogo"/>
-    <object name="categorySelection" type="image" style="TranslucentPanelThinBorder">
+    <object name="categoryPanel" type="image" style="TranslucentPanelThinBorder">
         <object name="categoryButtonHeading" type="text" style="ModernLabelText">
             <translatableAttribute id="caption">Choose a category:</translatableAttribute>
         </object>

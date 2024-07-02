@@ -5,36 +5,41 @@
 	<script directory="gui/encyclopedia/panels/"/>
 	<script directory="gui/reference/common/Dropdowns/"/>
 
-	<object name="background" type="image" sprite="BeigeBackground"/>
-	<object name="title" type="image" sprite="stretched:encyclopedia/lettering.png" size="50%-256 0 50%+256 128"/>
+	<object name="encyclopedia">
+		<object name="background" type="image" sprite="BeigeBackground"/>
 
-	<object name="centerSection" size="20%+40 20% 80% 90%">
-		<include file="gui/encyclopedia/panels/articlepanel.xml"/>
-		<include file="gui/encyclopedia/panels/selectionpanel.xml"/>
-		<include file="gui/encyclopedia/panels/overviewpanel.xml"/>
-	</object>
+		<!-- the lettering is placed outside the centralSection so it can be horizontally centered on the entire screen -->
+		<object name="lettering" type="image" sprite="stretched:encyclopedia/lettering.png"/>
 
-	<object name="backButton" type="button" size="25%+50 93% 45% 97%" style="WhiteButton">
-		<translatableAttribute id="caption">Back</translatableAttribute>
-	</object>
-	<object name="forwardButton" type="button" size="45%+50 93% 65% 97%" style="WhiteButton">
-		<translatableAttribute id="caption">Forward</translatableAttribute>
-	</object>
+		<object name="centralSection" size="12%+115 0 80%+33 100%">
+			<object size="40 11%+60 100%-20 100%-70">
+				<include file="gui/encyclopedia/panels/articlepanel.xml"/>
+				<include file="gui/encyclopedia/panels/selectionpanel.xml"/>
+				<include file="gui/encyclopedia/panels/overviewpanel.xml"/>
+			</object>
+			<object name="backButton" type="button" size="15% 100%-55 35%+90 100%-20" style="WhiteButton">
+				<translatableAttribute id="caption">Back</translatableAttribute>
+			</object>
+			<object name="forwardButton" type="button" size="35%+120 100%-55 55%+210 100%-20" style="WhiteButton">
+				<translatableAttribute id="caption">Forward</translatableAttribute>
+			</object>
+		</object>
 
-	<object name="contributeButton" type="button" size="95%-170 93%-5 95% 97%+5" style="ModernButtonRed">
-		<translatableAttribute id="caption">How to contribute</translatableAttribute>
-	</object>
+		<object name="rightSection" size="80%+33 0 100% 100%">
+			<object size="7%-2 170 93%+2 100%-100">
+				<include file="gui/encyclopedia/panels/relatedarticlespanel.xml"/>
+			</object>
+			<object name="contributeButton" type="button" size="28%-33 100%-75 72%+33 100%-25" style="ModernButtonRed">
+				<translatableAttribute id="caption">How to contribute</translatableAttribute>
+			</object>
+		</object>
 
-	<object name="rightSection" size="80%+40 20%+16 100%-30 90%-16">
-		<include file="gui/encyclopedia/panels/relatedarticlespanel.xml"/>
-	</object>
-
-	<object name="leftSection" size="0 0 20% 100%">
-	    <include file="gui/encyclopedia/panels/navigationpanel.xml"/>
-	</object>
+		<object name="leftSection" size="0 0 12%+115 100%">
+	    	<include file="gui/encyclopedia/panels/navigationpanel.xml"/>
+		</object>
 	
-	<object name="upperSection" size="20%+40 20%-45 80% 20%-15">
-	    <include file="gui/encyclopedia/panels/pathpanel.xml"/>
+		<object name="upperSection" size="20%+40 11%+10 80% 11%+40">
+	   	 	<include file="gui/encyclopedia/panels/pathpanel.xml"/>
+		</object>
 	</object>
-
 </objects>

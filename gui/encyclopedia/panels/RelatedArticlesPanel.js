@@ -1,10 +1,11 @@
 
 const relatedArticlesButtonHeight = 30;
-const relatedArticlesButtonDist = 5;
+const relatedArticlesButtonDist = 10;
 
-
-class RelatedArticlesPanel {
-    constructor(page) {
+class RelatedArticlesPanel 
+{
+    constructor(page) 
+    {
 
         this.page = page;
 
@@ -14,13 +15,14 @@ class RelatedArticlesPanel {
         this.buttons = Engine.GetGUIObjectByName("relatedArticlesButtons").children;
         this.buttons.forEach((button, i) => {
             button.size = new GUISize(
-				8, i * (relatedArticlesButtonHeight + relatedArticlesButtonDist) + relatedArticlesButtonDist / 2,
-                -8, i * (relatedArticlesButtonHeight + relatedArticlesButtonDist) + relatedArticlesButtonDist / 2 + relatedArticlesButtonHeight,
+				8, i * (relatedArticlesButtonHeight + relatedArticlesButtonDist) + relatedArticlesButtonDist,
+                -8, (i + 1) * (relatedArticlesButtonHeight + relatedArticlesButtonDist),
 				0, 12, 100, 12);
         })
     }
 
-    setupButtons(items) {
+    setupButtons(items) 
+    {
         this.buttons.forEach((button, i) => {
             const item = items[i];
 			button.hidden = !item;
@@ -28,7 +30,7 @@ class RelatedArticlesPanel {
 				return;
 			button.caption = item.title;
 			button.onPress = () => {
-            	this.page.articlePanel.open("gui/encyclopedia/articles/" + item.path);
+            	this.page.articlePanel.open(item.path);
             };
 		});
 
@@ -37,26 +39,27 @@ class RelatedArticlesPanel {
 	    }
     }
 
-    open(file) {
+    open(file) 
+    {
 
         const list = Engine.ReadJSONFile(file).relatedArticles;
-        this.warning.hidden = !!list;
+        this.warning.hidden = list != null;
         if (!this.warning.hidden) {
             this.buttons.forEach(button => button.hidden = true);
             return;
         }
 
         // getting the articles' titles
-        const data = list.map(path => {
-            if (!Engine.FileExists("gui/encyclopedia/articles/" + path)) {
-                warn("invalid relatedArticle in " + file);
+        const data = list.map(fileName => {
+            const path = "gui/encyclopedia/articles/" + fileName + ".json";
+            if (!Engine.FileExists(path)) {
+                warn("invalid relatedArticle in " + file + ": " + path);
                 return;
             }
-            const json = Engine.ReadJSONFile("gui/encyclopedia/articles/" + path);
-            const title = json.title || Engine.ReadJSONFile("gui/encyclopedia/articles/parent articles/" + json.parent).title;
+            const json = Engine.ReadJSONFile(path);
+            const title = json.title || Engine.ReadJSONFile("gui/encyclopedia/articles/parent articles/" + json.parent + ".json").title;
             return {"path":path, "title": title};
         })
         this.setupButtons(data);
     }
-
 }
