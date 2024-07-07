@@ -61,7 +61,7 @@ class OverviewPanel
 			return;
 		}
 		if (category == "0 A.D.'s Civilizations" && !civ) {
-			this.page.overviewPanel.civDropdown.selectNothing();
+			this.page.overviewPanel.civDropdown.civSelection.selected = -1;
 
 			// if no civilization is selected, all overviewButtons have to be disabled
 			items = [];
