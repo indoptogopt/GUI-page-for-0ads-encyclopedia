@@ -23,7 +23,6 @@ class ViewerPage extends ReferencePage
 
 	selectTemplate(data)
 	{
-		// warn ("template name: " + data.templateName + "\nciv: " + data.civ);
 		if (!data || !data.templateName)
 		{
 			error("Viewer: No template provided");
