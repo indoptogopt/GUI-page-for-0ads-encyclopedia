@@ -48,7 +48,8 @@ class OverviewPanel
     	this.civDropdown = new CivSelectDropdown(this.page.civData);
 		this.civDropdown.registerHandler(((civ) => 
 			{
-				this.open("0 A.D.'s Civilizations", this.page.civData[civ].Name);
+				if (civ)
+					this.open("0 A.D.'s Civilizations", this.page.civData[civ].Name);
 			}).bind(this));
 		this.civDropdown.civSelection.style = "BrownDropDown";
 		this.civDropdown.civSelectionHeading.textcolor = "transparent";
