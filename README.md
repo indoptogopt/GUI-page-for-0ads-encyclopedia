@@ -1,22 +1,25 @@
-  
 
-# GUI page for 0ad's coming encyclopedia by Vantha/indoptogopt
+## Customising the articles:
 
-## Customizing the articles:
-The articles are stored in JSON files inside a directory structure (equal to the categorization structure on the GUI page). The categories' introductory overview texts are saved in the overview.json in the respective directory and are treated the same as all other articles. 
- 
- 
+The articles are stored in JSON files inside a directory structure (equal to the categorization structure on the GUI page). The categories' introductory overview texts are saved in the overview.json in the respective directory and are treated the same as all other articles.
+
+Some notes ahead: _Firstly, most of the following "modifications" already applied to the article "Athenian Hoplites" (`0 A.D.'s civilizations/Athenians/Athenian military/Athenian Hoplites.json`). It serves as a good reference on how things need to be done._ _Secondly, I highly recommend to actually open articles on the page after "customising" them to verify everything is displayed as intended. There are just so many different interconnected parameters, visualising it in the head can be hard. And double-checking has never hurt anyone._
+
 **Editing the JSON files**
- - the **`content`** property (obviously) contains the text contents  
- - the **`title`** property (obviously) contains the title shown above the text.  
- - the **`relatedArticles`** property specifies the articles linked to in the right page section. It has to be written as a list (enclosed in square brackets and seperated by commas) of strings storing the path to the target articles' json from the `articles/` folder onwards. (meaning it has to start with "About/", "Nature and Environment/", "The Ancients World/", "0 A.D.'s civilizations/", or "Wars and Battles/")  
- - the **`parent`** property can specify a json file, from which all missing properties are inherited - essentially like template parents or mixins. The value has to be a string containing the target file's name (not the path to the file; only files inside `gui/encyclopedia/articles/parents/` can be set as parents)  
- - ~~the `image` property points to an image (via its path) that will get displayed to the left of the article's title~~ — code for this feature is currently commented out because I couldn't find a good place on he page to put the image)  
-  
+
+-   the **`content`** property (obviously) contains the text contents
+-   the **`title`** property (obviously) contains the title shown above the text. (As a guide point for its length: Heading images with the widest possible aspect ratio (3:1) leave space for a title of about 22 characters in length on the smallest supported screens)
+-   the **`subtitle`** property can set a string of text that is displayed in a smaller font below the title. It can span over two lines which allows for relatively long subtitles (As a guide point for its length: Heading images with the widest possible aspect ratio (3:1) leave space for a subtitles of about 60 characters in length)
+-   the **`relatedArticles`** property specifies the articles linked to in the right page section. It has to be written as a list (enclosed in square brackets and seperated by commas) of strings storing the path to the target articles' json from the articles/ folder onwards. (meaning it has to start with "About/", "Nature and Environment/", "The Ancients World/", "0 A.D.'s civilizations/", or "Wars and Battles/")
+-   the **`parent`** property can specify a json file, from which all missing properties are inherited - essentially like template parents or mixins. The value has to be a string containing the target file's name (not the path to the file; only files inside `gui/encyclopedia/articles/parents/` can be set as parents)
+-   the **`image`** property can store image data used to render an image to the right of the title. It has to be written as an object (in curved brackets) with two properties: the `fileName` property points to the image (png) file (inside `art/textures/ui/encyclopedia/images`). IMPORTANT: The engine can only read image files with width and height of powers of two, which drastically limits the number of aspect ratios. To circumvent this, images (of any aspect ratio) can be extended (by adding transparent pixels) outwards to achieve a width and height of the next larger power of two. The `cropped` property then stores the original image's resolution and the `full` property stores the final resolution after extending it. `full` is used to to calculate the actual size of the image object while `cropped` is used to align it (to the top right) and determine around what area (of opaque pixels) the border is placed and scaled to.
+-   the **`xmlTemplate`** property stores the data used for the template viewer button. It has to be defined as an object (in curved brackets) with two properties: `icon` determines which portrait icon to show on the button. `data` contains the data with which the template viewer is opened, it's comprised of:`templateName` containing the path to the XML file from the base folder simulation/templates (without the .xml file extension) and `civ` containing one of the civ codes (athen, brit, cart,...). The code for no civ is gaia. If no template is specified the button is simply disabled. One thing to note: The article setup script automatically assigned templates to the articles. If it didn't find an icon to use, it left it out. Articles without `icon` in their `xmlTemplate` will not (!) be rendered with a template viewer button.
+
 **Formatting**  
 Tags can be added into the plain text to change how it is rendered like explained on the wiki [here](https://trac.wildfiregames.com/wiki/GUI_-_Text_Renderer).  
 In the case of JSON files the quotation marks need to be escaped with a backslash.  
 Considering the default text size of articles is 18 pixels, a text passage can be set to bold with `font=\"sans-bold-18\"` and to italic with `font=\"sans-italic-18\"`. Also, beware that the overview texts are of size 20 (not 18).  
 The best way to embed images into the text is by using the icon tag in between two line breaks: `text above the image\n [icon=\"____\"]\ntext below the image` (this places in between two lines of texts and works regardless of the image's size). Using 'displace' is a good way to move the image more towards the center. Beware that too high values can lead to the icon being cut off on smaller screen resolutions.  
 Also, the icon has to be defined in `gui/encyclopedia/setup.js` like shown [here](https://trac.wildfiregames.com/wiki/GUI_-_Text_Renderer). The `size` of the icon should never be higher than the resolution of the image file. (By the way, the engine requires images to be PNGs and their height and width in pixels to be a power of two).
+
 
