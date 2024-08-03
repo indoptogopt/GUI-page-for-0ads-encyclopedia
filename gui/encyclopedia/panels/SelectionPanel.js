@@ -44,8 +44,13 @@ class SelectionPanel
 	open(category, civ, subcategory, dontUpdateNavigationHistory) 
 	{
 		this.page.switchPanel("selection");
+		const targetPath = "gui/encyclopedia/articles/" + category + "/" + (civ? civ + "/" : "") + subcategory;
+		const json = 
+			Engine.FileExists(targetPath + "/basic-info.json") ?
+				Engine.ReadJSONFile(targetPath + "/basic-info.json") :
+				{};
 		this.title.caption = this.page.lastSubcategory = subcategory;
-		this.setupList("gui/encyclopedia/articles/" + category + "/" + (civ? civ + "/" : "") + subcategory);
+		this.setupList(targetPath);
 		if (!dontUpdateNavigationHistory) {
 			this.page.updateNavigationHistory({"panel":"selection", "category":category, "civ":civ, "subcategory":subcategory});
 		}

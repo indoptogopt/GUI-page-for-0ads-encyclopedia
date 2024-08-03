@@ -9,6 +9,6 @@ function init (data)
 	if (data && data.article) {
 		g_Encyclopedia.openArticle(data.article);
 	} else {
-		g_Encyclopedia.openArticle("About this Encyclopedia/overview.json");
+		g_Encyclopedia.overviewPanel.open("about");
 	}
 }

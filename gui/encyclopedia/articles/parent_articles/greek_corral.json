@@ -1,0 +1,10 @@
+{
+    "title": "Greek Corral",
+    "content": "The mountains of Greece aren’t the best land for raising large animals, such as cows. However, the grassy mountains were the perfect grazing grounds for goats and sheep. Chickens were also raised around houses, and their eggs gathered.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "mixins/encyclopedia/encyclopedia_greek_corral",
+            "civ": "gaia"
+        }
+    }
+}

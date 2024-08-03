@@ -1,0 +1,11 @@
+{
+    "title": "Ship Fishing",
+    "content": "Athenians were famed for their catching of small fish, such as anchovy or sardines, off the Attic coast. So much so that Archestratos of Gela, a famous poet and cook, stated that all small fry were worthless except for the Athenian kind. To catch such small fish, the Athenians would most probably employ tightly woven fish nets.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "units/athen/ship_fishing",
+            "civ": "athen"
+        },
+        "icon": "units/hele/ship_fishing.png"
+    }
+}

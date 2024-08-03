@@ -1,107 +1,125 @@
 var g_EncyclopediaStructure = 
 {
-    "About this Encyclopedia": {},
+    "about":{},
     
-    "Nature and Environment": {
-        "Animals": {},
-        "Vegetation": {},
-        "Other map items": {}
+    "nature":
+    {
+        "animals":{},
+        "vegetation":{},
+        "other":{}
     },
 
-    "The Ancient World": {
-        "Ancient warfare": {},
-        "Ancient society": {},
+    "ancient_world":
+    {
+        "warfare":{},
+        "society":{},
     },
 
-    "0 A.D.'s Civilizations": {
-        "Athenians": {
-            "Athenian military": {},
-            "Athenian society": {},
-            "Athenian heroes": {}
+    "civilizations":
+    {
+        "athen":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Britons": {
-            "Briton military": {},
-            "Briton society": {},
-            "Briton heroes":{}
+        "brit":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Carthaginians": {
-            "Carthaginian military": {},
-            "Carthaginian society": {},
-            "Carthaginian heroes": {}
+        "carth":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Gauls": {
-            "Gaul military": {},
-            "Gaul society": {},
-            "Gaul heroes": {}
+        "gaul":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Han": {
-            "Han military": {},
-            "Han society": {},
-            "Han heroes": {}
+        "han":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Iberians": {
-            "Iberian military": {},
-            "Iberian society": {},
-            "Iberian heroes": {}
+        "iber":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Kushites": {
-            "Kushite military": {},
-            "Kushite society": {},
-            "Kushite heroes": {}
+        "kush":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Macedonians": {
-            "Macedonian military": {},
-            "Macedonian society": {},
-            "Macedonian heroes": {}
+        "mace":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Mauryas": {
-            "Mauryan military": {},
-            "Mauryan society": {},
-            "Mauryan heroes": {}
+        "maur":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Persians": {
-            "Persian military": {},
-            "Persian society": {},
-            "Persian heroes": {}
+        "pers":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Ptolemies": {
-            "Ptolemaic military": {},
-            "Ptolemaic society": {},
-            "Ptolemaic heroes": {}
+        "ptol":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Romans": {
-            "Roman military": {},
-            "Roman society": {},
-            "Roman heroes": {}
+        "rome":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Seleucids": {
-            "Seleucid military": {},
-            "Seleucid society": {},
-            "Seleucid heroes": {}
+        "sele":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         },
 
-        "Spartans": {
-            "Spartan military": {},
-            "Spartan society": {},
-            "Spartan heroes": {}
+        "spart":
+        {
+            "military":{},
+            "society":{},
+            "heroes":{}
         }
 
     },
-    "Wars and Battles": {
-        "Ancient China": {},
-        "Ancient Greece": {},
-        "The Hellenistic age": {}
+    "wars_and_battles":
+    {
+        "ancient_china":{},
+        "ancient_greece":{},
+        "hellenistic_age":{}
     }
 };

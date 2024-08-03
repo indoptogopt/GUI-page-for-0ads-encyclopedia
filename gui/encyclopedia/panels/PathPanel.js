@@ -31,29 +31,29 @@ class PathPanel
         this.page.lastPanel = panel;
 
         // if pressing the upButton would do nothing, it should also give no visual response when the player is hovering over it (i.e. setting the sprite_over to sprite)
-        this.upButton.sprite_over = panel != "overview" || (this.page.lastCategory == "0 A.D.'s Civilizations" && this.page.lastCiv)? "LightBrownArrowUp" :  "BrownArrowUp";
-        this.separator1.hidden = (panel == "overview" && this.page.lastCategory != "0 A.D.'s Civilizations") || (this.page.lastCategory == "0 A.D.'s Civilizations" && !this.page.lastCiv);
+        this.upButton.sprite_over = panel != "overview" || (this.page.lastCategory == "civilizations" && this.page.lastCiv)? "LightBrownArrowUp" :  "BrownArrowUp";
+        this.separator1.hidden = (panel == "overview" && this.page.lastCategory != "civilizations") || (this.page.lastCategory == "civilizations" && !this.page.lastCiv);
         this.categoryButton.caption = this.page.lastCategory;
         this.categoryButton.onPress = () => {
-            if (this.page.lastCategory == "0 A.D.'s Civilizations") {
+            if (this.page.lastCategory == "civilizations") {
                 this.page.lastCiv = "";
             }
             this.page.overviewPanel.open(this.page.lastCategory);
             
         }
 
-        this.separator2.hidden = panel == "overview" || this.page.lastCategory != "0 A.D.'s Civilizations" || !this.page.lastCiv;
+        this.separator2.hidden = panel == "overview" || this.page.lastCategory != "civilizations" || !this.page.lastCiv;
 
-        this.civButton.hidden = this.page.lastCategory != "0 A.D.'s Civilizations" || !this.page.lastCiv;
+        this.civButton.hidden = this.page.lastCategory != "civilizations" || !this.page.lastCiv;
         this.civButton.caption = this.page.lastCiv || "";
         this.civButton.onPress = () => {
-            this.page.overviewPanel.open("0 A.D.'s Civilizations", this.page.lastCiv);
+            this.page.overviewPanel.open("civilizations", this.page.lastCiv);
         }
 
         this.subcategoryButton.hidden = panel == "overview";
         this.subcategoryButton.caption = this.page.lastSubcategory || "";
         this.subcategoryButton.onPress = () => {
-            this.page.selectionPanel.open(this.page.lastCategory, this.page.lastCategory == "0 A.D.'s Civilizations" ? this.page.lastCiv : "", this.page.lastSubcategory);
+            this.page.selectionPanel.open(this.page.lastCategory, this.page.lastCategory == "civilizations" ? this.page.lastCiv : "", this.page.lastSubcategory);
         }
 
         this.separator3.hidden = panel != "article";

@@ -1,0 +1,10 @@
+{
+    "title": "Greek Field",
+    "content": "Most of Greece is mountainous and not well suited for farming. Some think only twenty percent of Greece was usable for farming. Less of this was fields because Greece also cultivated grape vineyards and olive orchards. What was fields were mostly sown with barley, although wheat was planted as well.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "mixins/encyclopedia/encyclopedia_greek_field",
+            "civ": "gaia"
+        }
+    }
+}

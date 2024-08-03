@@ -1,0 +1,10 @@
+{
+    "title": "Bush Badlands",
+    "content": "A bush commonly found in dry flatlands and on rocky crags.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/bush_badlands",
+            "civ": "gaia"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "title": "Date Palm Dead",
+    "content": "The Date Palm is found all over the Southern and Eastern Mediterranean. Their fruit, the date, was an important food crop in both ancient and modern times.\n\nThis Date Palm is, unfortunately, dead.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/date_palm_dead",
+            "civ": "gaia"
+        }
+    }
+}

@@ -1,7 +1,7 @@
 const overviewButtonHeight = 35;
 const overviewButtonDist = 25;
 
-const categoriesHidingLearnMore = ["About this Encyclopedia", "0 A.D.'s Civilizations"];
+const categoriesHidingLearnMore = ["about", "civilizations"];
 
 class OverviewPanel 
 {
@@ -16,7 +16,7 @@ class OverviewPanel
         this.learnMore = Engine.GetGUIObjectByName("learnMore");
 		this.textAddition = Engine.GetGUIObjectByName("civilizationsTextAddition");
 		this.disclaimer = Engine.GetGUIObjectByName("disclaimer");
-		this.disclaimer.caption = Engine.TranslateLines(Engine.ReadFile("gui/encyclopedia/articles/About this Encyclopedia/disclaimer.txt"));
+		this.disclaimer.caption = Engine.TranslateLines(Engine.ReadFile("gui/encyclopedia/articles/about/disclaimer.txt"));
 		this.supriseMeButton = Engine.GetGUIObjectByName("supriseMeButton");
 		this.buttons = Engine.GetGUIObjectByName("overviewButtons").children;
 		
@@ -49,7 +49,7 @@ class OverviewPanel
 		this.civDropdown.registerHandler(((civ) => 
 			{
 				if (civ)
-					this.open("0 A.D.'s Civilizations", this.page.civData[civ].Name);
+					this.open("civilizations", this.page.civData[civ].Name);
 			}).bind(this));
 		this.civDropdown.civSelection.style = "BrownDropDown";
 		this.civDropdown.civSelectionHeading.textcolor = "transparent";
@@ -61,7 +61,7 @@ class OverviewPanel
 		if (!items) {
 			return;
 		}
-		if (category == "0 A.D.'s Civilizations" && !civ) {
+		if (category == "civilizations" && !civ) {
 			this.page.overviewPanel.civDropdown.civSelection.selected = -1;
 
 			// if no civilization is selected, all overviewButtons have to be disabled
@@ -87,17 +87,16 @@ class OverviewPanel
 
     open(category, civ, dontUpdateNavigationHistory) 
 	{
-        this.page.lastCategory = category;
 		this.page.switchPanel("overview");
-		this.disclaimer.hidden = this.supriseMeButton.hidden = category != "About this Encyclopedia";
-		this.textAddition.hidden = (category != "0 A.D.'s Civilizations" || !!civ);
+		this.disclaimer.hidden = this.supriseMeButton.hidden = category != "about";
+		this.textAddition.hidden = (category != "civilizations" || !!civ);
 
 		if (!dontUpdateNavigationHistory) {
-		    this.page.updateNavigationHistory({"panel":"overview", "category":category, "civ": civ && category == "0 A.D.'s Civilizations"? civ : ""});
+		    this.page.updateNavigationHistory({"panel":"overview", "category":category, "civ": civ && category == "civilizations"? civ : ""});
 		}
 
-		this.civDropdown.hidden = category != "0 A.D.'s Civilizations";
-		if (category == "0 A.D.'s Civilizations" && civ) {
+		this.civDropdown.hidden = category != "civilizations";
+		if (category == "civilizations" && civ) {
 			this.openCiv(civ);
 			return;
 		}
@@ -106,14 +105,14 @@ class OverviewPanel
 		this.learnMore.hidden = categoriesHidingLearnMore.includes(category);
         this.civEmblem.hidden = true;
 
-		const json = Engine.ReadJSONFile("gui/encyclopedia/articles/" + category + "/overview.json");
+		const json = Engine.ReadJSONFile("gui/encyclopedia/articles/" + category + "/basic-info.json");
         this.title.caption = json.title || category;
         this.text.caption = json.content;
 
 		this.learnMore.caption = json.learnMorePhrase || "Learn more about the …";
 
 		this.setupButtons(Object.keys(g_EncyclopediaStructure[category]), category);
-        this.page.relatedArticlesPanel.open("gui/encyclopedia/articles/" + category + "/overview.json");
+        this.page.relatedArticlesPanel.open("gui/encyclopedia/articles/" + category + "/basic-info.json");
 		this.page.pathPanel.update("overview");
 	}
 
@@ -124,15 +123,15 @@ class OverviewPanel
 		
 		// this.civDropdown.civSelectionHeading.textcolor = "transparent";
 		
-		this.page.relatedArticlesPanel.open("gui/encyclopedia/articles/0 A.D.'s Civilizations/" + civ + "/overview.json");
+		this.page.relatedArticlesPanel.open("gui/encyclopedia/articles/civilizations/" + civ + "/basic-info.json");
 
 		this.civEmblem.children[1].sprite = "stretched:" + Object.values(this.page.civData).find(subObj => subObj.Name == civ).Emblem;
 		this.title.caption = civ;
 
 		//display the civ's overview text
-		this.text.caption = Engine.ReadJSONFile("gui/encyclopedia/articles/0 A.D.'s Civilizations/" + civ + "/overview.json").content;
+		this.text.caption = Engine.ReadJSONFile("gui/encyclopedia/articles/civilizations/" + civ + "/basic-info.json").content;
             
-        this.setupButtons(Object.keys(g_EncyclopediaStructure["0 A.D.'s Civilizations"][civ]), "0 A.D.'s Civilizations", civ);
+        this.setupButtons(Object.keys(g_EncyclopediaStructure["civilizations"][civ]), "civilizations", civ);
 		this.page.pathPanel.update("overview");
     }
 }

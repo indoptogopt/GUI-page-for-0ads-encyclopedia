@@ -1,0 +1,10 @@
+{
+    "title": "Aleppo Pine",
+    "content": "The Aleppo Pine does not look like other pines. Instead of having the distinctive triangular shape of its relatives, the Aleppo’s canopy is rather like a dome. Aleppo's height averages 65 feet (19.8 meters). It is a hearty tree that can withstand dry and windy locations and can be found in the highlands of the Mediterranean.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/aleppo_pine",
+            "civ": "gaia"
+        }
+    }
+}

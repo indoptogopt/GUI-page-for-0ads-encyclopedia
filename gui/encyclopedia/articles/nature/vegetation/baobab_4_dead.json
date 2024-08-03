@@ -1,0 +1,10 @@
+{
+    "title": "Baobab 4 Dead",
+    "content": "The Baobab tree (Adansonia digitata) grows throughout tropical Africa. The inside of its trunk and lower limbs are filled with a soft, spongy material that absorbs water to use in  the African dry season. Baobabs grow up to 80 feet (24.38 meters) tall, but the oldest trees are some of the widest in the world, with trunks up to 30 feet (9 meters) in diameter. As the tree ages, the trunk becomes hollow and can hold around 320 gallons (1,211 liters) of water. \n\nThis baobab is, unfortunately, dead.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "gaia/tree/baobab_4_dead",
+            "civ": "gaia"
+        }
+    }
+}

@@ -56,7 +56,6 @@ class NavigationPanel
 		this.heading = Engine.GetGUIObjectByName("categoryButtonHeading");
 		this.categoryPanel = Engine.GetGUIObjectByName("categoryPanel");
 		this.mainMenuButton = Engine.GetGUIObjectByName("mainMenuButton");
-		this.aboutButton = Engine.GetGUIObjectByName("aboutButton");
 
 		// margin desribes the space surrounding the panel on the outside, padding on the inside
 		// the panel is placed to the left edge of the screen (this.gui.getComputedSize().left = 0) therefore 'right' determines the width
@@ -88,7 +87,7 @@ class NavigationPanel
                 -this.categoryPanelPadding, i * (categoryButtonHeight + categoryButtonDist) + categoryButtonHeight + this.categoryPanelPadding,
 				0, 0, 100, 0);
 			button.onPress = () => {
-				if (item == "0 A.D.'s Civilizations")
+				if (item == "civilizations")
 					this.page.lastCiv = "";
             	this.page.overviewPanel.open(item, this.page.lastCiv, false);
 				this.selectCategoryButton(item);

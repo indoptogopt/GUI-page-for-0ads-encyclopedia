@@ -49,7 +49,7 @@ class EncyclopediaPage
 					550, 250,
 					contributeMessage,
 					translate("Contributing"),
-					[translate("Back"), translate("Open thread")],
+					[translate("Back"), translate("Open thread ")],
 					[null, () => {openURL("https://wildfiregames.com/forum/topic/107400-0-ads-built-in-encyclopedia/")}]	
 				);
 			}
@@ -62,8 +62,8 @@ class EncyclopediaPage
 	{
 		this.panel = panel;
 		this.overviewPanel.gui.hidden = panel != "overview";
-		this.overviewPanel.civDropdown.civSelection.hidden = this.lastCategory != "0 A.D.'s Civilizations";
-		this.overviewPanel.civDropdown.civSelectionHeading.hidden = this.lastCategory != "0 A.D.'s Civilizations";
+		this.overviewPanel.civDropdown.civSelection.hidden = this.lastCategory != "civilizations";
+		this.overviewPanel.civDropdown.civSelectionHeading.hidden = this.lastCategory != "civilizations";
 		this.selectionPanel.gui.hidden = panel != "selection";
 		this.articlePanel.gui.hidden = panel != "article";
 
@@ -98,10 +98,10 @@ class EncyclopediaPage
 		{
 
 			case "overview":
-				if (this.lastCategory == "0 A.D.'s Civilizations" && this.lastCiv)
+				if (this.lastCategory == "civilizations" && this.lastCiv)
 				{
 					this.lastCiv = "";
-					this.overviewPanel.open("0 A.D.'s Civilizations");
+					this.overviewPanel.open("civilizations");
 				}
 				break;
 
@@ -110,7 +110,7 @@ class EncyclopediaPage
 				break;
 
 			case "article":
-				this.selectionPanel.open(this.lastCategory, this.lastCategory == "0 A.D.'s Civilizations" ? this.lastCiv : null , this.lastSubcategory);
+				this.selectionPanel.open(this.lastCategory, this.lastCategory == "civilizations" ? this.lastCiv : null , this.lastSubcategory);
 				break;
 		}
 	}
@@ -194,11 +194,11 @@ class EncyclopediaPage
 		let list = [];
 		while (empty) {
 			this.lastCategory = pickRandom(Object.keys(g_EncyclopediaStructure));
-			const hasCiv = this.lastCategory == "0 A.D.'s Civilizations";
+			const hasCiv = this.lastCategory == "civilizations";
 
-			if (this.lastCategory == "0 A.D.'s Civilizations") {
+			if (this.lastCategory == "civilizations") {
 				this.lastCiv = pickRandom(Object.keys(this.civData).map(civ => this.civData[civ].Name));
-				this.lastSubcategory = pickRandom(Object.keys(g_EncyclopediaStructure["0 A.D.'s Civilizations"][this.lastCiv]));
+				this.lastSubcategory = pickRandom(Object.keys(g_EncyclopediaStructure["civilizations"][this.lastCiv]));
 			} else {
 				this.lastSubcategory = pickRandom(Object.keys(g_EncyclopediaStructure[this.lastCategory]));
 
@@ -234,7 +234,7 @@ class EncyclopediaPage
 		const splitPath = relativePath.split("/");
 		this.lastCategory = splitPath[0];
 		this.navigationPanel.selectCategoryButton(this.lastCategory);
-		const panel = path.includes("overview.json") ? "overview" : "article";
+		const panel = path.includes("basic-info.json") ? "overview" : "article";
 		
 		switch(panel) {
 			case "overview": 

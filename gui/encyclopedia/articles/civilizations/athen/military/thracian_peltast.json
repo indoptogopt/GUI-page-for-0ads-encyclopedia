@@ -1,0 +1,11 @@
+{
+    "title": "Thracian Peltast",
+    "content": "Peltasts were a type of Greek light infantry unit originating from Thrace, often fighting as mercenaries for various Greek city-states. They were named after their uniquely crescent-shaped shield (pelte). It was not only smaller than a hoplite's shield, but also thinner and lighter due to it being covered in hide rather than bronze. They wore minimal armor and carried a short sword, in addition to several javelins. Peltasts often used the so-called ankyle, a leather thong attached to the javelin. It was looped over two fingers and slipped off when thrown, extending the leverage and therefore increasing the javelin's momentum and the distance it would travel.\n\nThe introduction of peltasts into ancient Greece brought a small, but trendsetting revolution on the battlefields: They essentially fought as a mixture between ranged and melee troops which in some way hit the Achilles heel of traditional Greek warfare. Because of their stronger protection, peltasts outmatched other ranged units like javelineers or archers. On the flipside, they were still agile enough to outmaneuver and exhaust the heavily-armored hoplites: throwing javelins at them from a safe distance, evading the hoplites' charges, regrouping and attacking again.",
+    "xmlTemplate": {
+        "data": {
+            "templateName": "units/athen/infantry_javelineer_b",
+            "civ": "athen"
+        },
+        "icon": "units/athen/infantry_javelinist.png"
+    }
+}
