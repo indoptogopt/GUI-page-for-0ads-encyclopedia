@@ -49,7 +49,7 @@ class OverviewPanel
 		this.civDropdown.registerHandler(((civ) => 
 			{
 				if (civ)
-					this.open("civilizations", this.page.civData[civ].Name);
+					this.open("civilizations", civ);
 			}).bind(this));
 		this.civDropdown.civSelection.style = "BrownDropDown";
 		this.civDropdown.civSelectionHeading.textcolor = "transparent";
@@ -69,14 +69,14 @@ class OverviewPanel
 		}
 
         this.buttons.forEach((button, i) => {
-			const caption = items[i];
-			button.hidden = !caption;
+			const item = items[i];
+			button.hidden = !item;
 			if (button.hidden) {
 				return;
 			}
-			button.caption = caption;
+			button.caption = Engine.ReadJSONFile("gui/encyclopedia/articles/" + category + "/" + (civ ? civ + "/" : "") + item + "/basic-info.json")?.title;
 			button.onPress = () => {
-            	this.page.selectionPanel.open(category, civ || "", caption);
+            	this.page.selectionPanel.open(category, civ || "", item);
             };
 		});
 		if (this.buttons.length < items.length) {
@@ -88,6 +88,7 @@ class OverviewPanel
     open(category, civ, dontUpdateNavigationHistory) 
 	{
 		this.page.switchPanel("overview");
+		this.page.lastCategory = category;
 		this.disclaimer.hidden = this.supriseMeButton.hidden = category != "about";
 		this.textAddition.hidden = (category != "civilizations" || !!civ);
 
@@ -122,14 +123,16 @@ class OverviewPanel
 		this.learnMore.hidden = this.civEmblem.hidden = false;
 		
 		// this.civDropdown.civSelectionHeading.textcolor = "transparent";
+
+		const targetFile = "gui/encyclopedia/articles/civilizations/" + civ + "/basic-info.json";
 		
-		this.page.relatedArticlesPanel.open("gui/encyclopedia/articles/civilizations/" + civ + "/basic-info.json");
+		this.page.relatedArticlesPanel.open(targetFile);
 
-		this.civEmblem.children[1].sprite = "stretched:" + Object.values(this.page.civData).find(subObj => subObj.Name == civ).Emblem;
-		this.title.caption = civ;
+		this.civEmblem.children[1].sprite = "stretched:" + this.page.civData[civ].Emblem;
 
-		//display the civ's overview text
-		this.text.caption = Engine.ReadJSONFile("gui/encyclopedia/articles/civilizations/" + civ + "/basic-info.json").content;
+		const json = Engine.ReadJSONFile(targetFile);
+		this.title.caption = json.title;
+		this.text.caption = json.content
             
         this.setupButtons(Object.keys(g_EncyclopediaStructure["civilizations"][civ]), "civilizations", civ);
 		this.page.pathPanel.update("overview");

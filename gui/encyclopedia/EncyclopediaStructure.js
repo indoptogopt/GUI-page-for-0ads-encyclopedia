@@ -31,7 +31,7 @@ var g_EncyclopediaStructure =
             "heroes":{}
         },
 
-        "carth":
+        "cart":
         {
             "military":{},
             "society":{},

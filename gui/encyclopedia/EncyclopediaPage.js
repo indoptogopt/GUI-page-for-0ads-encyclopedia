@@ -62,11 +62,47 @@ class EncyclopediaPage
 	{
 		this.panel = panel;
 		this.overviewPanel.gui.hidden = panel != "overview";
-		this.overviewPanel.civDropdown.civSelection.hidden = this.lastCategory != "civilizations";
-		this.overviewPanel.civDropdown.civSelectionHeading.hidden = this.lastCategory != "civilizations";
 		this.selectionPanel.gui.hidden = panel != "selection";
 		this.articlePanel.gui.hidden = panel != "article";
 
+	}
+
+	// pullCategoryData()
+	// {
+	// 	return Object.keys(g_EncyclopediaStructure).map(category => {
+	// 		return { ...{ "category" : category }, ...Engine.ReadJSONFile(this.articleDirectory + "/" + category + "/basic-info.json")}
+	// 	});
+	// }
+
+	// pullCivilizationData()
+	// {
+	// 	return Object.keys(g_EncyclopediaStructure["civilizations"]).map(civ => 
+	// 		Engine.ReadJSONFile(this.articleDirectory + "/civilizations/" + civ + "/basic-info.json"
+	// 	));
+	// }
+
+	// pullSubcategoryData(category, civ)
+	// {
+	// 	const targetPath =
+	// 		civ ?
+	// 			this.articleDirectory + "/civilizations/" + civ :
+	// 			this.articleDirectory + "/" + category;
+	// 	const subdirectories = 
+	// 		civ ?
+	// 			g_EncyclopediaStructure[category][civ] :
+	// 			g_EncyclopediaStructure[category];
+		
+	// 	return subdirectories.map(subcategory => 
+	// 		Engine.ReadJSONFile(targetPath + "/" + subcategory + "/basic-info.json"
+	// 		));
+	// }
+
+	// articles are always read in batches (when listing articles in a chosen subcategory or when listing the related articles)
+	pullArticleData(articleList)
+	{
+		return articleList.map(article => 
+			Engine.ReadJSONFile(article)
+		)
 	}
 
 	// this method is called from virtually every click on the page
@@ -196,15 +232,15 @@ class EncyclopediaPage
 			this.lastCategory = pickRandom(Object.keys(g_EncyclopediaStructure));
 			const hasCiv = this.lastCategory == "civilizations";
 
-			if (this.lastCategory == "civilizations") {
-				this.lastCiv = pickRandom(Object.keys(this.civData).map(civ => this.civData[civ].Name));
+			if (hasCiv) {
+				this.lastCiv = pickRandom(Object.keys(this.civData));
 				this.lastSubcategory = pickRandom(Object.keys(g_EncyclopediaStructure["civilizations"][this.lastCiv]));
 			} else {
 				this.lastSubcategory = pickRandom(Object.keys(g_EncyclopediaStructure[this.lastCategory]));
 
 			}
 			const targetdir = "gui/encyclopedia/articles/" + this.lastCategory + "/" + (hasCiv? this.lastCiv + "/" : "") + this.lastSubcategory + "/";
-			list = Engine.ListDirectoryFiles(targetdir, "*.json", false);
+			list = Engine.ListDirectoryFiles(targetdir, "*.json", false).filter(file => !file.endsWith("basic-info.json"));
 			
 			if (list.length) {
 				empty = false;
@@ -217,7 +253,7 @@ class EncyclopediaPage
 	openArticle (path) 
 	{
 		
-		//works with both paths with and without "gui/encyclopedia/articles/"
+		// works with both paths with and without "gui/encyclopedia/articles/"
 		const relativePath = path.startsWith("gui/encyclopedia/articles/") ? path.substring(26) : path;
         
 		const fullPath = "gui/encyclopedia/articles/" + relativePath;
@@ -253,19 +289,4 @@ class EncyclopediaPage
 				break;
 		}
 	}
-	calculateDistanceByFactor(parentObj, horizOrVert, subtrahend, factor, summand, minimum, maximum)
-    {
-        const parentSize = parentObj.getComputedSize();
-		let totalDist = 
-			horizOrVert == "vertical" ?
-				parentSize.bottom - parentSize.top:
-				parentSize.right - parentSize.left;
-
-        // the factor is only multiplied with the space that scales along with the screen resolution (total space minus fix-sized elements, i.e. the free space between all borders, frames, and margins)
-        const scalableDist = totalDist - subtrahend;
-        const value = scalableDist * factor + (summand || 0);
-        const clampedValue = Math.max(Math.min(value, maximum), minimum);
-        return clampedValue;
-    }
-
 }

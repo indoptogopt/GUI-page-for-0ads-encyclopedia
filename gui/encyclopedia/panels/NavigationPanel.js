@@ -81,7 +81,7 @@ class NavigationPanel
 			button.hidden = !item;
 			if (button.hidden)
 				return;
-			button.caption = item;
+			button.caption = Engine.ReadJSONFile("gui/encyclopedia/articles/" + item + "/basic-info.json").title;
             button.size = new GUISize(
 				this.categoryPanelPadding, i * (categoryButtonHeight + categoryButtonDist) + this.categoryPanelPadding,
                 -this.categoryPanelPadding, i * (categoryButtonHeight + categoryButtonDist) + categoryButtonHeight + this.categoryPanelPadding,

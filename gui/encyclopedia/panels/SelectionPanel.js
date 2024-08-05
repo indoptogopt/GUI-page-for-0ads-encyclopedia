@@ -14,7 +14,7 @@ class SelectionPanel
 
     setupList(targetdir, dontRenderList)
 	{
-		this.list = Engine.ListDirectoryFiles(targetdir, "*.json", false);
+		this.list = Engine.ListDirectoryFiles(targetdir, "*.json", false).filter(file => !file.endsWith("basic-info.json"));
 
 		// When an article is opened directly (and not from this selection menu), the directory files still need to be listed
 		// in order to be able to pass on the fileData (information about the previous and next files), but without actually rendering this selection menu
@@ -49,7 +49,8 @@ class SelectionPanel
 			Engine.FileExists(targetPath + "/basic-info.json") ?
 				Engine.ReadJSONFile(targetPath + "/basic-info.json") :
 				{};
-		this.title.caption = this.page.lastSubcategory = subcategory;
+		this.page.lastSubcategory = subcategory;
+		this.title.caption = json.title || subcategory;
 		this.setupList(targetPath);
 		if (!dontUpdateNavigationHistory) {
 			this.page.updateNavigationHistory({"panel":"selection", "category":category, "civ":civ, "subcategory":subcategory});

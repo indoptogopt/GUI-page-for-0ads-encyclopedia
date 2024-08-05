@@ -25,7 +25,7 @@
                     <object name="articleSubtitleLeft" type="text" font="sans-20" textcolor="blackbrown" text_valign="center" text_align="left" size="0 44% 100% 100%"/>
                 </object>
                 <object name="articleSoleTitleLeft" type="text" font="sans-bold-26" textcolor="blackbrown" text_valign="center" text_align="center" size="0 42% 100% 42%+30"/>
-                <object name="nextArticleButtonLeft" type="button" sprite="BrownArrowCurvedRight" sprite_over="LightBrownArrowCurvedRight" size="100%-88 10 100%-30 68"/>
+                <object name="nextArticleButtonLeft" type="button" sprite="BrownArrowCurvedRight" sprite_over="LightBrownArrowCurvedRight" size="100%-88 10 100%-30 68" sound_pressed="audio/interface/ui/ui_button_click.ogg"/>
                 <object name="templateViewerButtonArea" size="0 0 100% 100%+10">
                     <object name="templateViewerButtonContainer">
                         <object name="templateViewerButton" type="button" style="SubtleBrownButton" text_align="right" size="0 0 100%+125 100%">
@@ -47,7 +47,7 @@
             <object name="articleText" scroll_top="true" scrollbar="true" scrollbar_style="BrownGoldenScrollBar" type="text" font="sans-18" textcolor="blackbrown" text_align="left"/>
             <object name="articleOrnament" type="image" sprite="TextOrnament" size="60 0 100%-60 100%" ghost="true"/>
         </object>
-        <object name="previousArticleButton" type="button" sprite="BrownArrowCurvedLeft" sprite_over="LightBrownArrowCurvedLeft" size="30 10 88 68"/>
-        <object name="nextArticleButtonRight" type="button" sprite="BrownArrowCurvedRight" sprite_over="LightBrownArrowCurvedRight" size="100%-88 10 100%-30 68"/>
+        <object name="previousArticleButton" type="button" sprite="BrownArrowCurvedLeft" sprite_over="LightBrownArrowCurvedLeft" size="30 10 88 68" sound_pressed="audio/interface/ui/ui_button_click.ogg"/>
+        <object name="nextArticleButtonRight" type="button" sprite="BrownArrowCurvedRight" sprite_over="LightBrownArrowCurvedRight" size="100%-88 10 100%-30 68" sound_pressed="audio/interface/ui/ui_button_click.ogg"/>
     </object>
 </object>
