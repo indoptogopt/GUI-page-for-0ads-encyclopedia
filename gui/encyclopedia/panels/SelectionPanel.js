@@ -1,6 +1,6 @@
-class SelectionPanel 
+class SelectionPanel
 {
-    constructor (page) 
+    constructor (page)
 	{
         this.page = page;
 
@@ -14,21 +14,21 @@ class SelectionPanel
 
     setupList(targetdir, dontRenderList)
 	{
-		this.list = Engine.ListDirectoryFiles(targetdir, "*.json", false).filter(file => !file.endsWith("basic-info.json"));
+		this.list = Engine.ListDirectoryFiles(targetdir, "*.json", false);
 
 		// When an article is opened directly (and not from this selection menu), the directory files still need to be listed
 		// in order to be able to pass on the fileData (information about the previous and next files), but without actually rendering this selection menu
 		if (dontRenderList)
 			return;
-		this.warning.hidden = this.list != null;
+		this.warning.hidden = this.list.length != 0;
 		if (!this.warning.hidden) {
 			this.selection.list = [];
 			return;
 		}
 		this.selection.list = this.list.map(file => {
 			const json = Engine.ReadJSONFile(file);
-			return json.title || 
-			Engine.ReadJSONFile("gui/encyclopedia/articles/parent articles/" + json.parent).title;
+			return json.title ||
+			Engine.ReadJSONFile(this.page.pathToArticles + "parent_articles/" + json.parent).title;
 		});
 
 		// a double-click opens the article
@@ -41,17 +41,18 @@ class SelectionPanel
 		}
     }
 
-	open(category, civ, subcategory, dontUpdateNavigationHistory) 
+	open(category, civ, subcategory, dontUpdateNavigationHistory)
 	{
 		this.page.switchPanel("selection");
-		const targetPath = "gui/encyclopedia/articles/" + category + "/" + (civ? civ + "/" : "") + subcategory;
-		const json = 
-			Engine.FileExists(targetPath + "/basic-info.json") ?
-				Engine.ReadJSONFile(targetPath + "/basic-info.json") :
-				{};
 		this.page.lastSubcategory = subcategory;
-		this.title.caption = json.title || subcategory;
+		this.title.caption =
+			civ ?
+				g_EncyclopediaStructure.civilizations.subdirectories[civ].subdirectories[subcategory].title :
+				g_EncyclopediaStructure[category].subdirectories[subcategory].title;
+
+		const targetPath = this.page.pathToArticles + category + "/" + (civ? civ + "/" : "") + subcategory;
 		this.setupList(targetPath);
+
 		if (!dontUpdateNavigationHistory) {
 			this.page.updateNavigationHistory({"panel":"selection", "category":category, "civ":civ, "subcategory":subcategory});
 		}

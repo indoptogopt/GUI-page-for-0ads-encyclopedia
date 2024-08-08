@@ -16,7 +16,7 @@ class ViewerPage extends ReferencePage
 			"entityInfo": Engine.GetGUIObjectByName("entityInfo"),
 			"entityRankGlyph": Engine.GetGUIObjectByName("entityRankGlyph"),
 		};
-		
+
 
 		let closeButton = new CloseButton(this);
 	}

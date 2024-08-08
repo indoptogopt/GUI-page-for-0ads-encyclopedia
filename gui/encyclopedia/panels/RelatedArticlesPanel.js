@@ -2,9 +2,9 @@
 const relatedArticlesButtonHeight = 30;
 const relatedArticlesButtonDist = 10;
 
-class RelatedArticlesPanel 
+class RelatedArticlesPanel
 {
-    constructor(page) 
+    constructor(page)
     {
 
         this.page = page;
@@ -21,7 +21,7 @@ class RelatedArticlesPanel
         })
     }
 
-    setupButtons(items) 
+    setupButtons(items)
     {
         this.buttons.forEach((button, i) => {
             const item = items[i];
@@ -39,10 +39,10 @@ class RelatedArticlesPanel
 	    }
     }
 
-    open(file) 
+    open(articleFile)
     {
 
-        const list = Engine.ReadJSONFile(file).relatedArticles;
+        const list = Engine.ReadJSONFile(articleFile).relatedArticles;
         this.warning.hidden = list != null;
         if (!this.warning.hidden) {
             this.buttons.forEach(button => button.hidden = true);
@@ -50,14 +50,14 @@ class RelatedArticlesPanel
         }
 
         // getting the articles' titles
-        const data = list.map(fileName => {
-            const path = "gui/encyclopedia/articles/" + fileName + ".json";
+        const data = list.map(file => {
+            const path = this.page.pathToArticles + file + ".json";
             if (!Engine.FileExists(path)) {
-                warn("invalid relatedArticle in " + file + ": " + path);
+                warn("invalid relatedArticle in " + articleFile + ": " + path);
                 return;
             }
             const json = Engine.ReadJSONFile(path);
-            const title = json.title || Engine.ReadJSONFile("gui/encyclopedia/articles/parent articles/" + json.parent + ".json").title;
+            const title = json.title || Engine.ReadJSONFile(this.page.pathToArticles/parent_articles + json.parent + ".json").title;
             return {"path":path, "title": title};
         })
         this.setupButtons(data);

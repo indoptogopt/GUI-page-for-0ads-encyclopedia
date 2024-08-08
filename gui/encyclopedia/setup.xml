@@ -21,9 +21,9 @@
 
 	<icon name="hoplite"
           sprite="stretched:encyclopedia/hoplite.png"
-          size="128 128" 
+          size="128 128"
     />
-  
+
 	<color name="blackbrown">29 15 5</color>
     <color name="mattbrown">122 95 75</color>
 

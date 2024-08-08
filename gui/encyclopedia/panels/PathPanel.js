@@ -2,9 +2,9 @@ const wordSpacing = 0;
 const textBuffer = 10;
 const fadingExtrusion = 20;
 
-class PathPanel 
+class PathPanel
 {
-    constructor(page) 
+    constructor(page)
     {
         this.page = page;
 
@@ -26,35 +26,39 @@ class PathPanel
         this.upButton.onPress = () => {this.page.toParentDirectory()};
     }
 
-    update(panel) 
+    update(panel)
     {
         this.page.lastPanel = panel;
 
         // if pressing the upButton would do nothing, it should also give no visual response when the player is hovering over it (i.e. setting the sprite_over to sprite)
-        this.upButton.sprite_over = panel != "overview" || (this.page.lastCategory == "civilizations" && this.page.lastCiv)? "LightBrownArrowUp" :  "BrownArrowUp";
-        this.separator1.hidden = (panel == "overview" && this.page.lastCategory != "civilizations") || (this.page.lastCategory == "civilizations" && !this.page.lastCiv);
-        this.categoryButton.caption = Engine.ReadJSONFile("gui/encyclopedia/articles/" + this.page.lastCategory + "/basic-info.json").title;
+        this.upButton.sprite_over = panel != "introduction" || (this.page.lastCategory == "civilizations" && this.page.lastCiv)? "LightBrownArrowUp" :  "BrownArrowUp";
+        this.separator1.hidden = (panel == "introduction" && this.page.lastCategory != "civilizations") || (this.page.lastCategory == "civilizations" && !this.page.lastCiv);
+        this.categoryButton.caption = g_EncyclopediaStructure[this.page.lastCategory].title;
         this.categoryButton.onPress = () => {
             if (this.page.lastCategory == "civilizations") {
                 this.page.lastCiv = "";
             }
-            this.page.overviewPanel.open(this.page.lastCategory);
-            
+            this.page.introductionPanel.open(this.page.lastCategory);
+
         }
 
-        this.separator2.hidden = panel == "overview" || this.page.lastCategory != "civilizations" || !this.page.lastCiv;
+        this.separator2.hidden = panel == "introduction" || this.page.lastCategory != "civilizations" || !this.page.lastCiv;
 
         this.civButton.hidden = this.page.lastCategory != "civilizations" || !this.page.lastCiv;
         this.civButton.caption = this.page.lastCiv ? this.page.civData[this.page.lastCiv].Name : "";
         this.civButton.onPress = () => {
-            this.page.overviewPanel.open("civilizations", this.page.lastCiv);
+            this.page.introductionPanel.open("civilizations", this.page.lastCiv);
         }
 
-        this.subcategoryButton.hidden = panel == "overview";
+        this.subcategoryButton.hidden = panel == "introduction";
         if (!this.subcategoryButton.hidden)
         {
-            let json = Engine.ReadJSONFile("gui/encyclopedia/articles/" + this.page.lastCategory + "/" + (this.page.lastCategory == "civilizations" ? this.page.lastCiv + "/" : "") + this.page.lastSubcategory + "/basic-info.json");
-            this.subcategoryButton.caption = json.shortenedTitle || json.title;
+            let data =
+                this.page.lastCategory == "civilizations" ?
+                    g_EncyclopediaStructure[this.page.lastCategory].subdirectories[this.page.lastCiv].subdirectories[this.page.lastSubcategory] :
+                    g_EncyclopediaStructure[this.page.lastCategory].subdirectories[this.page.lastSubcategory];
+
+            this.subcategoryButton.caption = data.shortenedTitle || data.title;
             this.subcategoryButton.onPress = () => {
                 this.page.selectionPanel.open(this.page.lastCategory, this.page.lastCategory == "civilizations" ? this.page.lastCiv : "", this.page.lastSubcategory);
             }
@@ -68,7 +72,7 @@ class PathPanel
         let offset = this.upButton.size.right + wordSpacing;
         const left = offset;
         for (let element of this.elements) {
-            if (element.hidden) 
+            if (element.hidden)
             {
                 continue;
             }

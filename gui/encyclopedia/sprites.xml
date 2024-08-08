@@ -13,11 +13,11 @@
 			real_texture_placement="28 0 292 264"
 			texture_size="0 0 240 240"
 		/>
-		
+
 		<image backcolor="230 190 80"
 			size="100%-3 0 100% 100%"
 		/>
-		
+
 	</sprite>
 
 	<sprite name="BlackGoldenPanel">
@@ -75,23 +75,23 @@
 		/>
 
 		<!-- corners -->
-		<image texture="encyclopedia/frames/wide/top-corner.png" 
+		<image texture="encyclopedia/frames/wide/top-corner.png"
 			size="0 0 32 32"
 		/>
-		<image texture="encyclopedia/frames/wide/top-corner.png" 
+		<image texture="encyclopedia/frames/wide/top-corner.png"
 		    texture_size="32 0 0 32"
 			size="100%-32 0 100% 32"
 		/>
-		<image texture="encyclopedia/frames/wide/bottom-corner.png" 
+		<image texture="encyclopedia/frames/wide/bottom-corner.png"
 			texture_size="32 0 0 32"
 			size="100%-32 100%-32 100% 100%"
 		/>
-		<image texture="encyclopedia/frames/wide/bottom-corner.png" 
+		<image texture="encyclopedia/frames/wide/bottom-corner.png"
 			size="0 100%-32 32 100%"
 		/>
 
 	</sprite>
-	
+
 	<sprite name="MediumOrnateFrame">
 
 		<!-- edges -->
@@ -113,19 +113,19 @@
 		/>
 
 		<!-- corners -->
-		<image texture="encyclopedia/frames/medium/corner.png" 
+		<image texture="encyclopedia/frames/medium/corner.png"
 		    texture_size="0 16 16 0"
 			size="0 0 16 16"
 		/>
-		<image texture="encyclopedia/frames/medium/corner.png" 
+		<image texture="encyclopedia/frames/medium/corner.png"
 		    texture_size="16 16 0 0"
 			size="100%-16 0 100% 16"
 		/>
-		<image texture="encyclopedia/frames/medium/corner.png" 
+		<image texture="encyclopedia/frames/medium/corner.png"
 			texture_size="16 0 0 16"
 			size="100%-16 100%-16 100% 100%"
 		/>
-		<image texture="encyclopedia/frames/medium/corner.png" 
+		<image texture="encyclopedia/frames/medium/corner.png"
 			size="0 100%-16 16 100%"
 		/>
 
@@ -152,19 +152,19 @@
 		/>
 
 		<!-- corners -->
-		<image texture="encyclopedia/frames/narrow/corner.png" 
+		<image texture="encyclopedia/frames/narrow/corner.png"
 		    texture_size="0 8 8 0"
 			size="0 0 8 8"
 		/>
-		<image texture="encyclopedia/frames/narrow/corner.png" 
+		<image texture="encyclopedia/frames/narrow/corner.png"
 		    texture_size="8 8 0 0"
 			size="100%-8 0 100% 8"
 		/>
-		<image texture="encyclopedia/frames/narrow/corner.png" 
+		<image texture="encyclopedia/frames/narrow/corner.png"
 			texture_size="8 0 0 8"
 			size="100%-8 100%-8 100% 100%"
 		/>
-		<image texture="encyclopedia/frames/narrow/corner.png" 
+		<image texture="encyclopedia/frames/narrow/corner.png"
 			size="0 100%-8 8 100%"
 		/>
 
@@ -180,18 +180,18 @@
 		<image backcolor="mattbrown" size="58 0 100%-58 2"/>
 
 		<!-- decorations -->
-		<image texture="encyclopedia/ornament_deco_bottom.png" 
+		<image texture="encyclopedia/ornament_deco_bottom.png"
 			size="100%-64 100%-19 100% 100%+13"
 		/>
-		<image texture="encyclopedia/ornament_deco_bottom.png" 
-			size="0 100%-19 64 100%+13" 
+		<image texture="encyclopedia/ornament_deco_bottom.png"
+			size="0 100%-19 64 100%+13"
 			texture_size="64 0 0 32"
 		/>
 		<image texture="encyclopedia/ornament_deco_top.png"
-			size="4 -21 68 11" 
+			size="4 -21 68 11"
 			texture_size="64 0 0 32"
 		/>
-		<image texture="encyclopedia/ornament_deco_top.png" 
+		<image texture="encyclopedia/ornament_deco_top.png"
 			size="100%-68 -21 100%-4 11"
 		/>
 
@@ -211,7 +211,7 @@
 		<image backcolor="16 16 16" size="100%-1 0 100% 100%"/>
 		<image backcolor="16 16 16" size="0 100%-1 100% 100%"/>
 	</sprite>
-	
+
 	<sprite name="WhiteButtonOver">
 		<image texture="encyclopedia/white-button.png"/>
 		<image backcolor="230 190 80 150"/>
@@ -239,7 +239,7 @@
 
 	<sprite name="BrownScrollBack">
 		<image texture="encyclopedia/scrollbar/brown-scrollback.png"
-			size="50%-4 -20 50%+4 100%+20" 
+			size="50%-4 -20 50%+4 100%+20"
 		/>
 	</sprite>
 
@@ -308,7 +308,7 @@
 		<effect add_color="blackbrown"/>
 		<image texture="encyclopedia/gradients/fading_double-sided_horizontal.png"/>
 	</sprite>
-	
+
 	<sprite name="BrownFadingRight">
 		<effect add_color="blackbrown"/>
 		<image texture="encyclopedia/gradients/fading_single-sided_horizontal.png"/>

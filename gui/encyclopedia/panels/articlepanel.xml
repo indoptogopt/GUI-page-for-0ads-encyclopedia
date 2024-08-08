@@ -8,8 +8,8 @@
 
         <!-- heading without an image -->
         <object name="articleHeadingCenter">
-            <object name="articleExpandedTitleCenter" size="90 28 100%-90 115">
-                    <object name="articleTitleCenter" type="text" font="sans-bold-24" textcolor="blackbrown" size="0 0 100% 30" text_valign="center" text_align="center"/>
+            <object name="articleExpandedTitleCenter" size="90 28 100%-90 120">
+                    <object name="articleTitleCenter" type="text" font="sans-bold-24" textcolor="blackbrown" size="0 0 100% 40" text_valign="center" text_align="center"/>
                     <object name="articleTitleSeparatorCenter" type="image" sprite="BrownSeparator"/>
                     <object name="articleSubtitleCenter" type="text" font="sans-20" textcolor="blackbrown" text_valign="center" size="0 40 100% 100%" text_align="center"/>
             </object>

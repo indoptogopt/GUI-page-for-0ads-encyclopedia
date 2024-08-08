@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="introductionPanel">
+	<object size="16 16 100%-16 100%-16">
+    	<include file="gui/reference/common/Dropdowns/CivSelectDropdown.xml"/>
+	</object>
+	<object name="introductionFrame" type="image" sprite="MediumOrnateFrame"/>
+	<object name="introductionTitle" type="text" font="sans-bold-24" textcolor="blackbrown" size="50%-200 10% 50%+200 10%+30" text_valign="center" text_align="center"/>
+	<object name="introductionTitleSeperator" type="image" sprite="BrownSeparator" size="20% 18% 80% 18%+2"/>
+	<object name="introductionText" scroll_top="true" font="sans-20" textcolor="blackbrown" type="text" scrollbar="true" scrollbar_style="BrownScrollBar" size="50 25% 100%-30 70%-50" />
+	<object name="civilizationsTextAddition" type="text" font="sans-20" size="50 70% 100%-30 70%+100">
+		<translatableAttribute id="caption">The question is…\n[font="sans-bold-22"]Who will you choose to lead to victory?[/font]</translatableAttribute>
+	</object>
+	<object name="disclaimer" type="text" font="sans-italic-18" textcolor="blackbrown" text_align="center" text_valign="bottom" size="50 25% 100%-30 93%" ghost="true"/>
+	<object name="civEmblem" type="image" size="50%-35 -25 50%+35 45">
+		<object name="civEmblemFrame" type="image" sprite="stretched:encyclopedia/frames/medium/circle.png" size="-10 -10 100%+10 100%+10" ghost="true"/>
+		<object name="civEmblemTexture" type="image"/>
+		<object name="civEmblemOver" type="button" sprite="color:transparent" sprite_over="stretched:session/portraits/emblems/states/hover.png" sprite_pressed="stretched:session/portraits/emblems/states/hover.png"/>
+	</object>
+	<object name="learnMore" type="text" size="50 70% 100% 80%" font="sans-20" textcolor="blackbrown"/>
+	<object name="supriseMeButton" type="button" style="BrownButton">
+		<translatableAttribute id="caption">Suprise me!</translatableAttribute>
+	</object>
+	<object name="subcategoryButtons" size="60 79% 100%-60 100%">
+	    <repeat count="4">
+		    <object name="subcategoryButton[n]" type="button" style="BrownButton"/>
+		</repeat>
+	</object>
+</object>

@@ -15,7 +15,7 @@
 			<object size="40 11%+60 100%-20 100%-70">
 				<include file="gui/encyclopedia/panels/articlepanel.xml"/>
 				<include file="gui/encyclopedia/panels/selectionpanel.xml"/>
-				<include file="gui/encyclopedia/panels/overviewpanel.xml"/>
+				<include file="gui/encyclopedia/panels/introductionpanel.xml"/>
 			</object>
 			<object name="backButton" type="button" size="15% 100%-55 35%+90 100%-20" style="WhiteButton">
 				<translatableAttribute id="caption">Back</translatableAttribute>

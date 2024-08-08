@@ -22,12 +22,12 @@ const textMarginRight = 20;
 
 const iconPath = "session/portraits/";
 
-class ArticlePanel 
+class ArticlePanel
 {
-    constructor(page) 
+    constructor(page)
     {
         this.page = page;
-        
+
         this.gui = Engine.GetGUIObjectByName("articlePanel");
 
         this.guiContent = Engine.GetGUIObjectByName("articlePanelContent");
@@ -59,7 +59,7 @@ class ArticlePanel
 
         const templateViewerButtonHeight = this.panelHeight * 0.0125 + 38;
         this.templateViewerButtonContainer.size = new GUISize(77, -templateViewerButtonHeight / 2, 77 + templateViewerButtonHeight, templateViewerButtonHeight / 2, 0, 50, 0, 50);
-        
+
         // only used to to include the file names in warning and error messages
         this.lastFile = "";
 
@@ -69,7 +69,7 @@ class ArticlePanel
 
         // the imageArea is anchored at the top right and contains the image itself as well as the imageFrame
         this.imageArea = Engine.GetGUIObjectByName("articleImageArea");
-        this.imageArea.size = 
+        this.imageArea.size =
             new GUISize
             (
                 - (imageAreaMargin + this.maxImageWidth + imageFrameWidth*2),
@@ -78,13 +78,13 @@ class ArticlePanel
                 imageAreaMargin + this.maxImageHeight + imageFrameWidth*2,
                 100, 0, 100, 0
             );
-            
+
         // the imageContainer is scaled to the maximum size an image can have (inside the imageFrame)
         this.imageContainer = Engine.GetGUIObjectByName("articleImageContainer");
         this.imageContainer.size = new GUISize(imageFrameWidth, imageFrameWidth, -imageFrameWidth, -imageFrameWidth, 0, 0, 100, 100);
         this.image = Engine.GetGUIObjectByName("articleImage");
         this.imageFrame = Engine.GetGUIObjectByName("articleImageFrame");
-        
+
         this.central = {};
         this.central.heading = Engine.GetGUIObjectByName("articleHeadingCenter");
         this.central.soleTitle = Engine.GetGUIObjectByName("articleSoleTitleCenter");
@@ -92,7 +92,7 @@ class ArticlePanel
         this.central.expandedHeadingTitle = Engine.GetGUIObjectByName("articleTitleCenter");
         this.central.expandedHeadingSubitle = Engine.GetGUIObjectByName("articleSubtitleCenter");
         this.central.expandedHeadingSeparator = Engine.GetGUIObjectByName("articleTitleSeparatorCenter");
-        
+
         this.left = {};
         this.left.heading = Engine.GetGUIObjectByName("articleHeadingLeft");
         this.left.soleTitle = Engine.GetGUIObjectByName("articleSoleTitleLeft");
@@ -100,13 +100,13 @@ class ArticlePanel
         this.left.expandedHeadingTitle = Engine.GetGUIObjectByName("articleTitleLeft");
         this.left.expandedHeadingSubitle = Engine.GetGUIObjectByName("articleSubtitleLeft");
         this.left.expandedHeadingSeparator = Engine.GetGUIObjectByName("articleTitleSeparatorLeft");
-        
+
         // the titleContainer's main purpose is to limit the titles to the right (and avoid overlapping with the image)
         // an explanation for copying the size to a new object is given already for templateViewerButtonAreaSize
         this.left.titleContainer = Engine.GetGUIObjectByName("articleTitleContainerLeft");
-        this.left.titleContainerSize = this.left.titleContainer.size = 
+        this.left.titleContainerSize = this.left.titleContainer.size =
             new GUISize(0, 0, 0, this.imageArea.size.bottom, 0, 0, 100, 0);
-            
+
             this.textField = Engine.GetGUIObjectByName("articleText");
         this.textField.size = new GUISize(textMarginLeft, textContainerMarginTop, -textMarginRight, -textContainerMarginBottom, 0, 0, 100, 100);
         this.textOrnament = Engine.GetGUIObjectByName("articleOrnament");
@@ -116,26 +116,26 @@ class ArticlePanel
         this.nextArticleButtonRight = Engine.GetGUIObjectByName("nextArticleButtonRight");
         this.nextArticleButtonRight.onPress = () => {this.open(this.fileData.nextFile)};
         this.nextArtButParent = Engine.GetGUIObjectByName("nextArtButParent");
-        this.previousArticleButton = Engine.GetGUIObjectByName("previousArticleButton"); 
+        this.previousArticleButton = Engine.GetGUIObjectByName("previousArticleButton");
         this.previousArticleButton.onPress = () => {this.open(this.fileData.previousFile)};
         this.fileData = {"hasNextFile":false, "nextFile":"", "hasPreviousFile":false, "previousFile":""};
 
     }
 
-    open (file, dontUpdateNavigationHistory) 
+    open (file, dontUpdateNavigationHistory)
     {
         this.lastFile = file;
         this.page.switchPanel("article");
-        
+
         const json =  Engine.ReadJSONFile(file);
-        if (json.parent && !Engine.FileExists("gui/encyclopedia/articles/parent articles/" + json.parent))
+        if (json.parent && !Engine.FileExists(this.page.pathToArticles + "parent_articles/" + json.parent))
             error("invalid parent " + json.parent + " in article " + file);
-            
-        const parent = json.parent? Engine.ReadJSONFile("gui/encyclopedia/articles/parent articles/" + json.parent) : {};
+
+        const parent = json.parent? Engine.ReadJSONFile(this.page.pathToArticles + "parent_articles/" + json.parent) : {};
 
         const title = json.title || parent.title;
         const subtitle = json.subtitle || parent.subtitle;
-        
+
         const xmlTemplate = json.xmlTemplate || parent.xmlTemplate || {};
         this.page.lastArticle = title;
 
@@ -146,7 +146,7 @@ class ArticlePanel
         this.fileData = this.page.selectionPanel.getFileData(file);
         if (this.left.heading.hidden)
         {
-            this.writeTitle("central", title, subtitle);    
+            this.writeTitle("central", title, subtitle);
             this.updateButtons("central", subtitle != null, xmlTemplate);
         }
         else
@@ -157,24 +157,24 @@ class ArticlePanel
         }
 
         // the text contents container's 'top' border is aligned with the bottom of the heading
-        this.articleContentSize.top = 
-            this.left.heading.hidden ? 
+        this.articleContentSize.top =
+            this.left.heading.hidden ?
                 // we can extend it further towards the top, if there is not subtitle
-                subtitle ? 
-                    150 : 110 
+                subtitle ?
+                    130 : 100
             : this.left.titleContainer.size.bottom;
             this.articleContent.size = this.articleContentSize;
 
             // the empty lines are added for aesthetic reasons
             this.textField.caption = "\n" + (json.content || parent.content) + "\n ";
-            
+
         if (!dontUpdateNavigationHistory) {
             this.page.updateNavigationHistory({"panel":"article", "category":this.page.lastCategory, "civ":this.page.lastCiv, "subcategory":this.page.lastSubcategory, "file":file});
         }
         this.page.pathPanel.update("article");
         this.page.relatedArticlesPanel.open(file);
     }
-    
+
     updateButtons (centralOrLeft, hasSubtitle, xmlTemplate)
     {
         // the central heading's nextArticleButton is placed on the right
@@ -206,7 +206,7 @@ class ArticlePanel
         {
             this[centralOrLeft].expandedHeadingTitle.caption = title;
             this[centralOrLeft].expandedHeadingSubitle.caption = subtitle;
-            
+
             const titleWidth = Engine.GetTextWidth(this[centralOrLeft].expandedHeadingTitle.font, this[centralOrLeft].expandedHeadingTitle.caption);
             const subtitleWidth = Engine.GetTextWidth(this[centralOrLeft].expandedHeadingSubitle.font, this[centralOrLeft].expandedHeadingSubitle.caption);
 
@@ -217,9 +217,9 @@ class ArticlePanel
                 // texts of the central titled and subtitle are anchored to the center
                 // the separator does, too, and is therefore scaled to the right and left
                 case "central":
-                    this[centralOrLeft].expandedHeadingSeparator.size = new GUISize(-(separatorWidth / 2), 37 , separatorWidth / 2, 38, 50, 0, 50, 0);
+                    this[centralOrLeft].expandedHeadingSeparator.size = new GUISize(-(separatorWidth / 2), 40, separatorWidth / 2, 41, 50, 0, 50, 0);
                     break;
-                
+
                 // texts of the left title and subtitle are anchored to the left
                 // the separator does, too, and is therefore scaled only scaled to the right
                 case "left":
@@ -230,7 +230,7 @@ class ArticlePanel
                     break;
             }
         }
-        else 
+        else
         {
             this[centralOrLeft].soleTitle.caption = title;
         }
@@ -239,8 +239,8 @@ class ArticlePanel
     updateImage(image)
     {
         /* The engine can only read image files with width and height of powers of two, which drastically limits the number of aspect ratios.
-         * To circumvent this, images (of any aspect ratio) are extended (by adding transparent pixels) outwards to width and height of the next larger power of two. 
-         * the 'cropped' property stores the original image's resolution and 'full' stores the final resolution after extending it. 
+         * To circumvent this, images (of any aspect ratio) are extended (by adding transparent pixels) outwards to width and height of the next larger power of two.
+         * the 'cropped' property stores the original image's resolution and 'full' stores the final resolution after extending it.
          * the latter is used to to calculate the actual size of the image while the former is used to align it (to the top right) and determine around what area to place the border.
          */
         this.image.sprite = "stretched:encyclopedia/images/" + image.file;
@@ -248,7 +248,7 @@ class ArticlePanel
         const fullImageWidth = image.resolution.full.width;
         const croppedImageHeight =  image.resolution.cropped && image.resolution.cropped.height ? image.resolution.cropped.height : fullImageHeight;
         const croppedImageWidth = image.resolution.cropped && image.resolution.cropped.width ? image.resolution.cropped.width : fullImageWidth;
-        
+
         if (croppedImageHeight > fullImageHeight)
         {
             warn ("The cropped height of a heading image musn't be larger than its full height, but found " + croppedImageHeight + "px vs " + fullImageHeight + "px in " + this.lastFile);
@@ -263,11 +263,11 @@ class ArticlePanel
 
         if (croppedImageWidth / croppedImageHeight > this.maxImageWidth / this.minImageHeight)
             throw error("too large aspect ratio of heading image in " + this.lastFile + " (maximum is " + Math.round(this.maxImageWidth) + "x" + Math.round(this.minImageHeight) + ", but found " + croppedImageWidth + "x" + croppedImageHeight + ")");
-        
+
         // images are ever only scaled down to avoid the pixelated look, except when it falls below the minimum height
         const heightQuotient = croppedImageHeight > this.maxImageHeight ? Math.max(this.maxImageHeight, minTitleContainerHeight - imageAreaMargin - imageFrameWidth * 2) / croppedImageHeight : 1;
         const widthQuotient = croppedImageWidth > this.maxImageWidth ? this.maxImageWidth / croppedImageWidth : 1;
-        const multiplier = 
+        const multiplier =
             croppedImageHeight < this.minImageHeight ?
                 this.minImageHeight / croppedImageHeight :
                 Math.min(heightQuotient, widthQuotient);
@@ -282,7 +282,7 @@ class ArticlePanel
         const heightDiff = calculatedFullImageHeight - calculatedCroppedImageHeight;
         // half the difference is added to all sides to center the image on the frame (the "cropping" is done equally on all sides, "towards" the center)
         this.image.size = new GUISize(-calculatedCroppedImageWidth - widthDiff / 2, - heightDiff / 2, widthDiff / 2, calculatedCroppedImageHeight + heightDiff / 2, 100, 0, 100, 0);
-        
+
         // scaling the titleContainer to fill the free space to the left of the image
         this.left.titleContainerSize.right = this.imageFrame.size.left - imageAreaMargin;
         this.left.titleContainerSize.bottom = Math.max(imageAreaMargin + imageFrameWidth + this.imageFrame.size.bottom, minTitleContainerHeight);
