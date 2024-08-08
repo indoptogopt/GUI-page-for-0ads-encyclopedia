@@ -1,7 +1,7 @@
 
 ## Customising the articles:
 
-The articles are stored in JSON files inside a directory structure (equal to the categorization structure on the GUI page). All introductory overview texts and the title displayed above it are saved in files called `basic-info.json`  in the respective directory and are treated the same as all other articles.
+The articles are stored in JSON files inside a directory structure (equal to the categorization structure on the GUI page). All introductory overview texts are stored in files called `introduction.txt`  in the respective directory.
 
 Some notes ahead: _Firstly, most of the following "modifications" already applied to the article "Athenian Hoplites" (`0 A.D.'s civilizations/Athenians/Athenian military/Athenian Hoplites.json`). It serves as a good reference on how things need to be done._ _Secondly, I highly recommend to actually open articles on the page after "customising" them to verify everything is displayed as intended. There are just so many different interconnected parameters, visualising it in the head can be hard. And double-checking has never hurt anyone._
 
