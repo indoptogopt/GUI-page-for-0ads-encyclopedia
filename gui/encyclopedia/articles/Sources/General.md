@@ -33,3 +33,5 @@ types of arrowheads: https://archeryhistorian.com/types-of-arrows/ by Vantha
 production of arrowhead: https://www.forumancientcoins.com/numiswiki/view.asp?key=ancient%20metal%20arrowheads&srsltid=AfmBOoo7p0xYglYHumVsSQsg23C4G0W8HQPaV3BaqgDvr3BM9rLuTKEp by Vantha
 
 crossbow designs: A ton of different websites, this one contains the core information: http://www.twcenter.net/forums/showthread.php?633087-amazing-power-of by Vantha
+
+amentum: https://en.wikipedia.org/wiki/Amentum by Vantha
