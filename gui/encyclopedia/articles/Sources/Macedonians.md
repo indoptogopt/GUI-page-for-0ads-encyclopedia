@@ -33,3 +33,4 @@ silver shields: https://www.youtube.com/watch?si=e-B-VW5GZlsjuAIV&v=csw9uSRjUz8 
 
 hypaspists: https://www.worldhistory.org/Hypaspist/ by Vantha
 
+cestrosphendon: https://www.youtube.com/watch?v=bvbcElk0vT4 & https://earlyworks.weebly.com/the-cestrosphendon---slinging-darts.html by Vantha
