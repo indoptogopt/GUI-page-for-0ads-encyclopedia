@@ -35,3 +35,5 @@ production of arrowhead: https://www.forumancientcoins.com/numiswiki/view.asp?ke
 crossbow designs: A ton of different websites, this one contains the core information: http://www.twcenter.net/forums/showthread.php?633087-amazing-power-of by Vantha
 
 amentum: https://en.wikipedia.org/wiki/Amentum by Vantha
+
+falx/sica/romphaia: https://www.youtube.com/watch?v=bzyYn3hQlSU by Vantha
